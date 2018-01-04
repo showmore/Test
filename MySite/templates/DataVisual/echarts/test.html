@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="西安科技大市场,西安科技,科技大市场,大市场,技术转移,技术交易,成果转化,科技服务,仪器设备,科技政策,现代服务业,创业">
+    <meta name="description" content="西安科技大市场将重点发挥“交易、共享、服务、交流”四位一体的功能。展示各种科技资源，促进科技资源的对接与合作；科技大市场促进技术转移和成果转化；科技大市场实现技术平台、仪器设备、科技文献等资源的共享；提供人才创业、政策落实、项目申报等专业化和集成化服务；通过举办科技集市和各种专业论坛，推动科技资源的交流与合作，促进科技成果的商品化、产业化与国际化。">
+    <title>数据可视化</title>
+    <link rel="shortcut icon" href="../images/common/favicon.ico">
+    <link rel="icon" type="image/gif" href="../images/common/animated_favicon1.gif">
+    <link href="http://cdn.bootcss.com/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+</head>
+<body>
+
+<script src="../../lib/jquery-1.9.1.min.js"></script>
+<script src="../../lib/echarts.min.js"></script>
+<script src="../../js/common/utils.js"></script>
+<script type="text/javascript">
+    $.when(
+        $.ajax('http://192.168.0.239:5000/select/dv_hyzj')
+    ).then(function(data1) {
+        console.log('data1:'+data1.length);
+        return $.ajax('http://192.168.0.239:5000/select/dv_hyzj')
+    }, function() {
+        alert('data1 failed!');
+    }).then(function (data2) {
+        console.log('data2:'+data2.length);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="西安科技大市场,西安科技,科技大市场,大市场,技术转移,技术交易,成果转化,科技服务,仪器设备,科技政策,现代服务业,创业">
+    <meta name="description" content="西安科技大市场将重点发挥“交易、共享、服务、交流”四位一体的功能。展示各种科技资源，促进科技资源的对接与合作；科技大市场促进技术转移和成果转化；科技大市场实现技术平台、仪器设备、科技文献等资源的共享；提供人才创业、政策落实、项目申报等专业化和集成化服务；通过举办科技集市和各种专业论坛，推动科技资源的交流与合作，促进科技成果的商品化、产业化与国际化。">
+    <title>数据可视化</title>
+    <link href="http://cdn.bootcss.com/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/first_module.less">
+    <style>
+        .chart_line1{
+            position: absolute;
+            right: 30px;
+            bottom: 32%;
+            width: 460px;
+            height: 200px;
+        }
+        .chart_line2{
+            position: absolute;
+            left: 30px;
+            bottom: 0;
+            width: 500px;
+            height: 280px;
+        }
+        .chart_line3{
+            position: absolute;
+            right: 30px;
+            bottom: 0;
+            width: 460px;
+            height: 280px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="chart-wrap" id="mainChart"></div>
+    <div class="chart-wrap chart_line1" id="line1_Chart">2016年各区县技术吸纳情况</div>
+    <div class="chart-wrap chart_line2" id="line2_Chart">陕西省5年专利申请与授权</div>
+    <div class="chart-wrap chart_line3" id="line3_Chart">2016年技术合同技术领域构成</div>
+</div>
+
+<script src="../../lib/jquery-1.9.1.min.js"></script>
+<script src="../../lib/echarts.min.js"></script>
+<script src="../../js/common/utils.js"></script>
+<script type="text/javascript">
+    var mainChart = echarts.init(document.getElementById('mainChart'));
+    var line1_Chart = echarts.init(document.getElementById('line1_Chart'));
+    var line2_Chart = echarts.init(document.getElementById('line2_Chart'));
+    var line3_Chart = echarts.init(document.getElementById('line3_Chart'));
+
+    mainChart.showLoading();
+
+    var aRagerDatas = [],
+        aSqsqDatas__xAxisData = [],
+        aSqsqDatas__seriesData = [],
+        aHtlyDatas__xAxisData = [],
+        aHtlyDatas__seriesData = [],
+        aXnscDatas__xAxisData = [],
+        aXnscDatas__seriesData = [];
+    $.when($.get('../../js/data/geo_xian.json')).then(function (xianJSON) {
+        echarts.registerMap('xian', xianJSON);
+        //西安市科技资源概况(雷达图)
+        return $.get('http://192.168.0.239:5000/select/dv_kjziyuan')
+    }).then(function (ragerData) {
+        for(var i=0,len=JSON.parse(ragerData).length; i<len; i++) {
+            var rager = JSON.parse(ragerData)[i];
+
+            var temObj = {
+                name: '',
+                value: []
+            };
+
+            temObj.name = rager.area;
+
+            temObj.value.push(rager.kjzuzhi)//科技组织
+            temObj.value.push(rager.hyzj)//行业专家
+            temObj.value.push(rager.zscq)//知识产权
+            temObj.value.push(rager.kjchengguo)//科技成果
+            temObj.value.push(rager.yiqishebei)//仪器设备
+
+            aRagerDatas.push(temObj);
+        }
+
+        //陕西省近五年专利申请与授权量
+        return $.get('http://192.168.0.239:5000/select/dv_zlsqsq_n5_sx')
+    }).then(function (sqsqData) {
+        var aShenqingzfs = [], aShouquanzfs = [], aShenqingnums = [], aShouquannums = [];
+
+        for(var i=0,len=JSON.parse(sqsqData).length; i<len; i++) {
+            var sqsq = JSON.parse(sqsqData)[i];
+
+            aSqsqDatas__xAxisData.push(sqsq.year);
+
+            if (sqsq.shenqingzf) {
+                aShenqingzfs.push(sqsq.shenqingzf)//申请总数
+            }
+            if (sqsq.shouquanzf) {
+                aShouquanzfs.push(sqsq.shouquanzf)//授权总数
+            }
+            if (sqsq.shenqingnum) {
+                aShenqingnums.push(sqsq.shenqingnum)//申请数量
+            }
+            if (sqsq.shouquannum) {
+                aShouquannums.push(sqsq.shouquannum)//授权数量
+            }
+        }
+
+        aSqsqDatas__seriesData = [
+            {name: '申请总数', type: 'bar', data: aShenqingnums},
+            {name: '授权总数', type: 'bar', data: aShouquannums},
+            {name: '申请总量增幅(%)', type: 'line', yAxisIndex: 1, data: aShenqingzfs},
+            {name: '授权总量增幅(%)', type: 'line', yAxisIndex: 1, data: aShouquanzfs}
+        ];
+
+        //西安市技术合同领域构成
+        return $.get('http://192.168.0.239:5000/select/dv_jmhtlygc')
+    }).then(function (htlyData) {
+        var aMoney2015s = [], aMoney2016s = [], aNumber2015s = [], aNumber2016s = [];
+
+        for(var i=0,len=JSON.parse(htlyData).length; i<len; i++) {
+            var htly = JSON.parse(htlyData)[i];
+
+            aHtlyDatas__xAxisData.push(htly.name);
+
+            if (htly.money2015) {
+                aMoney2015s.push(htly.money2015)//申请总数
+            }
+            if (htly.money2016) {
+                aMoney2016s.push(htly.money2016)//授权总数
+            }
+            if (htly.number2015) {
+                aNumber2015s.push(htly.number2015)//申请数量
+            }
+            if (htly.number2016) {
+                aNumber2016s.push(htly.number2016)//授权数量
+            }
+        }
+
+        aHtlyDatas__seriesData = [
+            {name: '2015年合同数', type: 'bar', data: aMoney2015s},
+            {name: '2016年合同数', type: 'bar', data: aMoney2016s},
+            {name: '2015年成交额', type: 'line', yAxisIndex: 1, data: aNumber2015s},
+            {name: '2016年成交额', type: 'line', yAxisIndex: 1, data: aNumber2016s}
+        ];
+
+        //西安市各区县技术输出吸纳情况
+        return $.get('http://192.168.0.239:5000/select/dv_jmhtgqxsx')
+    }).then(function (xnscData) {
+        var aXnmoneys = [], aScmoneys = [], aXnxs = [], aScxs = [];
+
+        for(var i=0,len=JSON.parse(xnscData).length; i<len; i++) {
+            var xnsc = JSON.parse(xnscData)[i];
+
+            aXnscDatas__xAxisData.push(xnsc.area);
+
+            if (xnsc.xnmoney) {
+                aXnmoneys.push(xnsc.xnmoney)//申请总数
+            }
+            if (xnsc.scmoney) {
+                aScmoneys.push(xnsc.scmoney)//授权总数
+            }
+            if (xnsc.scx) {
+                aXnxs.push(xnsc.scx)//申请数量
+            }
+            if (xnsc.xnx) {
+                aScxs.push(xnsc.xnx)//授权数量
+            }
+        }
+
+        aXnscDatas__seriesData = [
+            {name: '输出金额', type: 'bar', data: aScmoneys},
+            {name: '吸纳金额', type: 'bar', data: aXnmoneys},
+            {name: '输出项', type: 'line', yAxisIndex: 1, data: aScxs},
+            {name: '吸纳项', type: 'line', yAxisIndex: 1, data: aXnxs}
+        ];
+    }).always(function () {
+
+        mainChart.hideLoading();
+
+        var mainOption = {
+            title: [
+                {
+                    text: '西安市科技资源分布',
+                    subtext: '数据来源于西安科技大市场',
+                    sublink: 'http://www.xatrm.com',
+                    left: 'center',
+                    top: 'top',
+                    textStyle: {
+                        color: '#fff'
+                    }
+                }
+            ],
+            toolbox: {
+                iconStyle: {
+                    normal: {
+                        borderColor: '#fff'
+                    },
+                    emphasis: {
+                        borderColor: '#b1e4ff'
+                    }
+                }
+            },
+            geo: {
+                map: 'xian',
+                left: '-5%',
+                top: '-2%',
+                zoom: 0.8,
+                label: {
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    }
+                },
+                roam: false,
+                itemStyle: {
+                    normal: {
+                        areaColor: '#2e84ad',
+                        borderColor: '#1d244c'
+                    },
+                    emphasis: {
+                        areaColor: '#196a92',
+                        borderColor: '#fff'
+                    }
+                }
+            },
+            radar: [
+                {
+                    indicator: [
+                        {text: '科技组织'},
+                        {text: '行业专家'},
+                        {text: '仪器设备'},
+                        {text: '科技成果'},
+                        {text: '知识产权'}
+                    ],
+                    center: ['63%','20%'],
+                    radius: 60
+                }
+            ],
+            series: [
+                {
+                    name:'面积模式',
+                    type:'pie',
+                    radius : [20, 50],
+                    center : ['88%', '20%'],
+                    roseType : 'area',
+                    data:[
+                        {value:1738, name:'工程试验设备'},
+                        {value:339, name:'计量仪器'},
+                        {value:3034, name:'分析仪器'},
+                        {value:145, name:'其它仪器'},
+                        {value:780, name:'电子测量仪器'},
+                        {value:2570, name:'特种检测仪器'},
+                        {value:962, name:'物理性能测试'}
+                    ]
+                },
+                {
+                    type: 'radar',
+                    tooltip: {
+                        trigger: 'item'
+                    },
+                    itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                    data: aRagerDatas
+                }
+            ]
+        };
+
+        var line1_option = {
+            legend: {
+                left: '30%',
+                top: '20%',
+                textStyle:{
+                    color: '#fff'
+                },
+                data:['申请总数','授权总数','申请总量增幅(%)','授权总量增幅(%)']
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    axisLine: {
+                        lineStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    axisLabel: {
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    data: aSqsqDatas__xAxisData
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    name: '万元',
+                    min: 0,
+                    max: 80000,
+                    interval: 10000,
+                    splitLine: {
+                        show: false
+                    },
+                    axisLabel: {
+                        interval: 2,
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    axisTick: {
+                        show: false
+                    }
+                },
+                {
+                    type: 'value',
+                    name: '项',
+                    min: -10,
+                    max: 50,
+                    interval: 10,
+                    splitLine: {
+                        show: false
+                    },
+                    axisLabel: {
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    axisTick: {
+                        show: false
+                    }
+                }
+            ],
+            series: aSqsqDatas__seriesData
+        };
+
+        var line2_option = {
+            legend: {
+                left: '10%',
+                top: '20%',
+                textStyle:{
+                    color: '#fff'
+                },
+                data:['输出金额','吸纳金额','输出项','吸纳项']
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    axisLine: {
+                        lineStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    axisLabel: {
+                        textStyle: {
+                            color: '#fff'
+                        },
+                        interval: 0,
+                        rotate: 45
+                    },
+                    data: aXnscDatas__xAxisData
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    name: '亿元',
+                    min: 0,
+                    max: 400,
+                    interval: 50,
+                    splitLine: {
+                        show: false
+                    },
+                    axisLabel: {
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    axisTick: {
+                        show: false
+                    }
+                },
+                {
+                    type: 'value',
+                    name: '项',
+                    min: 0,
+                    max: 8000,
+                    interval: 1000,
+                    splitLine: {
+                        show: false
+                    },
+                    axisLabel: {
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    axisTick: {
+                        show: false
+                    }
+                }
+            ],
+            series: aXnscDatas__seriesData
+        };
+
+        var line3_option = {
+            legend: {
+                left: '13%',
+                top: '10%',
+                textStyle:{
+                    color: '#fff'
+                },
+                data:['2013年成交额','2014年成交额','2013年合同数','2014年合同数']
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    axisLine: {
+                        lineStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    axisLabel: {
+                        textStyle: {
+                            color: '#fff'
+                        },
+                        interval: 0,
+                        rotate: 45
+                    },
+                    data: aHtlyDatas__xAxisData
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    name: '亿元',
+                    min: 0,
+                    max: 250,
+                    interval: 50,
+                    splitLine: {
+                        show: false
+                    },
+                    axisLabel: {
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    axisTick: {
+                        show: false
+                    }
+                },
+                {
+                    type: 'value',
+                    name: '份数',
+                    min: 0,
+                    max: 7500,
+                    interval: 750,
+                    splitLine: {
+                        show: false
+                    },
+                    axisLabel: {
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    axisTick: {
+                        show: false
+                    }
+                }
+            ],
+            series: aHtlyDatas__seriesData
+        };
+
+        var requestUrl = '';
+
+        mainChart.setOption(mainOption);
+
+        line1_Chart.setOption(line1_option);
+
+        line2_Chart.setOption(line2_option);
+
+        line3_Chart.setOption(line3_option);
+    });
+
+    //监听mapselectchanged方法
+    mainChart.on('click', function (param) {
+
+        var aXnscDatas__yAxisOption = [{
+            name: '万元',
+            min: 0,
+            max: 1200,
+            interval: 200
+        },{
+            name: '项',
+            min: 0,
+            max: 1200,
+            interval: 200
+        }];
+
+        switch (param.name) {
+            case "碑林区":
+                requestUrl = 'http://192.168.0.239:5000/select/dv_jmhtblqsx';
+                aXnscDatas__yAxisOption = [{
+                    name: '万元',
+                    min: 0,
+                    max: 1400000,
+                    interval: 200000
+                },{
+                    name: '项',
+                    min: 0,
+                    max: 6500,
+                    interval: 500
+                }];
+                break;
+            case "莲湖区":
+                requestUrl = 'http://192.168.0.239:5000/select/dv_jmhtlhqsx';
+                aXnscDatas__yAxisOption = [{
+                    name: '万元',
+                    min: 0,
+                    max: 240000,
+                    interval: 20000
+                },{
+                    name: '项',
+                    min: 0,
+                    max: 1200,
+                    interval: 200
+                }];
+                break;
+            case "灞桥区":
+                requestUrl = 'http://192.168.0.239:5000/select/dv_jmhtbqqsx';
+                aXnscDatas__yAxisOption = [{
+                    name: '亿元',
+                    min: 0,
+                    max: 240000,
+                    interval: 20000
+                },{
+                    name: '项',
+                    min: 0,
+                    max: 1200,
+                    interval: 200
+                }];
+                break;
+            case "未央区":
+                requestUrl = 'http://192.168.0.239:5000/select/dv_jmhtwyqsx';
+                aXnscDatas__yAxisOption = [{
+                    name: '亿元',
+                    min: 0,
+                    max: 100,
+                    interval: 20
+                },{
+                    name: '项',
+                    min: 0,
+                    max: 1400,
+                    interval: 200
+                }];
+                break;
+            case "新城区":
+                requestUrl = 'http://192.168.0.239:5000/select/dv_jmhtxcqsx';
+                aXnscDatas__yAxisOption = [{
+                    name: '万元',
+                    min: 0,
+                    max: 800000,
+                    interval: 100000
+                },{
+                    name: '项',
+                    min: 0,
+                    max: 5000,
+                    interval: 500
+                }];
+                break;
+            case "雁塔区":
+                requestUrl = 'http://192.168.0.239:5000/select/dv_jmhtytqsx';
+                aXnscDatas__yAxisOption = [{
+                    name: '亿元',
+                    min: 0,
+                    max: 300,
+                    interval: 50
+                },{
+                    name: '项',
+                    min: 0,
+                    max: 7000,
+                    interval: 500
+                }];
+                break;
+            case "阎良区":
+                requestUrl = 'http://192.168.0.239:5000/select/dv_jmhtylqsx';
+                aXnscDatas__yAxisOption = [{
+                    name: '万元',
+                    min: 0,
+                    max: 500000,
+                    interval: 100000
+                },{
+                    name: '项',
+                    min: 0,
+                    max: 1200,
+                    interval: 200
+                }];
+                break;
+            case "高陵区":
+                requestUrl = '';
+                break;
+            case "周至县":
+                requestUrl = '';
+                break;
+            case "临潼区":
+                requestUrl = '';
+                break;
+            case "长安区":
+                requestUrl = 'http://192.168.0.239:5000/select/dv_jmhtcaqsx';
+                aXnscDatas__yAxisOption = [{
+                    name: '万元',
+                    min: 0,
+                    max: 240000,
+                    interval: 20000
+                },{
+                    name: '项',
+                    min: 0,
+                    max: 1200,
+                    interval: 200
+                }];
+                break;
+            case "蓝田县":
+                requestUrl = '';
+                break;
+            case "户县":
+                requestUrl = '';
+                break;
+            default: '未定义';
+        }
+
+        if (requestUrl) {
+            $.get(requestUrl).done(function (resData) {
+                var aXnmoneys_m = [], aXnxs_m = [], aScxs_m = [], aScmoneys_m = [];
+                var aXnscDatas__xAxisData_m = [];
+                var aXnscDatas__seriesData_m = [];
+
+                for(var i=0,len=JSON.parse(resData).length; i<len; i++) {
+                    var xnsc = JSON.parse(resData)[i];
+
+                    aXnscDatas__xAxisData_m.push(xnsc.area);
+
+                    if (xnsc.xnmoney) {
+                        aXnmoneys_m.push(xnsc.xnmoney)//吸纳金额
+                    }
+                    if (xnsc.scmoney) {
+                        aScmoneys_m.push(xnsc.scmoney)//输出金额
+                    }
+                    if (xnsc.xnx) {
+                        aXnxs_m.push(xnsc.xnx)//吸纳项
+                    }
+                    if (xnsc.scx) {
+                        aScxs_m.push(xnsc.scx)//输出项
+                    }
+                }
+
+                aXnscDatas__seriesData_m = [
+                    {name: '吸纳金额', type: 'bar', data: aXnmoneys_m},
+                    {name: '输出金额', type: 'bar', data: aScmoneys_m},
+                    {name: '吸纳项', type: 'line', yAxisIndex: 1, data: aXnxs_m},
+                    {name: '输出项', type: 'line', yAxisIndex: 1, data: aScxs_m}
+                ];
+
+                var line2_option = {
+                    legend: {
+                        left: '30%',
+                        top: '20%',
+                        textStyle:{
+                            color: '#fff'
+                        },
+                        data:['输出项','吸纳项','输出金额','吸纳金额']
+                    },
+                    xAxis: [
+                        {
+                            type: 'category',
+                            axisLine: {
+                                lineStyle: {
+                                    color: '#fff'
+                                }
+                            },
+                            axisLabel: {
+                                textStyle: {
+                                    color: '#fff'
+                                }
+                            },
+                            data: aXnscDatas__xAxisData_m
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            name: aXnscDatas__yAxisOption[0].name,
+                            min: aXnscDatas__yAxisOption[0].min,
+                            max: aXnscDatas__yAxisOption[0].max,
+                            interval: aXnscDatas__yAxisOption[0].interval,
+                            splitLine: {
+                                show: false
+                            },
+                            axisLabel: {
+                                textStyle: {
+                                    color: '#fff'
+                                }
+                            },
+                            axisLine: {
+                                lineStyle: {
+                                    color: '#fff'
+                                }
+                            },
+                            axisTick: {
+                                show: false
+                            }
+                        },
+                        {
+                            type: 'value',
+                            name: aXnscDatas__yAxisOption[1].name,
+                            min: aXnscDatas__yAxisOption[1].min,
+                            max: aXnscDatas__yAxisOption[1].max,
+                            interval: aXnscDatas__yAxisOption[1].interval,
+                            splitLine: {
+                                show: false
+                            },
+                            axisLabel: {
+                                textStyle: {
+                                    color: '#fff'
+                                }
+                            },
+                            axisLine: {
+                                lineStyle: {
+                                    color: '#fff'
+                                }
+                            },
+                            axisTick: {
+                                show: false
+                            }
+                        }
+                    ],
+                    series: aXnscDatas__seriesData_m
+                };
+
+                line2_Chart.setOption(line2_option);
+            });
+        } else {
+            alert('暂无数据');
+        }
+    });
+</script>
+</body>
+</html>

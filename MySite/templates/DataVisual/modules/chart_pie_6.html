@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<body>
+<div id="pieChart" style="width: 260px;height:210px;"></div>
+
+<script src="../../lib/echarts.min.js"></script>
+<script src="../../lib/jquery-1.9.1.min.js"></script>
+<script src="../../js/common/utils.js"></script>
+<script>
+    var pieChart = echarts.init(document.getElementById('pieChart'));
+
+    var pieOption = {
+        title: {
+            text: '创新协作',
+            left: 'center',
+            textStyle:{
+                color:'#fff',
+                fontSize: 14
+            }
+        },
+        series: [{
+            type: 'pie',
+            selectedMode: 'single',
+            center: ['50%', '50%'],
+            radius: 60,
+            color: ['#d3a100', '#b81c2b', '#007457', '#6c1f76', '#006979', '#191d6a', '#824221', '#58592a'],
+            label: {
+                normal: {
+                    position: 'inner',
+                    formatter: function (val) {
+                        return val.name + ' ' + val.percent;
+                    },
+                    textStyle: {
+                        color: '#fff',
+                        fontSize: 12
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            data: [{
+                value: 1290,
+                name: '合作'
+            }, {
+                value: 1290,
+                name: '洽谈中'
+            }, {
+                value: 4194,
+                name: '有意向'
+            }, {
+                value: 3226,
+                name: '无合作'
+            }]
+        }]
+    };
+
+    var currentIndex = -1;
+
+    setInterval(function () {
+        var dataLen = pieOption.series[0].data.length;
+        // 取消之前高亮的图形
+        pieChart.dispatchAction({
+            type: 'downplay',
+            seriesIndex: 0,
+            dataIndex: currentIndex
+        });
+
+        currentIndex = (currentIndex + 1) % dataLen;
+
+        // 高亮当前图形
+        pieChart.dispatchAction({
+            type: 'highlight',
+            seriesIndex: 0,
+            dataIndex: currentIndex
+        });
+
+    }, 1000);
+
+    pieChart.setOption(pieOption);
+</script>
+</body>
+</html>

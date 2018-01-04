@@ -1,0 +1,43 @@
+html, body{
+	height:100%;
+	min-height:100%;
+	_height:100%;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #fff;
+    background-image: url(../images/bg_2.jpg);
+    background-size: cover;
+	background-repeat: repeat;
+    background-color: #090C14;
+}
+
+//梯形
+.trapezoid{
+	border-top: 100px solid red;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;            
+	width: 100px;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+.container{
+	position: relative;
+	width: 1100px;
+	height: 100%;
+	margin: 0 auto;
+}

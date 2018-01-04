@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="西安科技大市场,西安科技,科技大市场,大市场,技术转移,技术交易,成果转化,科技服务,仪器设备,科技政策,现代服务业,创业">
+    <meta name="description" content="西安科技大市场将重点发挥“交易、共享、服务、交流”四位一体的功能。展示各种科技资源，促进科技资源的对接与合作；科技大市场促进技术转移和成果转化；科技大市场实现技术平台、仪器设备、科技文献等资源的共享；提供人才创业、政策落实、项目申报等专业化和集成化服务；通过举办科技集市和各种专业论坛，推动科技资源的交流与合作，促进科技成果的商品化、产业化与国际化。">
+    <title>数据可视化</title>
+    <link rel="shortcut icon" href="../images/common/favicon.ico">
+    <link rel="icon" type="image/gif" href="../images/common/animated_favicon1.gif">
+    <link href="http://cdn.bootcss.com/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="mainMap" style="width: 1000px;height:600px;"></div>
+
+<script src="../../lib/cnzz.js"></script>
+<script src="../../lib/modernizr.js"></script>
+<!--[if lte IE 8]>
+<script src="http://cdn.bootcss.com/selectivizr/1.0.2/selectivizr.js"></script>
+<![endif]-->
+<script src="../../lib/jquery-1.9.1.min.js"></script>
+<script src="../../lib/echarts.min.js"></script>
+<script type="text/javascript">
+    var mainChart = echarts.init(document.getElementById('mainMap'));
+
+    mainChart.showLoading();
+
+    $.get('../../js/api/v_bar3.json', function (data) {
+
+        mainChart.hideLoading();
+
+        var option = {
+            title: {text: "截至2016年陕西省高校发明专利拥有量前10名"},
+            tooltip: {trigger: "axis"},
+            toolbox: {
+                feature: {
+                    dataView: {show: !0, readOnly: !1},
+                    magicType: {show: !0, type: ["line", "bar"]},
+                    restore: {show: !0},
+                    saveAsImage: {show: !0}
+                }
+            },
+            legend: {data: ["拥有数量"]},
+            xAxis: [{
+                type: "category",
+                axisTick: {
+                    alignWithLabel: true
+                },
+                axisLabel: {
+                    interval: 0,
+                    rotate: 15
+                },
+                data: ["西安交通大学", "西安电子科技大学", "陕西科技大学", "西北工业大学", "长安大学", "西安理工大学", "陕西师范大学", "西安建筑科技大学", "西北农林科技大学", "中国人民解放军第四军医大学"]
+            }],
+            yAxis: [{
+                type: "value",
+                name: "",
+                min: 0,
+                max: 3500,
+                interval: 500,
+                axisLabel: {formatter: "{value}"}
+            }],
+            series: [{
+                name: "拥有数量",
+                type: "bar",
+                data: [3120, 2543, 1574, 1488, 728,643,498,449,449,435]
+            }]
+        };
+
+        mainChart.setOption(option);
+    });
+</script>
+</body>
+</html>

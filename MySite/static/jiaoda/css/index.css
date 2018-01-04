@@ -1,0 +1,865 @@
+/* CSS Document */
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select,td{margin:0;padding:0;}
+body{font:12px  "微软雅黑"; word-wrap:break-word;}
+a,u,s,del{color:#666;text-decoration:none} 
+fieldset ,a img,.bor0 {border:0;}
+i,em,b,strong{font-style:normal;font-weight:100;}
+li{list-style:none}
+img{vertical-align:middle}
+table{border-collapse:collapse;}/*细线边框*/
+
+.margin{margin:0 auto;}/*水平居中*/
+.ind2{text-indent:2em} 
+/*溢出隐藏出现省略号*/
+.over{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+
+/*让图片垂直对齐方式*/
+.valign{text-align:center;}
+.valign:after{content:"";display:inline-block;width:0;height:100%;
+vertical-align:middle;}/*给valign添加个子元素对齐图片*/
+.valign img{vertical-align:middle;}
+
+/*万能清除浮动法*/
+.clear{zoom:1;}
+.clear::after{content:"";display:table;clear:both;}
+
+.wrapper {
+  width: 1200px;
+  height: 88px; }
+  .wrapper .wrap-left {
+    float: left;
+    width: 445px;
+    height: 88px; }
+    .wrapper .wrap-left ul li:nth-child(1) {
+      width: 219px;
+      height: 58px;
+      margin-right: 20px; }
+      .wrapper .wrap-left ul li:nth-child(1) a {
+        display: block;
+        width: 219px;
+        height: 58px; }
+        .wrapper .wrap-left ul li:nth-child(1) a img {
+          width: 100%;
+          height: 100%; }
+    .wrapper .wrap-left ul li {
+      float: left;
+      height: 88px;
+      line-height: 88px; }
+      .wrapper .wrap-left ul li a {
+        display: block;
+        font-size: 22px;
+        color: #265889; }
+  .wrapper .wrap-right {
+    float: right;
+    width: 395px;
+    height: 88px; }
+    .wrapper .wrap-right ul {
+      width: 395px; }
+      .wrapper .wrap-right ul li {
+        float: left;
+        height: 88px;
+        line-height: 88px; }
+        .wrapper .wrap-right ul li a {
+          display: block;
+          margin-right: 35px;
+          font-size: 16px;
+          color: #6e6e6e; }
+          .wrapper .wrap-right ul li a:hover {
+            color: #0a4490; }
+      .wrapper .wrap-right ul li:nth-child(4) a {
+        margin-right: 0; }
+
+.banner {
+  width: 100%;
+  height: 369px;
+  background: url(../image/banner.jpg) no-repeat center center;}
+  .banner img {
+    display: block;
+    max-width: 100%;
+    height: 369px; }
+
+.section {
+  width: 1200px;
+  height: 100%; }
+  .section #centerJs {
+    width: 1190px;
+    height: 345px;
+    border: 5px solid #e3e3e3;
+    border-radius: 5px;
+    border-top: none;
+    margin-top: 83px; }
+    .section #centerJs .centerJsdiv {
+      width: 1190px;
+      height: 345px;
+      position: relative; }
+      .section #centerJs .centerJsdiv h5 {
+        font-size: 30px;
+        color: #0a4490;
+        position: absolute;
+        left: 50%;
+        top: -20px;
+        margin-left: -60px; }
+      .section #centerJs .centerJsdiv h5::after {
+        background: #e3e3e3;
+        content: "";
+        height: 5px;
+        width: 500px;
+        position: absolute;
+        right: 160px;
+        top: 20px; }
+      .section #centerJs .centerJsdiv h5::before {
+        background: #e3e3e3;
+        content: "";
+        height: 5px;
+        width: 500px;
+        position: absolute;
+        left: 160px;
+        top: 20px; }
+      .section #centerJs .centerJsdiv .centerJs-left-p {
+        float: left;
+        margin: 74px 0 0 30px;
+        width: 710px;
+        height: 210px; }
+        .section #centerJs .centerJsdiv .centerJs-left-p p {
+          text-indent: 2em;
+          font-size: 14px;
+          line-height: 26px;
+          color: #333333; }
+        .section #centerJs .centerJsdiv .centerJs-left-p .p1 {
+          margin-top: 10px; }
+      .section #centerJs .centerJsdiv .centerJs-right {
+        float: left;
+        width: 346px;
+        height: 299px;
+        margin: 23px 0 0 45px; }
+        .section #centerJs .centerJsdiv .centerJs-right img {
+          display: block;
+          width: 100%;
+          height: 100%; }
+  .section .progress {
+    width: 1200px;
+    height: 232px;
+    padding-top: 53px; }
+    .section .progress .progress-top {
+      width: 100%;
+      height: 28px; }
+      .section .progress .progress-top i {
+        float: left;
+        display: inline-block;
+        font-size: 22px;
+        color: #0a4490;
+        font-style: italic;
+        margin-left: 5px; }
+      .section .progress .progress-top span {
+        float: left;
+        margin: 9px 0 0 9px;
+        border-left: 10px solid #0a4490;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent; }
+    .section .progress .progress-center {
+      width: 100%;
+      margin-top: 55px; }
+      .section .progress .progress-center li {
+        float: left; }
+        .section .progress .progress-center li a {
+          font-size: 14px;
+          color: #2b2b2b; }
+      .section .progress .progress-center li:nth-child(1) {
+        margin-left: 65px; }
+      .section .progress .progress-center li:nth-child(2) {
+        margin-left: 305px; }
+    .section .progress p {
+      width: 1167px;
+      height: 12px;
+      margin: 20px 0 0 15px; }
+      .section .progress p img {
+        width: 1167px;
+        height: 12px; }
+    .section .progress .progress-bottom {
+      width: 100%;
+      margin-top: 30px; }
+      .section .progress .progress-bottom li {
+        float: left; }
+        .section .progress .progress-bottom li a {
+          font-size: 14px;
+          color: #2b2b2b; }
+      .section .progress .progress-bottom li:nth-child(1) a {
+        margin-left: 310px; }
+      .section .progress .progress-bottom li:nth-child(2) a {
+        margin-left: 360px; }
+  .section .fiveJsrw {
+    width: 1200px;
+    height: 280px; }
+    .section .fiveJsrw .fiveJsrwdiv {
+      width: 1200px;
+      height: 28px; }
+      .section .fiveJsrw .fiveJsrwdiv i {
+        float: left;
+        display: inline-block;
+        font-size: 20px;
+        color: #0a4490;
+        font-style: italic;
+        margin-left: 5px; }
+      .section .fiveJsrw .fiveJsrwdiv span {
+        float: left;
+        margin: 7px 0 0 9px;
+        border-left: 10px solid #0a4490;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent; }
+    .section .fiveJsrw .fiveJsrw-ul {
+      width: 1200px;
+      height: 255px; }
+      .section .fiveJsrw .fiveJsrw-ul li {
+        float: left;
+        width: 240px;
+        height: 100%;
+        text-align: center; }
+        .section .fiveJsrw .fiveJsrw-ul li a {
+          margin-top: 43px;
+          margin-left: 75px;
+          display: block;
+          width: 91px;
+          height: 75px; }
+          .section .fiveJsrw .fiveJsrw-ul li a img {
+            display: block;
+            width: 100%;
+            height: 100%; }
+        .section .fiveJsrw .fiveJsrw-ul li .fiveJsrw-div {
+          margin-top: 35px; }
+          .section .fiveJsrw .fiveJsrw-ul li .fiveJsrw-div p {
+            font-size: 14px; }
+          .section .fiveJsrw .fiveJsrw-ul li .fiveJsrw-div em {
+            font-size: 14px;
+            display: block;
+            margin-top: 20px; }
+      .section .fiveJsrw .fiveJsrw-ul .fiveJsrw-ul-li2 a {
+        display: block;
+        width: 80px;
+        margin-left: 80px;
+        height: 79px; }
+        .section .fiveJsrw .fiveJsrw-ul .fiveJsrw-ul-li2 a img {
+          display: block;
+          width: 100%;
+          height: 100%; }
+      .section .fiveJsrw .fiveJsrw-ul .fiveJsrw-ul-li3 a {
+        display: block;
+        width: 83px;
+        margin-left: 79px;
+        height: 77px; }
+        .section .fiveJsrw .fiveJsrw-ul .fiveJsrw-ul-li3 a img {
+          display: block;
+          width: 100%;
+          height: 100%; }
+      .section .fiveJsrw .fiveJsrw-ul .fiveJsrw-ul-li4 a {
+        display: block;
+        width: 89px;
+        margin-left: 75px;
+        height: 76px; }
+        .section .fiveJsrw .fiveJsrw-ul .fiveJsrw-ul-li4 a img {
+          display: block;
+          width: 100%;
+          height: 100%; }
+      .section .fiveJsrw .fiveJsrw-ul .fiveJsrw-ul-li5 a {
+        display: block;
+        width: 91px;
+        margin-left: 75px;
+        height: 71px; }
+        .section .fiveJsrw .fiveJsrw-ul .fiveJsrw-ul-li5 a img {
+          display: block;
+          width: 100%;
+          height: 100%; }
+
+#locellusJs {
+  width: 100%;
+  height: 100%;
+  background-color: #f7f7f7; }
+  #locellusJs .wrapper {
+    min-width: 1200px;
+    height: 640px;
+    padding-top: 40px; }
+    #locellusJs .wrapper .locellustitle {
+      width: 100%;
+      height: 100px; }
+      #locellusJs .wrapper .locellustitle h5 {
+        width: 1200px;
+        height: 63px; }
+        #locellusJs .wrapper .locellustitle h5 img {
+          display: block;
+          width: 1200px;
+          height: 63px; }
+    #locellusJs .wrapper .locellusnav {
+      margin-top: 14px;
+      width: 1200px;
+      height: 501px; }
+      #locellusJs .wrapper .locellusnav .locellusul {
+        width: 1200px;
+        height: 501px; }
+        #locellusJs .wrapper .locellusnav .locellusul li:nth-child(4) {
+          margin-right: 0; }
+        #locellusJs .wrapper .locellusnav .locellusul li {
+          float: left;
+          width: 259px;
+          height: 501px;
+          background: url("../image/fenshi.png") no-repeat;
+          position: relative;
+          margin-right: 54px; }
+          #locellusJs .wrapper .locellusnav .locellusul li .locellusdiv1 {
+            width: 165px;
+            height: 90px;
+            text-align: center;
+            position: absolute;
+            left: 48px;
+            top: 29px; }
+            #locellusJs .wrapper .locellusnav .locellusul li .locellusdiv1 span {
+              display: block;
+              width: 55px;
+              margin-left: 55px;
+              height: 47px; }
+              #locellusJs .wrapper .locellusnav .locellusul li .locellusdiv1 span img {
+                display: block;
+                width: 55px;
+                height: 47px; }
+            #locellusJs .wrapper .locellusnav .locellusul li .locellusdiv1 em {
+              font-size: 20px;
+              color: #555555; }
+          #locellusJs .wrapper .locellusnav .locellusul li .locellusdiv2 {
+            width: 235px;
+            height: 260px;
+            position: absolute;
+            left: 15px;
+            top: 179px; }
+            #locellusJs .wrapper .locellusnav .locellusul li .locellusdiv2 p {
+              text-indent: 2em;
+              font-size: 14px;
+              color: #656d79;
+              width: 235px;
+              height: 260px; }
+
+#resourceJs {
+  width: 1200px;
+  height: 910px; }
+  #resourceJs .locellustitle {
+    width: 100%;
+    height: 100px; }
+    #resourceJs .locellustitle h5 {
+      margin-top: 44px;
+      width: 1200px;
+      height: 63px; }
+      #resourceJs .locellustitle h5 img {
+        display: block;
+        width: 1200px;
+        height: 63px; }
+    #resourceJs .locellustitle .fiveJsrwdiv {
+      width: 80px;
+      height: 28px; }
+      #resourceJs .locellustitle .fiveJsrwdiv i {
+        float: left;
+        display: inline-block;
+        font-size: 20px;
+        color: #0a4490;
+        font-style: italic;
+        margin-left: 5px;
+        margin-top: 10px; }
+      #resourceJs .locellustitle .fiveJsrwdiv span {
+        float: left;
+        margin: 17px 0 0 9px;
+        border-left: 10px solid #0a4490;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent; }
+  #resourceJs .resourceJscontent {
+    width: 1170px;
+    height: 140px;
+    margin-top: 41px; }
+    #resourceJs .resourceJscontent p {
+      text-indent: 2em;
+      font-size: 14px;
+      color: #767676;
+      line-height: 29px; }
+  #resourceJs .resourceJstable {
+    width: 1200px;
+    height: 510px;
+    margin-top: 27px; }
+    #resourceJs .resourceJstable .resourceJstable-left {
+      float: left;
+      width: 698px;
+      height: 340px; }
+      #resourceJs .resourceJstable .resourceJstable-left table {
+        border: 3px solid #c7c7c7;
+        border-shadow: 2px 2px 5px #c7c7c7;
+        -webkit-border-shadow: 2px 2px 5px #c7c7c7;
+        margin-top: 85px;
+        margin-left: 15px; }
+        #resourceJs .resourceJstable .resourceJstable-left table tr td {
+          cursor: pointer; }
+        #resourceJs .resourceJstable .resourceJstable-left table tr:nth-child(1) th {
+          background-color: #0060a8;
+          font-size: 16px;
+          color: #ffffff;
+          border-right: 1px solid #ffffff; }
+        #resourceJs .resourceJstable .resourceJstable-left table tr:nth-child(2) td {
+          background-color: #f2f2f2;
+          font-size: 16px;
+          text-align: center;
+          color: #878787;
+          border-right: 1px solid #ffffff; }
+        #resourceJs .resourceJstable .resourceJstable-left table tr:nth-child(3) td {
+          background-color: #d9d9d9;
+          font-size: 16px;
+          text-align: center;
+          color: #878787;
+          border-right: 1px solid #ffffff; }
+        #resourceJs .resourceJstable .resourceJstable-left table tr:nth-child(4) td {
+          background-color: #f2f2f2;
+          font-size: 16px;
+          text-align: center;
+          color: #878787;
+          border-right: 1px solid #ffffff; }
+        #resourceJs .resourceJstable .resourceJstable-left table tr:nth-child(5) td {
+          background-color: #d9d9d9;
+          font-size: 16px;
+          text-align: center;
+          color: #878787;
+          border-right: 1px solid #ffffff; }
+        #resourceJs .resourceJstable .resourceJstable-left table tr:nth-child(6) td {
+          background-color: #f2f2f2;
+          font-size: 16px;
+          text-align: center;
+          color: #878787;
+          border-right: 1px solid #ffffff; }
+        #resourceJs .resourceJstable .resourceJstable-left table tr:nth-child(7) td {
+          background-color: #d9d9d9;
+          font-size: 16px;
+          text-align: center;
+          color: #878787;
+          border-right: 1px solid #ffffff; }
+    #resourceJs .resourceJstable .resourceJstable-right {
+      float: left;
+      width: 395px;
+      height: 510px;
+      margin-left: 50px; }
+      #resourceJs .resourceJstable .resourceJstable-right .resourceJstable-rightimg {
+        width: 395px;
+        height: 510px;
+        display: table;
+        text-align: center;
+        background-color: #f5f5f5; }
+        #resourceJs .resourceJstable .resourceJstable-right .resourceJstable-rightimg p {
+          display: table-cell;
+          vertical-align: middle;
+          width: 339px;
+          height: 453px;
+          cursor: pointer; }
+          #resourceJs .resourceJstable .resourceJstable-right .resourceJstable-rightimg p img {
+            max-width: 100%;
+            max-height: 100%; }
+
+.specialist {
+  width: 100%;
+  height: 100%;
+  background-color: #f7f7f7; }
+  .specialist .specialistbox {
+    width: 1200px;
+    height: 675px; }
+    .specialist .specialistbox .specialisttop {
+      width: 1200px;
+      height: 95px; }
+      .specialist .specialistbox .specialisttop .fiveJsrwdiv {
+        width: 1200px;
+        height: 95px;
+        line-height: 95px; }
+        .specialist .specialistbox .specialisttop .fiveJsrwdiv .specialisttopleft {
+          width: 650px;
+          float: left; }
+          .specialist .specialistbox .specialisttop .fiveJsrwdiv .specialisttopleft i {
+            float: left;
+            display: inline-block;
+            font-size: 20px;
+            color: #0a4490;
+            font-style: italic;
+            margin-left: 5px; }
+          .specialist .specialistbox .specialisttop .fiveJsrwdiv .specialisttopleft span {
+            float: left;
+            margin: 39px 0 0 15px;
+            border-left: 8px solid #0a4490;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent; }
+          .specialist .specialistbox .specialisttop .fiveJsrwdiv .specialisttopleft em {
+            font-size: 14px;
+            color: #737373;
+            margin-left: 20px; }
+        .specialist .specialistbox .specialisttop .fiveJsrwdiv .specialisttopbtn {
+          width: 75px;
+          float: right; }
+          .specialist .specialistbox .specialisttop .fiveJsrwdiv .specialisttopbtn #btn01 {
+            float: left;
+            display: block;
+            width: 33px;
+            height: 33px;
+            background-color: #ffffff;
+            margin-top: 35px;
+            position: relative; }
+            .specialist .specialistbox .specialisttop .fiveJsrwdiv .specialisttopbtn #btn01 img {
+              width: 10px;
+              height: 18px;
+              position: absolute;
+              left: 11px;
+              top: 7px; }
+          .specialist .specialistbox .specialisttop .fiveJsrwdiv .specialisttopbtn #btn02 {
+            float: right;
+            background-color: #ffffff;
+            margin-top: 35px;
+            width: 33px;
+            height: 33px;
+            position: relative; }
+            .specialist .specialistbox .specialisttop .fiveJsrwdiv .specialisttopbtn #btn02 img {
+              width: 10px;
+              height: 18px;
+              position: absolute;
+              left: 11px;
+              top: 7px; }
+    .specialist .specialistbox .specialistboxpic {
+      width: 1200px;
+      height: 510px;
+      position: relative;
+      overflow: hidden; }
+      .specialist .specialistbox .specialistboxpic .specialistboxpicul {
+        width: 4800px;
+        height: 510px;
+        position: absolute;
+        left: 0;
+        top: 0; }
+        .specialist .specialistbox .specialistboxpic .specialistboxpicul li {
+          float: left;
+          width: 600px;
+          height: 255px; }
+          .specialist .specialistbox .specialistboxpic .specialistboxpicul li a {
+            display: block; }
+            .specialist .specialistbox .specialistboxpic .specialistboxpicul li a .specialistboxpiculdiv1 {
+              float: left;
+              width: 122px;
+              height: 168px;
+              margin: 38px 0 0 30px; }
+              .specialist .specialistbox .specialistboxpic .specialistboxpicul li a .specialistboxpiculdiv1 img {
+                display: block;
+                width: 100%;
+                height: 100%; }
+            .specialist .specialistbox .specialistboxpic .specialistboxpicul li a .specialistboxpiculdiv2 {
+              float: left;
+              width: 390px;
+              height: 200px;
+              margin: 35px 0 0 25px; }
+              .specialist .specialistbox .specialistboxpic .specialistboxpicul li a .specialistboxpiculdiv2 .specialistboxpicultitle {
+                width: 100%;
+                height: 26px;
+                line-height: 26px; }
+                .specialist .specialistbox .specialistboxpic .specialistboxpicul li a .specialistboxpiculdiv2 .specialistboxpicultitle em {
+                  font-size: 18px;
+                  color: #2b2b2b; }
+                .specialist .specialistbox .specialistboxpic .specialistboxpicul li a .specialistboxpiculdiv2 .specialistboxpicultitle b {
+                  font-size: 14px;
+                  color: #2b2b2b; }
+              .specialist .specialistbox .specialistboxpic .specialistboxpicul li a .specialistboxpiculdiv2 p {
+                margin-top: 25px;
+                font-size: 14px;
+                color: #2b2b2b;
+                line-height: 25px; }
+        .specialist .specialistbox .specialistboxpic .specialistboxpicul li:nth-child(1) {
+          background-color: #e8e8e8; }
+        .specialist .specialistbox .specialistboxpic .specialistboxpicul li:nth-child(2) {
+          background-color: #ffffff; }
+          .specialist .specialistbox .specialistboxpic .specialistboxpicul li:nth-child(2) .specialistboxpiculdiv2 {
+            width: 405px; }
+        .specialist .specialistbox .specialistboxpic .specialistboxpicul li:nth-child(3) {
+          background-color: #ffffff; }
+          .specialist .specialistbox .specialistboxpic .specialistboxpicul li:nth-child(3) .specialistboxpiculdiv1 {
+            width: 123px;
+            height: 163px; }
+            .specialist .specialistbox .specialistboxpic .specialistboxpicul li:nth-child(3) .specialistboxpiculdiv1 img {
+              max-width: 100%;
+              height: 100%; }
+        .specialist .specialistbox .specialistboxpic .specialistboxpicul li:nth-child(4) {
+          background-color: #e8e8e8; }
+          .specialist .specialistbox .specialistboxpic .specialistboxpicul li:nth-child(4) .specialistboxpiculdiv1 {
+            width: 122px;
+            height: 168px; }
+            .specialist .specialistbox .specialistboxpic .specialistboxpicul li:nth-child(4) .specialistboxpiculdiv1 img {
+              max-width: 100%;
+              height: 100%; }
+
+#boxImg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  background: #000 \9;
+  filter: alpha(opacity=50);
+  display: none;
+  z-index: 9999; }
+  #boxImg #resourceJstableboxImg {
+    position: absolute;
+    width: auto;
+    height: auto; }
+  #boxImg #resourceJstableboxImg2 {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer; }
+
+#orderLc {
+  width: 1200px;
+  height: 595px; }
+  #orderLc .orderLctitle {
+    width: 1200px;
+    height: 63px;
+    margin-top: 60px; }
+    #orderLc .orderLctitle img {
+      width: 1200px;
+      height: 63px; }
+  #orderLc .orderLclist {
+    width: 1200px;
+    height: 495px;
+    margin-top: 10px; }
+    #orderLc .orderLclist .orderLclistLeft {
+      float: left;
+      width: 865px;
+      height: 495px;
+      background-color: #f3f3f3; }
+      #orderLc .orderLclist .orderLclistLeft .orderLclistLeftdiv1 {
+        float: left;
+        width: 390px;
+        height: 205px;
+        margin: 138px 0 0 55px; }
+        #orderLc .orderLclist .orderLclistLeft .orderLclistLeftdiv1 p {
+          text-indent: 2em;
+          font-size: 14px;
+          color: #5a5a5a;
+          line-height: 30px; }
+      #orderLc .orderLclist .orderLclistLeft .orderLclistLeftdiv2 {
+        float: left;
+        width: 314px;
+        height: 470px;
+        margin: 13px 0 0 68px; }
+        #orderLc .orderLclist .orderLclistLeft .orderLclistLeftdiv2 img {
+          width: 100%;
+          height: 100%; }
+    #orderLc .orderLclist .orderLclistRight {
+      float: left;
+      width: 280px;
+      height: 495px;
+      margin-left: 34px; }
+      #orderLc .orderLclist .orderLclistRight .orderLclistRighttitle {
+        width: 280px;
+        height: 32px; }
+        #orderLc .orderLclist .orderLclistRight .orderLclistRighttitle span {
+          float: left;
+          display: block;
+          width: 18px;
+          height: 18px; }
+          #orderLc .orderLclist .orderLclistRight .orderLclistRighttitle span img {
+            display: block;
+            width: 100%;
+            height: 100%; }
+        #orderLc .orderLclist .orderLclistRight .orderLclistRighttitle em {
+          margin-left: 15px;
+          float: left;
+          font-size: 14px;
+          color: #6a8192; }
+      #orderLc .orderLclist .orderLclistRight .orderLclistRightul li {
+        width: 280px;
+        height: 32px;
+        background-color: #f3f3f3;
+        line-height: 32px;
+        margin-bottom: 16px; }
+        #orderLc .orderLclist .orderLclistRight .orderLclistRightul li a {
+          letter-spacing: 2px;
+          margin-left: 10px;
+          font-size: 14px;
+          color: #6a8192; }
+        #orderLc .orderLclist .orderLclistRight .orderLclistRightul li:hover a {
+          color: #3A3F51; }
+      #orderLc .orderLclist .orderLclistRight .orderLclistRightul li:last-child {
+        margin-bottom: 0; }
+
+.introduceQR {
+  width: 1200px;
+  height: 207px;
+  padding-top: 53px;
+  border-top: 2px solid #e3e3e3; }
+  .introduceQR .introduceQRleft {
+    float: left;
+    width: 455px;
+    height: 165px;
+    margin-left: 20px; }
+    .introduceQR .introduceQRleft p {
+      font-size: 14px;
+      line-height: 32px; }
+    .introduceQR .introduceQRleft .p3 {
+      margin-left: 68px; }
+  .introduceQR .introduceQRright {
+    float: right;
+    width: 349px;
+    height: 165px; }
+    .introduceQR .introduceQRright .centerWeb {
+      float: left;
+      width: 131px;
+      height: 165px;
+      text-align: center;
+      margin-right: 70px; }
+      .introduceQR .introduceQRright .centerWeb img {
+        width: 131px;
+        height: 131px; }
+      .introduceQR .introduceQRright .centerWeb span {
+        height: 34px;
+        line-height: 34px;
+        display: block;
+        font-size: 14px; }
+    .introduceQR .introduceQRright .Myintroduce {
+      float: left;
+      width: 131px;
+      height: 165px;
+      text-align: center; }
+      .introduceQR .introduceQRright .Myintroduce img {
+        width: 131px;
+        height: 131px; }
+      .introduceQR .introduceQRright .Myintroduce span {
+        height: 34px;
+        line-height: 34px;
+        display: block;
+        font-size: 14px; }
+
+.Cuttingline {
+  width: 100%;
+  height: 10px;
+  background-color: #e3e3e3; }
+
+.footer {
+  width: 100%;
+  height: 190px;
+  padding-top: 100px;
+  text-align: center;
+  background-color: #0364b1; }
+  .footer .footertitle {
+    width: 100%;
+    height: 80px;
+    line-height: 28px;
+    font-size: 14px;
+    color: white; }
+
+.footerbox {
+  width: 100%;
+  height: 40px;
+  background-color: #01579b; }
+
+.nav {
+  width: 80px;
+  height: 300px;
+  position: fixed;
+  top: 50%;
+  margin-top: -50px;
+  right:10px;
+  z-index: 999; }
+
+  .nav li {
+    background-color:#fff ;
+    /*opacity: 0.7;*/
+    width: 80px;
+    height:80px;
+    border-radius: 50%;
+    border: 1px solid #106cb5;
+    behavior: url(PIE.htc);
+    text-align: center;
+    line-height: 80px;
+    margin-bottom: 30px;
+    cursor: pointer; }
+.nav li:hover {
+  background-color:#106cb5;
+
+}
+
+    .nav li a {
+      display: block;
+      font-size: 12px;
+      color: #333333; }
+  .nav li:last-child {
+    margin-bottom: 0; }
+.nav li:hover a{
+  color:#fff;
+}
+
+#btnTop {
+  position: fixed;
+  left: 20px;
+  bottom: 150px;
+  width: 48px;
+  height: 48px;
+  z-index: 999;
+  cursor: pointer; }
+  #btnTop a {
+    display: none; }
+    #btnTop a img {
+      width: 100%; }
+/*#information{*/
+  /*width:100px;*/
+  /*height:100px;*/
+  /*background-color: #989898;*/
+  /*position:fixed;*/
+  /*left:0;*/
+  /*top:450px;*/
+  /*cursor: pointer;*/
+/*}*/
+/*#information p{*/
+  /*font-size: 14px;*/
+  /*color:#fff;*/
+/*}*/
+
+/*#kuangInfor{*/
+  /*width:400px;*/
+  /*height:300px;*/
+  /*border:1px solid red;*/
+  /*position: fixed;*/
+  /*left:100px;*/
+  /*top:450px;*/
+  /*display: none;*/
+/*}*/
+/*banner轮播图*/
+.bannerbox{
+  width:1200px;
+  height:370px;
+  margin:0 auto;
+}
+#wrap{
+  width: 1200px;
+  height: 358px;
+  overflow: hidden;
+  position: relative;
+}
+ul#slide{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 9999px;
+}
+#slide li{
+  float: left;
+  width: 1200px;
+  height: 358px;
+}
+#slide li:nth-child(2) img{
+  width: 770px;
+  height: 358px;
+}
+#slide li:nth-child(4) img{
+  width: 770px;
+  height: 358px;
+}
+#slide li:nth-child(1) img{
+  max-width: 100%;
+}
+#slide li:nth-child(3) img{
+  max-width: 100%;
+}
+/*# sourceMappingURL=index.css.map */

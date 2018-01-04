@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<div id="pieChart" style="width: 100%;height:200px;"></div>
+		<script src="../../lib/echarts.min.js"></script>
+		<script src="../../lib/jquery-1.9.1.min.js"></script>
+		<script src="../../js/common/utils.js"></script>
+		<script>
+	    var pieChart = echarts.init(document.getElementById('pieChart'));
+	    pieOption = {
+	    	tooltip: {
+		        trigger: 'item',
+		        formatter: "{a} <br/>{b} : {c} ({d}%)"
+		    },
+		    series: [{
+		        name: '来访团体',
+		        type: 'pie',
+		        radius: '68%',
+		        center: ['50%', '50%'],
+		        clockwise: false,
+		        data: [{
+		            value: 41,
+		            name: '科研院所'
+		        }, {
+		            value: 98,
+		            name: '开发区'
+		        }, {
+		            value: 158,
+		            name: '其他'
+		        }, {
+		            value: 53,
+		            name: '高校'
+		        },{
+		            value: 311,
+		            name: '科技系统'
+		        }, {
+		            value: 6,
+		            name: '媒体'
+		        }, {
+		            value: 259,
+		            name: '社会团体'
+		        }, {
+		            value: 27,
+		            name: '军工系统'
+		        }],
+		        label: {
+		            normal: {
+		               show: true,
+		                position: 'left', //标签的位置
+		                formatter: "{b} : {c} ({d}%)",
+		                textStyle: {
+		                    color: '#fff',
+		                }
+		            }
+		        },
+		        labelLine: {
+		            normal: {
+		                show: true
+		            }
+		        },
+		        itemStyle: {
+		            normal: {
+		                borderWidth: 4,
+		             //   borderColor: '#ffffff',
+		             //   shadowBlur:'90',
+                        shadowColor:'rgba(255,255,255,0.6)',
+                        shadowOffsetY:'8',
+                        shadowOffsetX:'6'
+		            },
+		            emphasis: {
+		                borderWidth: 0,
+		                shadowBlur: 10,
+		                shadowOffsetX: 0,
+		                shadowColor: 'rgba(0, 0, 0, 0.5)'
+		            }
+		        }
+		    }],
+		    color: [
+		        '#fe8eae','#f5d978','#7899f5','#d303f9','#de9cfd','#f99b1d','#78f4f5','#65db99'
+		    ],
+	    }
+	    var currentIndex = -1;
+
+	    var timer1 = setInterval(function () {
+	        var dataLen = pieOption.series[0].data.length;
+	        // 取消之前高亮的图形
+	        pieChart.dispatchAction({
+	            type: 'downplay',
+	            seriesIndex: 0,
+	            dataIndex: currentIndex
+	        });
+	
+	        currentIndex = (currentIndex + 1) % dataLen;
+	
+	        // 高亮当前图形
+	        pieChart.dispatchAction({
+	            type: 'highlight',
+	            seriesIndex: 0,
+	            dataIndex: currentIndex
+	        });
+	
+	    }, 1000);
+	    pieChart.setOption(pieOption);
+	    </script>
+	</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="chinaMap" style="width:100%; height: 550px;"></div>
+		<p style="position: absolute;z-index: 999;left: 1068px;top: 422px;color: #fff;font-size: 18px;">来自全国128个城市</p>
+        <script src="../../../static/datavisual/lib/echarts.min.js"></script>
+        <script src="../../../static/datavisual/lib/jquery-1.9.1.min.js"></script>
+	    <script src="../../../static/datavisual/js/common/world.js"></script>
+	    <script src="../../../static/datavisual/js/common/bmap.min.js"></script>
+	    <script src="../../../static/datavisual/js/common/china.js"></script>
+
+	     <script type="text/javascript">
+	    	request();
+	    	lineRequest();
+	    	var regionCoor = [];	//区域坐标
+	    	var lineCoor = [];	//飞
+	    	//获取区域坐标点
+	    	function request(){
+				$.get('http://test.xatrm.com/select/dv_visitor_loc_1', function(data){
+					if (data) {
+						data = JSON.parse(data);
+						for(var i=0; i<data.length; i++) {
+							regionCoor.push({"name": data[i]["loc"], "value": data[i]["coordinate"].split(',')})					
+						}
+						worldChart.setOption(option);
+					}
+				});
+			};
+			function lineRequest(){
+				$.get('http://test.xatrm.com/select/dv_visitor_loc_1', function(lineData){
+						console.log("lineData:"+lineData);
+					if (lineData) {
+						lineData = JSON.parse(lineData);
+						for(var j=0; j<lineData.length; j++) {
+							lineCoor.push({"formName": "西安市", "toName": lineData[j]["loc"],"coords":[[108.940175, 34.341568],lineData[j]["coordinate"].split(',')]});
+						}
+						worldChart.setOption(option);
+					}
+				});
+			}
+	    
+	    	var worldChart = echarts.init(document.getElementById('chinaMap'));
+	    	
+	    	var geoCoordMap = {
+			    '西安': [108.95, 34.27]
+			};
+			var xianCor = [
+				{
+	                "name": "西安",
+	                "value": [108.940175, 34.341568],
+	                "symbolSize": 14,
+	                "itemStyle": {
+	                    "normal": {
+	                        "color": "#fff"  //"#F58158"
+	                    }
+	                }
+	            }
+			];
+			
+			
+			
+			var planePath = 'path://M1705.06,1318.313v-89.254l-319.9-221.799l0.073-208.063c0.521-84.662-26.629-121.796-63.961-121.491c-37.332-0.305-64.482,36.829-63.961,121.491l0.073,208.063l-319.9,221.799v89.254l330.343-157.288l12.238,241.308l-134.449,92.931l0.531,42.034l175.125-42.917l175.125,42.917l0.531-42.034l-134.449-92.931l12.238-241.308L1705.06,1318.313z';
+			function formtGCData(geoData, data, srcNam, dest) {
+			    var tGeoDt = [];
+			    if (dest) {
+			        for (var i = 0, len = data.length; i < len; i++) {
+			            if (srcNam != data[i].name) {
+			                tGeoDt.push({
+			                    coords: [geoData[srcNam], geoData[data[i].name]]
+			                });
+			            }
+			        }
+			    } else {
+			        for (var i = 0, len = data.length; i < len; i++) {
+			            if (srcNam != data[i].name) {
+			                tGeoDt.push({
+			                    coords: [geoData[data[i].name], geoData[srcNam]]
+			                });
+			            }
+			        }
+			    }
+			    return tGeoDt;
+			}
+			
+			function formtVData(geoData, data, srcNam) {
+			    var tGeoDt = [];
+			    for (var i = 0, len = data.length; i < len; i++) {
+			        var tNam = data[i].name
+			        if (srcNam != tNam) {
+			            tGeoDt.push({
+			                name: tNam,
+			                value: geoData[tNam],
+			                symbolSize: v[i],
+			                itemStyle: {
+			
+			                    normal: {
+			                        color: '#f79906',	//红色  ffc100黄色
+			                        borderColor: 'gold'
+			                    }
+			                }
+			            });
+			        }
+			
+			    }
+			    tGeoDt.push({
+			        name: srcNam,
+			        value: geoData[srcNam],
+			        symbolSize: 8,
+			        itemStyle: {
+			            normal: {
+			                color: '#60ff44',	//蓝色
+			                borderColor: '#fff'
+			            }
+			        }
+			    });
+			    return tGeoDt;
+			}
+			option = {
+	            title: {
+	                text: '西安科技大市场接待来访地区示意图',
+	                left: 'center',
+	                top:'15%',
+	                textStyle: {
+	                    color: '#fff',
+	                    fontSize: 18
+	                }
+	            },
+	            legend: {
+	                show: false,
+	                orient: 'vertical',
+	                top: 'bottom',
+	                left: 'right',
+	                data: ['地点', '线路'],
+	                textStyle: {
+	                    color: '#fff'
+	                }
+	            },
+	            geo: {
+	                map: 'china',
+	                label: {
+	                    emphasis: {
+	                        show: false
+	                    }
+	                },
+	                roam: true,
+	                itemStyle: {
+	                    normal: {
+	                    	color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+	                    		  offset: 0, color: 'rgba(1, 17, 154, 0.6)' // 0% 处的颜色27a7f8
+	                    		}, {
+	                    		  offset: 1, color: 'rgba(1, 17, 154, 0.6)' // 100% 处的颜色
+	                    		}], false),
+	                       
+	                        borderColor: '#aeb0b2',//#404a59,
+	                        borderWidth : 0.5,
+	                        areaColor: '#000055'
+	                    },
+	                    emphasis: {
+	                        areaColor: '#2a333d'
+	                    }
+	                }
+	            },
+	            series: [
+	            {
+	                name: '地点',
+	                type: 'effectScatter',
+	                coordinateSystem: 'geo',
+	                zlevel: 2,
+	                rippleEffect: {
+	                    brushType: 'stroke'
+	                },
+	                label: {
+	                    emphasis: {
+	                        show: true,
+	                        position: 'right',
+	                        formatter: '{b}'
+	                    }
+	                },
+	                symbolSize: 2,
+	                showEffectOn: 'render',
+	                itemStyle: {
+	                    normal: {
+	                        color: '#adfa18'
+	                    }
+	                },
+	                data: regionCoor
+	            }, {
+	                name: '线路',
+	                type: 'lines',
+	                coordinateSystem: 'geo',
+	                zlevel: 4,
+	                large: true,
+	                effect: {
+	                    show: true,
+	                    constantSpeed: 30,
+	                    symbol: 'pin',
+	                    symbolSize: 3,
+	                    trailLength: 0,
+	                },
+	                lineStyle: {
+	                    normal: {
+	                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+	                            offset: 0,
+	                            color: '#27a7f8'  //#58B3CC
+	                        }, {
+	                            offset: 1,
+	                            color: '#27a7f8'   //"##27a7f8"
+	                        }], false),
+	                        width: 3,
+	                        opacity: 0.2,
+	                        curveness: 0.1
+	                    }
+	                },
+	                data: lineCoor
+	            },
+	            {
+	                name: '西安',
+	                type: 'effectScatter',
+	                coordinateSystem: 'geo',
+	                zlevel: 99,
+	                rippleEffect: {
+	                    brushType: 'stroke'
+	                },
+	                label: {
+	                	normal: {
+	                        show: true,
+	                        position: 'right',
+	                        formatter: '{b}'
+	                   },
+	                    emphasis: {
+	                        show: true,
+	                        position: 'right',
+	                        formatter: '{b}'
+	                    }
+	                },
+	                symbolSize: 55,
+	                showEffectOn: 'render',
+	                itemStyle: {
+	                    normal: {
+	                        color: '#46bee9'
+	                    }
+	                },
+	                data: xianCor
+	            }]
+			};
+	    </script>
+
+	   
+	</body>
+</html>
+

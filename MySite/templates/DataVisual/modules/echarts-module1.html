@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+			<div class="contentCharts" id="mainChart" style="width:100%;height:200px;">
+				
+			</div>	
+		<script src="../../lib/echarts.min.js"></script>
+		<script type="text/javascript">
+			var mainChart = echarts.init(document.getElementById('mainChart'));
+			//app.title = '正负条形图';
+
+			 var option = {
+			    tooltip : {
+			        trigger: 'axis',
+			        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+			            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+			        }
+			    },
+			    legend: {
+			    	top:"-2",
+			    	textStyle:{
+			    		color:"#fff"
+			    	},
+			    	data:['利润', '支出', '收入']
+			    },
+			    grid: {
+			        left: '1%',
+			        right: '4%',
+			        bottom: '8%',
+			        top:'10%',
+			        containLabel: true
+			    },
+			    xAxis : [
+			        {
+			            type : 'value',
+			            nameTextStyle: {
+				            color: '#fff'
+				        },
+				        splitLine:{
+							show:true
+						},
+				        axisLine:{
+				        	lineStyle:{
+				        		color:"#fff"
+				        	}
+				        }
+			        }
+			    ],
+			    yAxis : [
+			        {
+			            type : 'category',
+			            axisTick : {show: false},
+			            nameTextStyle: {
+				            color: '#fff'
+				        },
+				        axisLine:{
+				        	lineStyle:{
+				        		color:"#fff"
+				        	}
+				        },
+			            data : ['周一','周二','周三','周四','周五','周六','周日']
+			        }
+			    ],
+			    series : [
+			        {
+			            name:'利润',
+			            type:'bar',
+			            label: {
+			                normal: {
+			                    show: true,
+			                    position: 'inside'
+			                }
+			            },
+			            itemStyle:{
+			            	normal:{
+			            		color:"#b0332e"
+			            	}
+			            },
+			            data:[200, 170, 240, 244, 200, 220, 210]
+			        },
+			        {
+			            name:'收入',
+			            type:'bar',
+			            stack: '总量',
+			            label: {
+			                normal: {
+			                    show: true,
+			                    color:"#fff"
+			                }
+			            },
+			            itemStyle:{
+			            	normal:{
+			            		color:"#c3cbd1"
+			            	}
+			            },
+			            data:[320, 302, 341, 374, 390, 450, 420]
+			        },
+			        {
+			            name:'支出',
+			            type:'bar',
+			            stack: '总量',
+			            label: {
+			                normal: {
+			                    show: true,
+			                    position: 'left'
+			                }
+			            },
+			            itemStyle:{
+			            	normal:{
+			            		color:"#89bba6"
+			            	}
+			            },
+			            data:[-120, -132, -101, -134, -190, -230, -210]
+			        }
+			    ]
+			};
+			mainChart.setOption(option);
+		</script>
+	</body>
+</html>

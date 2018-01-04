@@ -1,0 +1,50 @@
+
+.w--260{
+	width: 20%;
+    float:left;
+}
+.w--560{
+    width: 80%;
+    padding: 10px;
+    float:left;
+}
+
+.lg_l {
+    margin: 10px;
+}
+
+
+.select {
+    width: 20%;
+}
+
+.dlt1 {
+    display: block;
+}
+
+thead {
+	background: #337ab7;
+	color: #ffffff;
+}
+
+.lg_zd {
+	background: #337ab7;
+	color: #ffffff;
+}
+
+th {
+    text-align: center;
+}
+
+.pagination li{
+    float: left;
+    list-style: none;
+	border:1px;
+	padding:0;
+	margin:0 auto;
+}
+
+#tpn {
+    text-align: right;
+}
+

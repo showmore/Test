@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<body>
+<div id="pieChart" style="width: 260px;height:210px;"></div>
+
+<script src="../../lib/echarts.min.js"></script>
+<script src="../../lib/jquery-1.9.1.min.js"></script>
+<script src="../../js/common/utils.js"></script>
+<script>
+    var pieChart = echarts.init(document.getElementById('pieChart'));
+
+    var pieOption = {
+        title: {
+            text: '运营模式',
+            left: 'center',
+            textStyle:{
+                color:'#fff',
+                fontSize: 14
+            }
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {d}%"
+        },
+        series: [{
+            name: '运营模式',
+            type: 'pie',
+            radius: ['20%', '30%'],
+            color: ['#d3a100', '#b81c2b', '#007457', '#6c1f76', '#006979', '#191d6a', '#824221', '#58592a'],
+            label: {
+                normal: {
+                    position: 'outside',
+                    formatter: function (val) {
+                        return val.name + ' ' + val.percent + '%';
+                    },
+                    textStyle: {
+                        color: '#fff'
+                    }
+                }
+            },
+            data: [{
+                value: 8065,
+                name: '线上线下结合'
+            }, {
+                value: 323,
+                name: '仅线上'
+            }, {
+                value: 698,
+                name: '仅线下'
+            }, {
+                value: 645,
+                name: '其他'
+            }]
+        }]
+    };
+
+    var currentIndex = -1;
+
+    setInterval(function () {
+        var dataLen = pieOption.series[0].data.length;
+        // 取消之前高亮的图形
+        pieChart.dispatchAction({
+            type: 'downplay',
+            seriesIndex: 0,
+            dataIndex: currentIndex
+        });
+        currentIndex = (currentIndex + 1) % dataLen;
+
+        // 高亮当前图形
+        pieChart.dispatchAction({
+            type: 'highlight',
+            seriesIndex: 0,
+            dataIndex: currentIndex
+        });
+        // 显示 tooltip
+        pieChart.dispatchAction({
+            type: 'showTip',
+            seriesIndex: 0,
+            dataIndex: currentIndex
+        });
+    }, 1000);
+
+    pieChart.setOption(pieOption);
+</script>
+</body>
+</html>

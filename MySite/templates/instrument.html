@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>接口管理系统</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/base.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/instr.css">
+    <script src="../static/js/jquery-3.2.1.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/common.js"></script>
+</head>
+
+<body>
+{#    <div class="ui-dialog" id="dialogMove" onselectstart='return false;'>#}
+{#        <div class="ui-dialog-title" id="dialogDrag"  onselectstart="return false;" >#}
+{#            登录通行证#}
+{#            <a class="ui-dialog-closebutton" href="javascript:hideDialog();"></a>#}
+{#        </div>#}
+{#        <div class="ui-dialog-content">#}
+{#                <input class="ui-dialog-input ui-dialog-input-username" type="input" placeholder="手机/邮箱/用户名" />#}
+{#                <input class="ui-dialog-input ui-dialog-input-password" type="password" placeholder="密码" />#}
+{#            <div class="ui-dialog-l40">#}
+{#                <a href="#">忘记密码</a>#}
+{#            </div>#}
+{#            <div>#}
+{#                <a class="ui-dialog-submit" href="#" >登录</a>#}
+{#            </div>#}
+{#            <div class="ui-dialog-l40">#}
+{#                <a href="#">立即注册</a>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#    <div id="zzc"></div>#}
+
+    <ul class="nav-my fix">
+        <li><a href="/">主页</a></li>
+        <li><a href="/instr">信息查询</a></li>
+        <li><a href="#">版本查询</a></li>
+        <li><a href="#">数据处理</a></li>
+        <li><a href="#">接口管理</a></li>
+        <li><a href="/test_easyui">Jquery EasyUI 测试</a></li>
+        <li><a target="_blank" href="/jiaoda">交大宣传页</a></li>
+        <li><a target="_blank" href="/dv">数据可视化</a></li>
+    </ul>
+    <br/>
+    <div class="wrapper">
+        <ol class="breadcrumb">
+            <li><a href="/index">首页</a></li>
+            <li><a href="/instr">信息查询</a></li>
+            <li class="active">仪器信息查询</li>
+        </ol>
+        <div class="w--260">
+            <div class="lg_l">
+                <div class="list-group-item active" ">学科领域</div>
+            {% for i in subject_list %}
+                        <a herf="# " class="list-group-item dlt1 ">{{ i }}</a>
+                    {% endfor %}
+
+        </div>
+            <div class="panel-group lg_l " id="accordion ">
+            <div class="panel panel-default ">
+            <div class="panel-heading list-group-item active ">
+              <h4 class="panel-title ">
+                <a data-toggle="collapse " data-parent="#accordion "
+                  href="#collapseOne ">
+                  点击我进行展开，再次点击我进行折叠。
+        </a>
+      </h4>
+    </div>
+            <div id="collapseOne " class="panel-collapse collapse in ">
+              <div class="panel-body ">
+                  可折叠内容信息
+              </div>
+            </div>
+            </div>
+            </div>
+        </div>
+        <div class="w--560 ">
+
+                <form class="form-inline " role="form " style="margin-bottom: 10px " action="/instr/ " method="get ">
+                    <div class="form-group " style="margin-right: 10px ">
+                    <label for="eqname ">仪器名称:</label>
+                    <input type="text " class="form-control " value="{{ eqName }} " name="eqName " id="eqname ">
+                    </div>
+                    <div class="form-group " style="margin-right: 10px ">
+                    <label for="eqOrg ">仪器单位:</label>
+                    <input type="text " class="form-control " value="{{ eqOrg }} " name="eqOrg " id="eqOrg ">
+                    </div>
+                    <div class="form-group " style="margin-right: 10px ">
+                    <label for="eqSubject ">仪器领域:</label>
+                    <input type="text " class="form-control " value="{{ eqSubject }} " name="eqSubject " id="eqSubject ">
+                    </div>
+                    <button type="submit " class="btn btn-default ">搜索</button>
+                </form>
+
+                <table class="table table-hover table-bordered " border="1 ">
+                    <thead>
+                                <th>仪器名称</th>
+                                <th>服务规定</th>
+                                <th>学科领域</th>
+                                <th>设备分类</th>
+                                <th>隶属单位</th>
+                                <th>状态</th>
+                                <th>跳转地址</th>
+                            </thead>
+                    <tbody>
+                                {% for line in customer.object_list %}
+                                <tr>
+                                    <td width="200 "><a href=" ">{{ line.cname }}</a></td>
+                                    <td width="200 ">{{ line.requirement }}</td>
+                                    <td width="200 ">{{ line.subject }}</td>
+                                    <td width="200 ">{{ line.instrCategory }}</td>
+                                    <td width="200 ">{{ line.org }}</td>
+                                    <td width="100 ">{{ line.status }}</td>
+                                    <td width="200 ">{{ line.serviceUrl }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                </table>
+                <div>
+                    <nav aria-label="Page navigation ">
+                        <ul class='pagination'>
+                            {# 如果data元素有上一页，则显示上一页箭头且修改链接地址#}
+                            {% if customer.has_previous %}
+                            <li>
+                                <a href="?eqName={{ eqName }}&eqOrg={{ eqOrg }}&eqSubject={{ eqSubject }}&page={{ customer.previous_page_number }} " aria-label="Previous ">
+                                        <span aria-hidden="true ">&laquo; 上一页</span>
+                                    </a>
+                            </li>
+                            {% endif %} {# 生成导航标签页码#}
+                            {% for pg in paginator.page_range %}
+                                {% if number == pg %} {# 将view传来的页码相等的导航页码高亮#}
+                            <li><a href="?eqName={{ eqName }}&eqOrg={{ eqOrg }}&eqSubject={{ eqSubject }}&page={{ pg }} ">{{ pg }}</a></li>
+                            {% else %}
+                            <li><a href="?eqName={{ eqName }}&eqOrg={{ eqOrg }}&eqSubject={{ eqSubject }}&page={{ pg }} ">{{ pg }}</a></li>
+                            {% endif %} {% endfor %} {# 如果data有下一页，则显示下一页箭头且修改链接地址#} {% if customer.has_next %}
+                            <li>
+                                <a href="?eqName={{ eqName }}&eqOrg={{ eqOrg }}&eqSubject={{ eqSubject }}&page={{ customer.next_page_number }} " aria-label="Next ">
+                                    <span aria-hidden="true ">&raquo; 下一页</span>
+                                </a>
+                            </li>
+                        </ul>
+                        {% endif %}
+                    </nav>
+                </div>
+                <div id="tpn ">
+                Page {{ customer.number }} of {{ customer.paginator.num_pages }}.
+                <br/> {{ eqName }},{{ eqOrg }},{{ eqSubject }}
+            </div>
+            </div>
+    </div>
+
+</body>
+<footer>
+    <span>Copyright © 2010 科技大市场 All Rights Reserved 陕ICP备13006569号
+    <br>
+    版权所有：西安科技大市场有限公司
+    <br>
+    服务热线：029-68518700 029-68518800
+    </span>
+</footer>
+
+</html>

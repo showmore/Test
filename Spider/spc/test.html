@@ -1,0 +1,1047 @@
+<html>
+
+<head>
+    <link href="/gb168/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="标准,标准下载,标准咨询,标准咨询,免费查询,国家标准,行业标准,企业标准,地方标准,国际标准,国外标准,ISO,IEC,中国质检出版社,中国标准在线服务网,北京标科网络技术有限公司,正版标准,权威标准,标准查新,标准比对,标准购买,标准咨询,标准数据库定制,系统开发,软件研发,服务器托管" name="keywords" />
+    <meta content="标准,标准下载,标准咨询,标准咨询,免费查询,国家标准,行业标准,企业标准,地方标准,国际标准,国外标准,ISO,IEC,中国质检出版社,中国标准在线服务网,北京标科网络技术有限公司,正版标准,权威标准,标准查新,标准比对,标准购买,标准咨询,标准数据库定制,系统开发,软件研发,服务器托管" name="description" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="fcd4927320ea820aceebd300148dc5af" name="baidu_union_verify" />
+    <link href="/gb168/styles/base.css" rel="stylesheet" type="text/css" />
+    <link href="/gb168/styles/style_zh_CN.css" rel="stylesheet" type="text/css" />
+    <link href="/gb168/styles/autocomplete.css" rel="stylesheet" type="text/css" />
+    <link href="/gb168/js/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script src="//hm.baidu.com/hm.js?b5bdb81ba9543a3b3567778ab86df74b"></script>
+    <script src="//hm.baidu.com/hm.js?b5bdb81ba9543a3b3567778ab86df74b"></script>
+    <script src="//hm.baidu.com/hm.js?b5bdb81ba9543a3b3567778ab86df74b"></script>
+    <script src="//hm.baidu.com/hm.js?b5bdb81ba9543a3b3567778ab86df74b"></script>
+    <script src="/gb168/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/gb168/js/jquery-ui-datepicker.js" type="text/javascript"></script>
+    <script src="/gb168/js/stdtype.js" type="text/javascript"></script>
+    <script src="/gb168/js/jquery.validate.js" type="text/javascript"></script>
+    <script src="/gb168/js/validate_zh_CN.js" type="text/javascript"></script>
+    <!-- <script type="text/javascript" src="/gb168/js/search_zh_CN.js"></script> -->
+    <script src="/gb168/js/formatdate.js" type="text/javascript"></script>
+    <script src="/gb168/js/jquery.cookie.js" type="text/javascript"></script>
+    <!--去除自动补全功能
+<script type="text/javascript" src="/gb168/js/autocomplete.js"></script>
+  -->
+    <script src="/gb168/js/common.js" type="text/javascript"></script>
+    <script src="/gb168/js/search.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(function() {
+        //获取国际化cookie
+        var locale = $.cookie('locale');
+
+        //如果cookie为空，获取当前浏览器语言
+        if (locale == '' || locale == 'undefined' || locale == null) {
+
+            var baseLang;
+
+            if (!navigator.language) {
+                baseLang = navigator.browserLanguage;
+            } else {
+                baseLang = navigator.language;
+            }
+
+            /* language match */
+            switch (baseLang) {
+                case "ja":
+                    /* 日本 */
+                    window.location = "?lang=ja&text=";
+                    break;
+                case "ko-HR":
+                    /* 朝鲜语 */
+                    window.location = "?lang=ko&text=";
+                    break;
+                case "en":
+                    /* english */
+                    window.location = "?lang=en_US&text=";
+                    break;
+                case "zh-HK":
+                    /* 中国香港 */
+                    window.location = "?lang=zh_HK&text=";
+                    break;
+                default:
+                    window.location = "?lang=zh_CN&text=";
+                    break;
+            }
+        };
+    });
+
+    /* var xmlhttp;
+ 	var x = 0;
+ 	var url = "/gb168/stdlib/wushan";
+	function createXmlObject(){ 
+		if(window.ActiveXObject){ 
+		  xmlhttp = new ActiveXObject("Microsoft.XMLHTTP"); 
+		  }else if(window.XMLHttpRequest) { 
+		    xmlhttp = new XMLHttpRequest(); 
+		 
+		  } 
+		} 
+	//创建xmlhttp对象；然后在调用方法得到这个对象 
+	
+	function myRefresh(){ 
+	   createXmlObject(); 
+	   if (xmlhttp.readyState == 4)  {// 收到完整的服务器响应 
+		   } 
+	   if (xmlhttp.status == 200) {//HTTP服务器响应的值OK
+		   } 
+	 
+		xmlhttp.open('GET', url, true);  
+	 
+		xmlhttp.send(null);  
+		x++;
+		if(x<60){  //60次，也就是Session真正的过期时间是30分钟 
+			setTimeout("myRefresh()",30*1000); //30秒 
+		} 
+	}
+	myRefresh();   */
+    //收藏本站 
+    function addfavorite() {
+
+        var url = 'http://www.gb168.com';
+        var title = '中国标准在线服务网';
+        try {
+            window.external.addFavorite(url, title);
+        } catch (e) {
+            try {
+                window.sidebar.addPanel(title, url, "");
+            } catch (e) {
+                alert("加入收藏失败，请使用Ctrl+D进行添加，或者手动在浏览器里设置。");
+            }
+        }
+    }
+
+    function popupDiv(div_id) {
+        var div_obj = $("#" + div_id);
+        //窗口宽度,高度
+        var winWidth = $(window).width();
+        var winHeight = $(window).height();
+        //弹出的div的宽度,高度
+        var popHeight = div_obj.height();
+        var popWidth = div_obj.width();
+        var left = (winWidth - popWidth) / 2;
+        var top = (winHeight - popHeight) / 2;
+        div_obj.animate({ opacity: "show", right: left, top: top, width: popWidth, height: popHeight }, 0);
+    }
+
+    function hideDiv(div_id) {
+        $("#" + div_id).animate({ opacity: "hide" }, 300);
+    }
+    </script>
+</head>
+
+<body>
+    <!-- -->
+    <!--  暂时不用，不要删除 -->
+    <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?b5bdb81ba9543a3b3567778ab86df74b";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="标准,标准下载,标准咨询,标准咨询,免费查询,国家标准,行业标准,企业标准,地方标准,国际标准,国外标准,ISO,IEC,中国质检出版社,中国标准在线服务网,北京标科网络技术有限公司,正版标准,权威标准,标准查新,标准比对,标准购买,标准咨询,标准数据库定制,系统开发,软件研发,服务器托管" name="keywords" />
+    <meta content="标准,标准下载,标准咨询,标准咨询,免费查询,国家标准,行业标准,企业标准,地方标准,国际标准,国外标准,ISO,IEC,中国质检出版社,中国标准在线服务网,北京标科网络技术有限公司,正版标准,权威标准,标准查新,标准比对,标准购买,标准咨询,标准数据库定制,系统开发,软件研发,服务器托管" name="description" />
+    <meta content="IE=edge" http-equiv="X-UA-Compat ible" />
+    <script src="/gb168/js/viewjs/index.js" type="text/javascript"></script>
+    <!--[if lte IE 6]>
+
+<script type="text/javascript" src="js/fixpng.js"></script>	
+<script type="text/javascript" src="js/ie6.js"></script>
+<![endif]-->
+    <script type="text/javascript">
+    var str = "";
+
+    $(function() {
+        $(".gb-mobile").mouseover(function() {
+            $(".qrcode").show();
+        });
+        $(".qrcode").mouseout(function() {
+            $(this).hide();
+        });
+        $(document).click(function() {
+            $(".qrcode").hide();
+        });
+    });
+
+    $(function() {
+
+        $(".top-nav li").hover(function() {
+            $(this).children(".navlist-web").stop().slideDown();
+            $(this).css('background', '#AC2F42');
+        }, function() {
+            $(this).children(".navlist-web").slideUp("fast");
+            $(this).css('background', '#e53937');
+        });
+        $(".navlist-web a").mouseover(function() {
+            $(this).find("img").prop("src", "/gb168/images/rsan.png");
+        });
+        $(".navlist-web a").mouseout(function() {
+            $(this).find("img").prop("src", "/gb168/images/wsan.png");
+        });
+    });
+    $(function() {
+        //首页导航
+        $(".nav-bar .nav a").mouseover(function() {
+            $(this).css('color', 'red');
+        });
+        $(".nav-bar .nav a").mouseout(function() {
+            $(this).css('color', '');
+        });
+        //基本检索或全文检索
+        var search = '';
+        var searchBtn = $(".searchtype-btn").find("label");
+        if (search == "a100") {
+            searchBtn
+                .text('标准号');
+            $("input[name='search']").val("a100");
+        } else if (search == "a301") {
+            searchBtn
+                .text('中文名称');
+            $("input[name='search']").val("a301");
+        } else if (search == "a302") {
+            searchBtn
+                .text('英文名称');
+            $("input[name='search']").val("a302");
+        } else if (search == "fulltext") {
+            $("input[name='search']").val("fulltext");
+            searchBtn
+                .text('全文');
+
+        } else if (search == "book") {
+            $("input[name='search']").val("book");
+            searchBtn
+                .text('图书');
+
+        }
+
+        $(".top-nav li").hover(function() {
+            $(this).children(".navlist").stop().slideDown();
+            $(this).css('background', '#AC2F42');
+        }, function() {
+            $(this).children(".navlist").slideUp("fast");
+            $(this).css('background', '#e53937');
+        });
+        $(".navlist a").mouseover(function() {
+            $(this).find("img").prop("src", "/gb168/images/rsan.png");
+        });
+        $(".navlist a").mouseout(function() {
+            $(this).find("img").prop("src", "/gb168/images/wsan.png");
+        });
+
+        var key = $("#search-text").val();
+        var keyword = '';
+
+        function trim(stringToTrim) {
+            return stringToTrim.replace(/^\s+|\s+$/g, "");
+        }
+
+        if ($.trim(key) == null || $.trim(key) == "") {
+            if (keyword != null && keyword != '') {
+                $("#search-text").val(keyword);
+            }
+            /* else{
+            	//如果搜索添加为空，随机放入一个
+            	var arry =  new Array('城市环境','钢筋混凝土','通用硅酸盐水泥','国家纺织产品','塑料购物袋','生活饮用水','角度尺寸','质量管理体系','包装储运图示标志','煤的工业分析','金属材料','计数抽样检验程序','化学试剂','运输包装','分析实验室用水','碳素结构钢','豆制食品业','工业产品使用','插头插座','电磁电流','室内装饰装修材料','外壳防护等级','家用和类似用途电器的安全','预包装食品标签通则','食品安全国家标准','人造板理化性能','质量管理体系','信息安全技术','钢');
+            	
+            	var index = Math.round(Math.random() * arry.length);
+            	
+            	str = arry[index];
+            	$("#search-text").val(str);
+            } */
+
+        } else {
+            str = keyword;
+        }
+
+    });
+
+    /*光标触发文本框事件*/
+    function focusText(v) {
+        //if($(v).val() == str){
+        $(v).css('color', 'black');
+        //$(v).val('');
+        //}
+    }
+
+    /*鼠标离开文本框事件*/
+    function blurText(v) {
+        //if($(v).val() == ''){
+        $(v).css('color', 'gray');
+        //$(v).val(str);
+        //}
+    }
+
+    /*提交之前判断搜索条件是否为空，为空添加搜索关键词*/
+    function searchKey() {
+        var key = $("#search-text").val();
+        if ($.trim(key) == null || $.trim(key) == "") {
+            $("#search-text").val(str);
+        }
+    }
+    /*回车键提交请求 */
+    function keyDown(e) {
+        var ev = window.event || e;
+        if (ev.keyCode == 13) {
+            var type = $("input[name='search']").val();
+            var searchForm = $(".search-form").find("form[name='form1']");
+            if (type == 'fulltext') {
+                searchForm.attr("action", "/gb168/search"); //全文检索 
+            } else if (type == 'book') {
+                searchForm.attr("action", "/gb168/book/booksearch"); //图书检索 
+            } else {
+                searchForm.attr("action", "/gb168/basicsearch"); //基本检索
+            }
+            searchForm.submit();
+        }
+    }
+
+    function AddFavorite(sURL, sTitle) {
+
+        sURL = encodeURI(sURL);
+        try {
+
+            window.external.addFavorite(sURL, sTitle);
+
+        } catch (e) {
+
+            try {
+
+                window.sidebar.addPanel(sTitle, sURL, "");
+
+            } catch (e) {
+
+                alert("加入收藏失败，请使用Ctrl+D进行添加，或者手动在浏览器里设置。");
+
+            }
+
+        }
+
+    }
+    </script>
+    <style type="text/css">
+    #topbar ul li .qrcode {
+        position: absolute;
+        width: 300px;
+        /* height: 227px; */
+        background: #fff;
+        left: -48px;
+        top: 26px;
+        box-shadow: 0 0 5px #aaa;
+        cursor: default;
+        display: none;
+        padding: 5px;
+    }
+
+    #topbar ul li .qrcode .qrcode-content .qrcode-item {
+        float: left;
+    }
+
+    #topbar ul li .qrcode .qrcode-content img {
+        display: inline-block;
+        width: 110px;
+        float: left;
+    }
+
+    #topbar ul li .qrcode .qrcode-content .divider {
+        width: 100%;
+        height: 0px;
+        border-bottom: 1px dashed #000;
+        margin: 5px 0;
+        float: left;
+    }
+
+    #topbar ul li .qrcode .qrcode-content span {
+        color: #000;
+        display: inline-block;
+        float: left;
+    }
+
+    #topbar ul li .qrcode b {
+        width: 0;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+        position: absolute;
+        left: 26%;
+        top: -10px;
+        margin-left: -2px;
+        border-width: 5px;
+        border-style: dashed dashed solid;
+        border-color: transparent transparent #fff;
+        cursor: default;
+    }
+
+    img {
+        border: none;
+    }
+
+    .logo a img {
+        azimuth: expression(this.pngSet ? this.pngSet=true:( this.nodeName=="IMG" && this.src.toLowerCase ().indexOf('.png')>-1?(this.runtimeStyle.backgroundImage="none", this.runtimeStyle.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"+ this.src+ "', sizingMethod='image')", this.src="/gb168/images/transparent.gif"):(this.origBg=this.origBg? this.origBg:this.currentStyle.backgroundImage.toString().replace('url("', '').replace('")', ''),
+        this.runtimeStyle.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"+ this.origBg+ "', sizingMethod='crop')",
+        this.runtimeStyle.backgroundImage="none")), this.pngSet=true);
+    }
+
+    #search-text {
+        color: gray;
+    }
+    </style>
+    <div id="topbar">
+        <div class="top-cont clearfix">
+            <div class="top-login left" id="notloggedin">
+                <span>您好,欢迎光临中国标准在线服务网</span> [ <a href="/gb168/login">登录</a> | <a href="/gb168/register">免费注册</a> ]
+            </div>
+            <!-- 头部 导航条-->
+            <div class="top-nav right">
+                <ul>
+                    <li><a href="/gb168/customer/plugin">�0�2�0�2 插件下载</a></li>
+                    <li class="gb-mobile"><a href="/gb168/customer/app">�0�2�0�2
+							手机版
+					</a> </li>
+                    <li><a href="javascript:void(0)" onclick="AddFavorite(window.location,document.title)" rel="sidebar">�0�2�0�2 收藏本站</a></li>
+                    <li><a href="/gb168/home/customer">�0�2�0�2我的标准</a>
+                        <div class="navlist">
+                            <a class="pngfix" href="/gb168/home/customer">�0�2�0�2
+								我的信息
+							</a> <a class="pngfix" href="/gb168/home/account">�0�2�0�2
+								我的账户
+							</a> <a class="pngfix test" href="/gb168/home/findfinshedstandards">�0�2�0�2
+								我的订单
+							</a> <a class="pngfix" href="/gb168/home/findfavorites">�0�2�0�2
+								我的收藏
+							</a> <a class="pngfix" href="/gb168/orders/cart">�0�2�0�2 我的购物车</a>
+                        </div>
+                    </li>
+                    <li><a href="/gb168/customer">�0�2�0�2客户服务</a>
+                        <div class="navlist">
+                            <a class="pngfix" href="/gb168/customer">�0�2�0�2 客户须知</a>
+                            <a class="pngfix" href="/gb168/customer/questions">�0�2�0�2
+								常见问题
+							</a> <a class="pngfix test" href="/gb168/customer/paymentmethods">�0�2�0�2
+								付款方式
+							</a> <a class="pngfix" href="/gb168/customer/email">�0�2�0�2
+								客服邮箱
+							</a> <a class="pngfix" href="/gb168/customer/plugin">�0�2�0�2
+								插件下载
+							</a>
+                        </div>
+                    </li>
+                    <li><a href="">�0�2�0�2网站导航</a>
+                        <div class="navlist-web">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td><a class="pngfix" href="/gb168/index">�0�2�0�2
+											首页
+									</a></td>
+                                        <td><a class="pngfix" href="/gb168/customer/app">�0�2�0�2
+											手机版
+									</a></td>
+                                        <td><a class="pngfix" href="http://www.gb168.cn/std/indexpage/index.jsp">�0�2�0�2 旧版</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="pngfix" href="http://www.gb168.cn/foc/searches.do?onload=true">�0�2�0�2 强标免费</a></td>
+                                        <td><a class="pngfix" href="/gb168/product">�0�2�0�2
+											产品服务
+									</a></td>
+                                        <td><a class="pngfix" href="http://www.gb168.cn/std/info/protectNoSearch.jsp">�0�2�0�2 防伪查询</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="pngfix" href="/gb168/standardonline">�0�2�0�2
+											标准分类
+									</a></td>
+                                        <td><a class="pngfix" href="/gb168/customer">�0�2�0�2
+											客户服务
+									</a></td>
+                                        <td><a class="pngfix" href="/gb168/standardonline/replace?type=0">�0�2�0�2 被代替国标</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="pngfix" href="http://www.spc.net.cn">�0�2�0�2
+											标准图书
+									</a></td>
+                                        <td><a class="pngfix" href="/gb168/home/customer">�0�2�0�2
+											我的标准
+									</a></td>
+                                        <td><a class="pngfix" href="/gb168/standardonline/replace?type=1">�0�2�0�2 已废止标准</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="pngfix" href="/gb168/news/main">�0�2�0�2
+											标准资讯
+									</a></td>
+                                        <td><a class="pngfix" href="/gb168/about">�0�2�0�2
+											关于我们
+									</a></td>
+                                        <td><a class="pngfix" href="/gb168/standardonline/replace?type=2">�0�2�0�2 国标转行标
+									</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="selectedlanguage">�0�2�0�2简体中文</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix" id="header">
+        <h1 class="logo left">
+<a href="/gb168/index"><img alt="中国在线服务网" src="/gb168/images/logo2_zh_CN.png"/></a>
+</h1>
+        <div class="inputleft">
+            <div class="search right">
+                <div class="search-form">
+                    <form action="/gb168/basicsearch" method="post" name="form1" onsubmit="return searchKey();">
+                        <input class="ky" id="search-text" name="text" onblur="blurText(this);" onfocus="focusText(this);" onkeydown="keyDown(event)" placeholder="请输入标准号或标准名称关键词，如 '19001' 或 '食品'" type="text" value="" />
+                        <input class="btn" onclick="btnSub();" type="button" value="检 索" />
+                        <input class="advbtn" onclick="advancedSub();" type="button" value="高级检索" />
+                        <input name="search" type="hidden" value="a100" />
+                    </form>
+                    <form action="/gb168/basicsearch" method="post" name="basicform" onsubmit="return searchKey();">
+                        <input class="ky" id="basicsearch-text" name="text" type="hidden" value="" />
+                    </form>
+                    <form action="/gb168/advancedsearch" id="senior-form-header" method="post">
+                        <input name="sc" type="hidden" value="CN" />
+                    </form>
+                    <script type="text/javascript">
+                    /*判断搜索类型并提交*/
+                    function btnSub() {
+
+                        var type = $("input[name='search']").val();
+                        var searchForm = $(".search-form").find(
+                            "form[name='form1']");
+                        if (type == 'fulltext') {
+                            searchForm.attr("action", "/gb168/search");
+                        } else if (type == 'book') {
+                            searchForm.attr("action",
+                                "/gb168/book/booksearch"); //图书检索 
+                        } else {
+                            searchForm.attr("action",
+                                "/gb168/basicsearch");
+                        }
+                        var key = $("#search-text").val();
+
+                        if ($.trim(key) == null || $.trim(key) == "") {
+                            $("#colorbox").show();
+                            $(".operateMsg").children("p").text(
+                                "检索必须输入检索条件！");
+                            $(".operateMsg").show();
+                            msg = false;
+                        } else {
+                            searchForm.submit();
+                        }
+                    }
+
+                    function advancedSub() {
+                        $("#senior-form-header").submit();
+                    }
+                    $(function() {
+                        $("#basicsearch").click(function() {
+                            var text = $("#search-text").val();
+                            if (text != '' && text != null) {
+                                $("#basicsearch-text").val(text);
+                                $("form[name=basicform]").submit();
+                            } else {
+                                $(".operateMsg p").html("请输入关键词");
+                                $(".operateMsg").show();
+                                $("#colorbox").show();
+                                $(".contrast").hide();
+                            }
+                        });
+                    });
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <div class="nav-back" style="height: 12px; color: red">
+                <div class="nav">
+                    <ul class="nav-top">
+                        <li><a class="curr" href="/gb168/index"> <em> <font color="red"> 首页 </font>
+</em>
+</a></li>
+                        <li id="nav-frist">
+                            <a href="/gb168/stdlib/vipinfo" target="_blank"><em id="ppt">会员中心<img src="/gb168/images/newthems.png"/></em></a>
+                            <div class="nav-subnav" style="display: none">
+                                <ul>
+                                    <li><a href="/gb168/stdlib/view/readroom">电子阅览室</a></li>
+                                    <li><a href="/gb168/stdlib/view/zjwk"> 质检文库</a></li>
+                                    <li><a href="/gb168/stdlib/view/stdschedule">标准进度查询</a></li>
+                                    <li><a href="/gb168/made/madenewinfo">定制推送</a></li>
+                                    <li><a href="/gb168/made/trackstd">标准跟踪</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a class="curr" href="/gb168/standardonline" id="ppt"><em>标准分类</em></a></li>
+                        <li><a href="/gb168/product/review"><em>产品服务</em></a></li>
+                        <li><a href="http://www.sac.gov.cn/gzfw/ggcx" target="_blank"><em>标准公告</em></a>
+                        </li>
+                        <li><a href="/gb168/thematicdatabase"><em>专题数据库</em></a>
+                        </li>
+                        <li><a href="/gb168/about"><em>关于我们</em></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?b5bdb81ba9543a3b3567778ab86df74b";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="标准,标准下载,标准咨询,标准咨询,免费查询,国家标准,行业标准,企业标准,地方标准,国际标准,国外标准,ISO,IEC,中国质检出版社,中国标准在线服务网,北京标科网络技术有限公司,正版标准,权威标准,标准查新,标准比对,标准购买,标准咨询,标准数据库定制,系统开发,软件研发,服务器托管" name="keywords" />
+    <meta content="标准,标准下载,标准咨询,标准咨询,免费查询,国家标准,行业标准,企业标准,地方标准,国际标准,国外标准,ISO,IEC,中国质检出版社,中国标准在线服务网,北京标科网络技术有限公司,正版标准,权威标准,标准查新,标准比对,标准购买,标准咨询,标准数据库定制,系统开发,软件研发,服务器托管" name="description" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <link href="/gb168/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <title>标准分类-中国标准在线服务网</title>
+    <!--[if lte IE 6]>
+<script type="text/javascript" src="js/fixpng.js"></script>	
+<script type="text/javascript" src="js/ie6.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".nav .child-nav").parents().css({"z-index":"999"});
+	});
+</script>
+<![endif]-->
+    <style type="text/css">
+    .title a {
+        color: #e52929;
+    }
+
+    .online_list .online_content .list .standard {
+        margin-left: 0px;
+        margin-top: 5px;
+        padding-left: 10px;
+    }
+
+    .overlay-btn {
+        top: -2px!important;
+    }
+    /* .standard a {
+		position: absolute;
+		z-index: 1001;
+	}
+    */
+
+    #colorbox {
+        display: none;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1000px;
+        background: #000;
+        filter: alpha(opacity=40);
+        /*ie透明度20%*/
+        -moz-opacity: 0.8;
+        /*Moz + FF 透明度20%*/
+        opacity: 0.4;
+        position: fixed !important;
+        /*FF IE7*/
+        position: absolute;
+        /*IE6*/
+        top: 0;
+        _top: expression(eval(document.compatMode && document.compatMode=='CSS1Compat')? documentElement.scrollTop+ (document.documentElement.clientHeight-this.offsetHeight)/2:/*IE6*/
+        document.body.scrollTop+ (document.body.clientHeight- this.clientHeight)/2);
+        /*IE5 IE5.5*/
+    }
+
+    .operateMsg {
+        position: fixed!important;
+        /*FF IE7*/
+        position: absolute;
+        /*IE6*/
+        top: 180px;
+        z-index: 990;
+        margin-top: 8%;
+        margin-left: 33%;
+
+        _top: expression(eval(document.compatMode && document.compatMode=='CSS1Compat') ? documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2:/*IE6*/
+        document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);
+        /*IE5 IE5.5*/
+    }
+    </style>
+    <div id="content">
+        <div class="online_list">
+            <div class="online_content" id="A">
+                <div class="title">
+                    <div class="img"></div><span><a href="#A" name="A">CCS · 分类</a></span></div>
+                <div class="list" id="CN_list" style="height: auto;">
+                    <div class="standard"><a href="javascript:submit('综合','A','1','国内标准')" target="_blank"> A 综合</a></div>
+                    <div class="standard"><a href="javascript:submit('农业、林业','B','1','国内标准')" target="_blank"> B 农业、林业</a></div>
+                    <div class="standard"><a href="javascript:submit('医药、卫生、劳动保护','C','1','国内标准')" target="_blank"> C 医药、卫生、劳动保护</a></div>
+                    <div class="standard"><a href="javascript:submit('矿业','D','1','国内标准')" target="_blank"> D 矿业</a></div>
+                    <div class="standard"><a href="javascript:submit('石油','E','1','国内标准')" target="_blank"> E 石油</a></div>
+                    <div class="standard"><a href="javascript:submit('能源、核技术','F','1','国内标准')" target="_blank"> F 能源、核技术</a></div>
+                    <div class="standard"><a href="javascript:submit('化工','G','1','国内标准')" target="_blank"> G 化工</a></div>
+                    <div class="standard"><a href="javascript:submit('冶金','H','1','国内标准')" target="_blank"> H 冶金</a></div>
+                    <div class="standard"><a href="javascript:submit('机械','J','1','国内标准')" target="_blank"> J 机械</a></div>
+                    <div class="standard"><a href="javascript:submit('电工','K','1','国内标准')" target="_blank"> K 电工</a></div>
+                    <div class="standard"><a href="javascript:submit('电子元器件与信息技术','L','1','国内标准')" target="_blank"> L 电子元器件与信息技术</a></div>
+                    <div class="standard"><a href="javascript:submit('通信、广播','M','1','国内标准')" target="_blank"> M 通信、广播</a></div>
+                    <div class="standard"><a href="javascript:submit('仪器、仪表','N','1','国内标准')" target="_blank"> N 仪器、仪表</a></div>
+                    <div class="standard"><a href="javascript:submit('工程建设','P','1','国内标准')" target="_blank"> P 工程建设</a></div>
+                    <div class="standard"><a href="javascript:submit('建材','Q','1','国内标准')" target="_blank"> Q 建材</a></div>
+                    <div class="standard"><a href="javascript:submit('公路、水路运输','R','1','国内标准')" target="_blank"> R 公路、水路运输</a></div>
+                    <div class="standard"><a href="javascript:submit('铁路','S','1','国内标准')" target="_blank"> S 铁路</a></div>
+                    <div class="standard"><a href="javascript:submit('车辆','T','1','国内标准')" target="_blank"> T 车辆</a></div>
+                    <div class="standard"><a href="javascript:submit('船舶','U','1','国内标准')" target="_blank"> U 船舶</a></div>
+                    <div class="standard"><a href="javascript:submit('航空、航天','V','1','国内标准')" target="_blank"> V 航空、航天</a></div>
+                    <div class="standard"><a href="javascript:submit('纺织','W','1','国内标准')" target="_blank"> W 纺织</a></div>
+                    <div class="standard"><a href="javascript:submit('食品','X','1','国内标准')" target="_blank"> X 食品</a></div>
+                    <div class="standard"><a href="javascript:submit('轻工、文化与生活用品','Y','1','国内标准')" target="_blank"> Y 轻工、文化与生活用品</a></div>
+                    <div class="standard"><a href="javascript:submit('环境保护','Z','1','国内标准')" target="_blank"> Z 环境保护</a></div>
+                </div>
+            </div>
+            <div class="online_content" id="B">
+                <div class="title">
+                    <div class="img"></div><span><a href="#B" name="B">行业标准 · 分类</a></span></div>
+                <div class="list" id="QT_list">
+                    <div class="standard"><a href="javascript:submit('安全生产','AQ','1', '行业标准')" target="_blank">AQ 安全生产</a></div>
+                    <div class="standard"><a href="javascript:submit('包装','BB','1', '行业标准')" target="_blank">BB 包装</a></div>
+                    <div class="standard"><a href="javascript:submit('船舶','CB','1', '行业标准')" target="_blank">CB 船舶</a></div>
+                    <div class="standard"><a href="javascript:submit('测绘','CH','1', '行业标准')" target="_blank">CH 测绘</a></div>
+                    <div class="standard"><a href="javascript:submit('城镇建设','CJ','1', '行业标准')" target="_blank">CJ 城镇建设</a></div>
+                    <div class="standard"><a href="javascript:submit('新闻出版','CY','1', '行业标准')" target="_blank">CY 新闻出版</a></div>
+                    <div class="standard"><a href="javascript:submit('档案','DA','1', '行业标准')" target="_blank">DA 档案</a></div>
+                    <div class="standard"><a href="javascript:submit('地震','DB','1', '行业标准')" target="_blank">DB 地震</a></div>
+                    <div class="standard"><a href="javascript:submit('电力','DL','1', '行业标准')" target="_blank">DL 电力</a></div>
+                    <div class="standard"><a href="javascript:submit('地质矿产','DZ','1', '行业标准')" target="_blank">DZ 地质矿产</a></div>
+                    <div class="standard"><a href="javascript:submit('核工业','EJ','1', '行业标准')" target="_blank">EJ 核工业</a></div>
+                    <div class="standard"><a href="javascript:submit('纺织','FZ','1', '行业标准')" target="_blank">FZ 纺织</a></div>
+                    <div class="standard"><a href="javascript:submit('公共安全','GA','1', '行业标准')" target="_blank">GA 公共安全</a></div>
+                    <div class="standard"><a href="javascript:submit('供销','GH','1', '行业标准')" target="_blank">GH 供销</a></div>
+                    <div class="standard"><a href="javascript:submit('广播电影电视','GY','1', '行业标准')" target="_blank">GY 广播电影电视</a></div>
+                    <div class="standard"><a href="javascript:submit('航空','HB','1', '行业标准')" target="_blank">HB 航空</a></div>
+                    <div class="standard"><a href="javascript:submit('化工','HG','1', '行业标准')" target="_blank">HG 化工</a></div>
+                    <div class="standard"><a href="javascript:submit('环境保护','HJ','1', '行业标准')" target="_blank">HJ 环境保护</a></div>
+                    <div class="standard"><a href="javascript:submit('海关','HS','1', '行业标准')" target="_blank">HS 海关</a></div>
+                    <div class="standard"><a href="javascript:submit('海洋','HY','1', '行业标准')" target="_blank">HY 海洋</a></div>
+                    <div class="standard"><a href="javascript:submit('机械','JB','1', '行业标准')" target="_blank">JB 机械</a></div>
+                    <div class="standard"><a href="javascript:submit('建材','JC','1', '行业标准')" target="_blank">JC 建材</a></div>
+                    <div class="standard"><a href="javascript:submit('建筑工业','JG','1', '行业标准')" target="_blank">JG 建筑工业</a></div>
+                    <div class="standard"><a href="javascript:submit('金融','JR','1', '行业标准')" target="_blank">JR 金融</a></div>
+                    <div class="standard"><a href="javascript:submit('交通','JT','1', '行业标准')" target="_blank">JT 交通</a></div>
+                    <div class="standard"><a href="javascript:submit('教育','JY','1', '行业标准')" target="_blank">JY 教育</a></div>
+                    <div class="standard"><a href="javascript:submit('旅游','LB','1', '行业标准')" target="_blank">LB 旅游</a></div>
+                    <div class="standard"><a href="javascript:submit('劳动和劳动安全','LD','1', '行业标准')" target="_blank">LD 劳动和劳动安全</a></div>
+                    <div class="standard"><a href="javascript:submit('粮食','LS','1', '行业标准')" target="_blank">LS 粮食</a></div>
+                    <div class="standard"><a href="javascript:submit('林业','LY','1', '行业标准')" target="_blank">LY 林业</a></div>
+                    <div class="standard"><a href="javascript:submit('民用航空','MH','1', '行业标准')" target="_blank">MH 民用航空</a></div>
+                    <div class="standard"><a href="javascript:submit('煤炭','MT','1', '行业标准')" target="_blank">MT 煤炭</a></div>
+                    <div class="standard"><a href="javascript:submit('民政','MZ','1', '行业标准')" target="_blank">MZ 民政</a></div>
+                    <div class="standard"><a href="javascript:submit('农业','NY','1', '行业标准')" target="_blank">NY 农业</a></div>
+                    <div class="standard"><a href="javascript:submit('轻工','QB','1', '行业标准')" target="_blank">QB 轻工</a></div>
+                    <div class="standard"><a href="javascript:submit('汽车','QC','1', '行业标准')" target="_blank">QC 汽车</a></div>
+                    <div class="standard"><a href="javascript:submit('航天','QJ','1', '行业标准')" target="_blank">QJ 航天</a></div>
+                    <div class="standard"><a href="javascript:submit('气象','QX','1', '行业标准')" target="_blank">QX 气象</a></div>
+                    <div class="standard"><a href="javascript:submit('商业','SB','1', '行业标准')" target="_blank">SB 商业</a></div>
+                    <div class="standard"><a href="javascript:submit('水产','SC','1', '行业标准')" target="_blank">SC 水产</a></div>
+                    <div class="standard"><a href="javascript:submit('石油化工','SH','1', '行业标准')" target="_blank">SH 石油化工</a></div>
+                    <div class="standard"><a href="javascript:submit('电子','SJ','1', '行业标准')" target="_blank">SJ 电子</a></div>
+                    <div class="standard"><a href="javascript:submit('水利','SL','1', '行业标准')" target="_blank">SL 水利</a></div>
+                    <div class="standard"><a href="javascript:submit('商检','SN','1', '行业标准')" target="_blank">SN 商检</a></div>
+                    <div class="standard"><a href="javascript:submit('石油天然气','SY','1', '行业标准')" target="_blank">SY 石油天然气</a></div>
+                    <div class="standard"><a href="javascript:submit('铁路运输','TB','1', '行业标准')" target="_blank">TB 铁路运输</a></div>
+                    <div class="standard"><a href="javascript:submit('土地管理','TD','1', '行业标准')" target="_blank">TD 土地管理</a></div>
+                    <div class="standard"><a href="javascript:submit('体育','TY','1', '行业标准')" target="_blank">TY 体育</a></div>
+                    <div class="standard"><a href="javascript:submit('物资管理','WB','1', '行业标准')" target="_blank">WB 物资管理</a></div>
+                    <div class="standard"><a href="javascript:submit('文化','WH','1', '行业标准')" target="_blank">WH 文化</a></div>
+                    <div class="standard"><a href="javascript:submit('兵工民品','WJ','1', '行业标准')" target="_blank">WJ 兵工民品</a></div>
+                    <div class="standard"><a href="javascript:submit('外经贸','WM','1', '行业标准')" target="_blank">WM 外经贸</a></div>
+                    <div class="standard"><a href="javascript:submit('卫生','WS','1', '行业标准')" target="_blank">WS 卫生</a></div>
+                    <div class="standard"><a href="javascript:submit('稀土','XB','1', '行业标准')" target="_blank">XB 稀土</a></div>
+                    <div class="standard"><a href="javascript:submit('黑色冶金','YB','1', '行业标准')" target="_blank">YB 黑色冶金</a></div>
+                    <div class="standard"><a href="javascript:submit('烟草','YC','1', '行业标准')" target="_blank">YC 烟草</a></div>
+                    <div class="standard"><a href="javascript:submit('通信','YD','1', '行业标准')" target="_blank">YD 通信</a></div>
+                    <div class="standard"><a href="javascript:submit('有色冶金','YS','1', '行业标准')" target="_blank">YS 有色冶金</a></div>
+                    <div class="standard"><a href="javascript:submit('医药','YY','1', '行业标准')" target="_blank">YY 医药</a></div>
+                    <div class="standard"><a href="javascript:submit('邮政','YZ','1', '行业标准')" target="_blank">YZ 邮政</a></div>
+                    <div class="standard"><a href="javascript:submit('中医药','ZY','1', '行业标准')" target="_blank">ZY 中医药</a></div>
+                    <div class="standard"><a href="javascript:submit('认证认可标准
+','RB','1', '行业标准')" target="_blank">RB 认证认可标准
+</a></div>
+                </div>
+            </div>
+            <div class="online_content" id="C">
+                <div class="title">
+                    <div class="img"></div><span><a href="#C" name="C">ICS · 分类</a></span></div>
+                <div class="list" id="ISO_list" style="height: auto;">
+                    <div class="standard"><a href="javascript:submit(' 综合、术语学、标准化、文献','01','1','国际标准')" target="_blank"> 01 综合、术语学、标准化、文献</a></div>
+                    <div class="standard"><a href="javascript:submit(' 社会学、服务、公司（企业）的组织和管理、行政、运输','03','1','国际标准')" target="_blank"> 03 社会学、服务、公司（企业）的组织和管理、行政、运输</a></div>
+                    <div class="standard"><a href="javascript:submit(' 数学、自然科学','07','1','国际标准')" target="_blank"> 07 数学、自然科学</a></div>
+                    <div class="standard"><a href="javascript:submit(' 医药卫生技术','11','1','国际标准')" target="_blank"> 11 医药卫生技术</a></div>
+                    <div class="standard"><a href="javascript:submit(' 环保、保健和安全','13','1','国际标准')" target="_blank"> 13 环保、保健和安全</a></div>
+                    <div class="standard"><a href="javascript:submit(' 计量学和测量、物理现象','17','1','国际标准')" target="_blank"> 17 计量学和测量、物理现象</a></div>
+                    <div class="standard"><a href="javascript:submit(' 试验','19','1','国际标准')" target="_blank"> 19 试验</a></div>
+                    <div class="standard"><a href="javascript:submit(' 机械系统和通用件','21','1','国际标准')" target="_blank"> 21 机械系统和通用件</a></div>
+                    <div class="standard"><a href="javascript:submit(' 流体系统和通用件','23','1','国际标准')" target="_blank"> 23 流体系统和通用件</a></div>
+                    <div class="standard"><a href="javascript:submit(' 机械制造','25','1','国际标准')" target="_blank"> 25 机械制造</a></div>
+                    <div class="standard"><a href="javascript:submit(' 能源和热传导工程','27','1','国际标准')" target="_blank"> 27 能源和热传导工程</a></div>
+                    <div class="standard"><a href="javascript:submit(' 电气工程','29','1','国际标准')" target="_blank"> 29 电气工程</a></div>
+                    <div class="standard"><a href="javascript:submit(' 电子学','31','1','国际标准')" target="_blank"> 31 电子学</a></div>
+                    <div class="standard"><a href="javascript:submit(' 电信、音频和视频工程','33','1','国际标准')" target="_blank"> 33 电信、音频和视频工程</a></div>
+                    <div class="standard"><a href="javascript:submit(' 信息技术、办公机械','35','1','国际标准')" target="_blank"> 35 信息技术、办公机械</a></div>
+                    <div class="standard"><a href="javascript:submit(' 成像技术','37','1','国际标准')" target="_blank"> 37 成像技术</a></div>
+                    <div class="standard"><a href="javascript:submit(' 精密机械、珠宝','39','1','国际标准')" target="_blank"> 39 精密机械、珠宝</a></div>
+                    <div class="standard"><a href="javascript:submit(' 道路车辆工程','43','1','国际标准')" target="_blank"> 43 道路车辆工程</a></div>
+                    <div class="standard"><a href="javascript:submit(' 铁路工程','45','1','国际标准')" target="_blank"> 45 铁路工程</a></div>
+                    <div class="standard"><a href="javascript:submit(' 造船和海上构筑物','47','1','国际标准')" target="_blank"> 47 造船和海上构筑物</a></div>
+                    <div class="standard"><a href="javascript:submit(' 航空器和航天器工程','49','1','国际标准')" target="_blank"> 49 航空器和航天器工程</a></div>
+                    <div class="standard"><a href="javascript:submit(' 材料储运设备','53','1','国际标准')" target="_blank"> 53 材料储运设备</a></div>
+                    <div class="standard"><a href="javascript:submit(' 货物的包装和调运','55','1','国际标准')" target="_blank"> 55 货物的包装和调运</a></div>
+                    <div class="standard"><a href="javascript:submit(' 纺织和皮革技术','59','1','国际标准')" target="_blank"> 59 纺织和皮革技术</a></div>
+                    <div class="standard"><a href="javascript:submit(' 服装工业','61','1','国际标准')" target="_blank"> 61 服装工业</a></div>
+                    <div class="standard"><a href="javascript:submit(' 农业','65','1','国际标准')" target="_blank"> 65 农业</a></div>
+                    <div class="standard"><a href="javascript:submit(' 食品技术','67','1','国际标准')" target="_blank"> 67 食品技术</a></div>
+                    <div class="standard"><a href="javascript:submit(' 化工技术','71','1','国际标准')" target="_blank"> 71 化工技术</a></div>
+                    <div class="standard"><a href="javascript:submit(' 采矿和矿产品','73','1','国际标准')" target="_blank"> 73 采矿和矿产品</a></div>
+                    <div class="standard"><a href="javascript:submit(' 石油及相关技术','75','1','国际标准')" target="_blank"> 75 石油及相关技术</a></div>
+                    <div class="standard"><a href="javascript:submit(' 冶金','77','1','国际标准')" target="_blank"> 77 冶金</a></div>
+                    <div class="standard"><a href="javascript:submit(' 木材技术','79','1','国际标准')" target="_blank"> 79 木材技术</a></div>
+                    <div class="standard"><a href="javascript:submit(' 玻璃和陶瓷工业','81','1','国际标准')" target="_blank"> 81 玻璃和陶瓷工业</a></div>
+                    <div class="standard"><a href="javascript:submit(' 橡胶和塑料工业','83','1','国际标准')" target="_blank"> 83 橡胶和塑料工业</a></div>
+                    <div class="standard"><a href="javascript:submit(' 造纸技术','85','1','国际标准')" target="_blank"> 85 造纸技术</a></div>
+                    <div class="standard"><a href="javascript:submit(' 涂料和颜料工业','87','1','国际标准')" target="_blank"> 87 涂料和颜料工业</a></div>
+                    <div class="standard"><a href="javascript:submit(' 建筑材料和建筑物','91','1','国际标准')" target="_blank"> 91 建筑材料和建筑物</a></div>
+                    <div class="standard"><a href="javascript:submit(' 土木工程','93','1','国际标准')" target="_blank"> 93 土木工程</a></div>
+                    <div class="standard"><a href="javascript:submit(' 军事工程','95','1','国际标准')" target="_blank"> 95 军事工程</a></div>
+                    <div class="standard"><a href="javascript:submit(' 家用和商用设备、文娱、体育','97','1','国际标准')" target="_blank"> 97 家用和商用设备、文娱、体育</a></div>
+                </div>
+            </div>
+            <div class="online_content" id="D">
+                <div class="title">
+                    <div class="img"></div><span><a href="#D" name="D">国外标准 · 分类</a></span></div>
+                <div class="list" id="GW_list" style="height: 210px;">
+                    <div class="standard" id="noRecordGW">没有分类记录！</div>
+                </div>
+            </div>
+            <div class="online_content" id="E">
+                <div class="title">
+                    <div class="img"></div><span><a href="#E" name="E">计量规程规范 · 分类</a></span></div>
+                <div class="list" id="JJ_list" style="height: 70px;">
+                    <div class="standard"><a href="javascript:submit('检定规程','JJG','1', '计量规程规范')" target="_blank">JJG 检定规程</a></div>
+                    <div class="standard"><a href="javascript:submit('技术规范','JJF','1', '计量规程规范')" target="_blank">JJF 技术规范</a></div>
+                    <div class="standard"><a href="javascript:submit('技术规范(纺织)','JJFFZ','1', '计量规程规范')" target="_blank">JJFFZ 技术规范(纺织)</a></div>
+                    <div class="standard"><a href="javascript:submit('地方计量检定规程','JJGD','1', '计量规程规范')" target="_blank">JJGD 地方计量检定规程</a></div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div style="height: 0px;display: none;">
+                <form action="/gb168/standardonline/detail/" id="submitForm" method="post" target="_blank">
+                    <input name="className" type="hidden" />
+                    <input name="classCode" type="hidden" />
+                    <input name="classLevel" type="hidden" />
+                    <input name="classType" type="hidden" />
+                </form>
+                <form action="/gb168/basicsearch" id="directSearch" method="post">
+                    <input name="standclass" type="hidden" />
+                    <input name="classcode" type="hidden" />
+                    <input name="openmore" type="hidden" />
+                    <input name="classname" type="hidden" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="colorbox" style="display: none; width: 100%"></div>
+    <div class="operateMsg" style="display: none;">
+        <div id="closeimg"><a href="javascript:void(0)" onclick="hideMessage(this);"><img alt="关闭" onmousemove="this.src='/gb168/images/msgClose-btn2.png'" onmouseout="this.src='/gb168/images/msgClose-btn.png'" src="/gb168/images/msgClose-btn.png"/></a></div>
+        <p></p>
+    </div>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="标准,标准下载,标准咨询,标准咨询,免费查询,国家标准,行业标准,企业标准,地方标准,国际标准,国外标准,ISO,IEC,中国质检出版社,中国标准在线服务网,北京标科网络技术有限公司,正版标准,权威标准,标准查新,标准比对,标准购买,标准咨询,标准数据库定制,系统开发,软件研发,服务器托管" name="keywords" />
+    <meta content="标准,标准下载,标准咨询,标准咨询,免费查询,国家标准,行业标准,企业标准,地方标准,国际标准,国外标准,ISO,IEC,中国质检出版社,中国标准在线服务网,北京标科网络技术有限公司,正版标准,权威标准,标准查新,标准比对,标准购买,标准咨询,标准数据库定制,系统开发,软件研发,服务器托管" name="description" />
+    <title>无标题文档</title>
+    <!--[if lte IE 6]>
+		<script type="text/javascript" src="js/fixpng.js"></script>	
+		<script type="text/javascript" src="js/ie6.js"></script>
+		<![endif]-->
+    <style type="text/css">
+    * html {
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+
+    * html #qq {
+        position: absolute;
+    }
+
+    .footer-cont {
+        position: relative;
+    }
+
+    .wx {
+        position: absolute;
+        top: 12px;
+        right: 112px;
+    }
+
+    .wx img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .wx dl dd {
+        margin-top: 3px;
+    }
+
+    .wx dl {
+        float: left;
+    }
+
+    .wx .gb-wx {
+        margin-right: 34px;
+    }
+    </style>
+    <div id="footer">
+        <div class="footer-cont">
+            <div class="footer-nav">
+                <a href="/gb168/customer">购买流程</a>
+                <em>|</em>
+                <a href="/gb168/about">关于我们<!--</a-->
+<em>|</em>
+</a><a href="/gb168/about/link">联系我们</a>
+                <em>|</em>
+                <a href="/gb168/about/ad">广告服务</a>
+                <em>|</em>
+                <a href="/gb168/about/friendlylink">友情链接</a>
+                <em>|</em>
+                <a href="/gb168/customer">帮助中心</a>
+            </div>
+            <div class="footer-brief">
+                <p>主管：国家标准化管理委员会 主办：中国标准出版社 运营：北京标科网络技术有限公司 </p>
+                <p>经营许可证编号 京ICP证 050760 号 </p>
+                <p>版权所有 侵权必究</p>
+                <p>销售服务热线：400-168-0010</p>
+                <span class="flag"><img src="/gb168/images/flag.jpg"/></span>
+            </div>
+            <div class="wx">
+                <dl class="gb-wx">
+                    <dt><img src="/gb168/images/barcode/footer_weixin.jpg" /></dt>
+                    <dd>微信公众号</dd>
+                </dl>
+                <dl>
+                    <dt><img src="/gb168/images/barcode/footer_qq.jpg" /></dt>
+                    <dd>QQ交流群</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $(function() {
+        $("#qq table tr:not(:last)").hide();
+        $("#qq table tr:first").show();
+        $("#hidead").toggle(
+            function() {
+                $("#qq table tr").show();
+                $("#qq table tr:first").hide();
+            },
+            function() {
+                $("#qq table tr:not(:last)").hide();
+                $("#qq table th").parent().show();
+            }
+        );
+        $("#close_qq").mouseover(
+            function() {
+                $("#close_qq").css("background", "#E53937");
+            }
+        );
+        $("#close_qq").mouseout(
+            function() {
+                $("#close_qq").css("background", "#3B80C7");
+            }
+        );
+    });
+
+    function showqq() {
+        $("#qq table tr").show();
+        $("#qq table tr:first").hide();
+    }
+
+    function hideqq() {
+        $("#qq table tr:not(:last)").hide();
+        $("#qq table th").parent().show();
+    }
+
+    /*关闭提示信息*/
+    function hideMessage() {
+        $("#colorbox").hide();
+        $(".operateMsg").hide();
+    };
+    </script>
+    <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?b5bdb81ba9543a3b3567778ab86df74b";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+    <script src="/gb168/js/jquery.buttonbox.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    function getClassifyLevel1(standClass, className, callback) {
+        var request = $.ajax({
+            type: "GET",
+            url: "/gb168/standardonline/gettype",
+            data: { "standclass": standClass },
+            dataType: "json"
+        });
+        request.done(function(data) {
+            if (data.errorCode == "0") {
+                var list = data.value;
+                if (!$.isEmptyObject(list)) {
+                    $("#noRecord" + standClass).remove();
+                    $.each(list, function(idx, ele) {
+                        $("#" + standClass + "_list").append('<div class="standard"><a target="_blank" href="javascript:submit(\'' + ele + '\',\'' + idx + '\',\'1\', \'' + className + '\')">' + idx + ' ' + ele + '</a></div>');
+                    });
+                }
+                callback();
+            }
+        });
+        return request;
+    }
+    $(function() {
+        getClassifyLevel1('QT', '行业标准', function() {
+            getClassifyLevel1('JJ', '计量规程规范', function() {
+                getClassifyLevel1('GW', '国外标准', function() {
+                    $(".list").buttonbox({
+                        btnImageUrl: "/gb168/images/sub_search2.png",
+                        buttonCallback: function() {
+                            var standClass = $(this).parent().parent().attr("id");
+                            standClass = standClass.substring(0, standClass.indexOf("_"));
+                            $("input[name='standclass']").val(standClass);
+                            var classCode = $(this).siblings("a").text();
+                            //classCode = classCode.substring(0, classCode.indexOf(" "));
+                            classCode = classCode.match(new RegExp("[0-9A-Z]+"));
+                            $("input[name='classcode']").val(classCode);
+                            if (standClass == "GW") {
+                                $("input[name='openmore']").val("fn");
+                            } else {
+                                $("input[name='openmore']").val(standClass.toLowerCase());
+                            }
+                            $("#directSearch").submit();
+                        }
+                    }); //加载完分类调用插件
+                });
+            });
+        });
+    });
+    </script>
+</body>
+
+</html>

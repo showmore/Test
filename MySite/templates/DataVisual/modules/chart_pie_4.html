@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<body>
+<div id="pieChart" style="width: 260px;height:210px;"></div>
+
+<script src="../../lib/echarts.min.js"></script>
+<script src="../../lib/jquery-1.9.1.min.js"></script>
+<script src="../../js/common/utils.js"></script>
+<script>
+    var pieChart = echarts.init(document.getElementById('pieChart'));
+
+    var pieOption = {
+        title: {
+            text: '运营主体',
+            left: '40%',
+            top: '43%',
+            textStyle:{
+                color:'#fff',
+                fontSize: 14
+            }
+        },
+        legend: {
+            orient : 'vertical',
+            left: '50%',
+            top: 'top',
+            itemGap:12,
+            textStyle: {
+                color: '#fff'
+            },
+            data:['67.74% 政府','29.03% 委托','3.23% 其他']
+        },
+        series: [
+            {
+                name:'政府',
+                type:'pie',
+                clockWise:false,
+                center : ['40%', '50%'],
+                radius : [40, 55],
+                data:[
+                    {
+                        value: 6774,
+                        name: '67.74% 政府',
+                        itemStyle: {
+                            normal: {
+                                color: '#d3a100',
+                                label: {show:false},
+                                labelLine: {show:false}
+                            }
+                        }
+                    },
+                    {
+                        value: 3226,
+                        name:'invisible',
+                        itemStyle: {
+                            normal: {
+                                color: 'rgba(0, 0, 0, 0)',
+                                label: {show:false},
+                                labelLine: {show:false}
+                            },
+                            emphasis: {
+                                color: 'rgba(0, 0, 0, 0)'
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                name:'委托',
+                type:'pie',
+                clockWise:false,
+                center : ['40%', '50%'],
+                radius : [25, 40],
+                data:[
+                    {
+                        value:2903,
+                        name:'29.03% 委托',
+                        itemStyle: {
+                            normal: {
+                                color: '#b81c2b',
+                                label: {show:false},
+                                labelLine: {show:false}
+                            }
+                        }
+                    },
+                    {
+                        value:7097,
+                        name:'invisible',
+                        itemStyle: {
+                            normal: {
+                                color: 'rgba(0, 0, 0, 0)',
+                                label: {show:false},
+                                labelLine: {show:false}
+                            },
+                            emphasis: {
+                                color: 'rgba(0, 0, 0, 0)'
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                name:'其他',
+                type:'pie',
+                clockWise:false,
+                center : ['40%', '50%'],
+                radius : [15, 30],
+                data:[
+                    {
+                        value: 3230,
+                        name:'3.23% 其他',
+                        itemStyle: {
+                            normal: {
+                                color: '#007457',
+                                label: {show:false},
+                                labelLine: {show:false}
+                            }
+                        }
+                    },
+                    {
+                        value: 6770,
+                        name:'invisible',
+                        itemStyle: {
+                            normal: {
+                                color: 'rgba(0, 0, 0, 0)',
+                                label: {show:false},
+                                labelLine: {show:false}
+                            },
+                            emphasis: {
+                                color: 'rgba(0, 0, 0, 0)'
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    };
+
+    pieChart.setOption(pieOption);
+</script>
+</body>
+</html>

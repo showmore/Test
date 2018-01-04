@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="wrap" style="width:100%;height:200px;">
+			<div class="contentCharts" id="mainChart" style="width:100%;height:200px;"></div>
+		</div>
+			
+		<script src="../../lib/echarts.min.js"></script>
+		<script type="text/javascript">
+			var mainChart = echarts.init(document.getElementById('mainChart'));
+			var	option = {
+			   /* title: {
+			        text: '到访省、市',
+			        left: 'left',
+			        top: 'bottom'
+			    },*/
+			    tooltip: {
+			        trigger: 'item',
+			        formatter: "{a} <br/>{b} : {c}次"
+			    },
+			
+			    /*legend: {
+			    	 y: 'top',
+			//      orient: 'vertical',
+			        left: 'left',
+			        data: ['A省','B省','C省','D省','E省','F省','G省','H省','I省','J省']
+			    },*/
+			    calculable: true,
+			    series: [
+			        {
+			            name: '到访',
+			            type: 'funnel',
+			            width: '40%',
+			            height: '80%',
+			            left: '15%',
+			            top: '10%',
+			            bottom:'10%',
+			            funnelAlign: 'right',
+						label:{
+							normal:{
+								show:true,
+								position:'left'	
+							}
+						},
+			            data:[
+			                {value:60, name:'A省'},
+			                {value:30, name:'B省'},
+			                {value:10, name:'C省'},
+			                {value:80, name:'D省'},
+			                {value:100, name:'E省'},
+			                {value:115, name:'F省'},
+			                {value:120, name:'G省'},
+			                {value:125, name:'H省'},
+			                {value:130, name:'I省'},
+			                {value:135, name:'J省'}
+			            ]
+			        },
+			
+			        {
+			            name:'到访',
+			            type:'funnel',
+			            width: '40%',
+			            height: '80%',
+			            left: '55%',
+			            top: '10%',
+			            bottom:'10%',
+			            funnelAlign: 'left',
+			            data: [
+			                {value: 60, name: 'A省'},
+			                {value: 30, name: 'B省'},
+			                {value: 10, name: 'C省'},
+			                {value: 80, name: 'D省'},
+			                {value: 100, name: 'E省'},
+			                {value:110, name:'F省'},
+			                {value:120, name:'G省'},
+			                {value:130, name:'H省'},
+			                {value:140, name:'I省'},
+			                {value:150, name:'J省'}
+			                
+			            ]
+			        },
+			
+			    ]
+			};
+			mainChart.setOption(option);
+		</script>
+	</body>
+</html>

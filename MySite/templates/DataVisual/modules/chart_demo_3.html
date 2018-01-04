@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.content{width: 300px;height: 550px;margin:100px auto;position: relative;background:#0d1430;}
+			.pub{width: 120px;height: 120px;background: #15244b;border-radius: 50%;position: relative;z-index: 3;}
+			.pub p{color: #fff;width: 100%;font-size: 16px;text-align: center;padding-top: 30px;}
+			.pub span{color:#d8e0b5;font-size: 30px;width: 100%;text-align: center;font-weight: bold;display: block;margin-top: -14px;}
+			.pub span i{font-style: normal;font-size: 12px;color:#fff;}
+			.pub:after{content: "";width: 130px;height: 130px;border:2px solid #283659;position:absolute;top: -7px;left:-7px;border-radius:50% ;z-index: -2;}
+			.round1{left:10px;top:20px;}
+			.round2{left:170px;top:-4px;}
+			.round3{left:10px;top:-25px;}
+			.round4{left:170px;top:-35px;}
+			
+			.round1:before{content:"";width: 50px;height: 2px;background: #fff;position: absolute;left: 112px;top: 120px;z-index: 2;transform: rotateZ(-140deg);}
+			.round2:before{content:"";width: 50px;height: 2px;background: #fff;position: absolute;left: -40px;top: 122px;z-index: 2;transform: rotateZ(-222deg);}
+			.round3:before{content:"";width: 50px;height: 2px;background: #fff;position: absolute;left: 114px;top: 124px;z-index: 2;transform: rotateZ(-140deg);}
+			
+			.round1 p:before{content: "";width: 30px;height: 50px;background: #0d1430;position: absolute;border-radius:50%;left:115px;top:10px;z-index: -1;transform: rotate(-20deg);}
+			.round2 p:before{content: "";width: 30px;height: 50px;background: #0d1430;position: absolute;border-radius:50%;left:-32px;top:44;z-index: -1; transform: rotate(-24deg); }
+			.round3 p:before{content: "";width: 30px;height: 50px;background: #0d1430;position: absolute;border-radius:50%;left:118px;top:54px;z-index: -1;transform: rotate(22deg);}
+			.round4 p:before{content: "";width: 30px;height: 50px;background: #0d1430;position: absolute;border-radius:50%;left:-28px;top:15px;z-index: -1;transform: rotate(23deg);}
+			
+
+		</style>
+	</head>
+	<body>
+		
+		<div class="content">
+			<div class="pub round1">
+				<p>年实收金额</p>
+				<span>80<i>亿元</i></span>
+				<b></b>
+			</div>
+			<div class="pub round2">
+				<p>年实收金额</p>
+				<span>80<i>亿元</i></span>
+				<b></b>
+			</div>
+			<div class="pub round3">
+				<p>年实收金额</p>
+				<span>80<i>亿元</i></span>
+			</div>
+			<div class="pub round4">
+				<p>年实收金额</p>
+				<span>80<i>亿元</i></span>
+			</div>
+		</div>
+		
+	</body>
+</html>

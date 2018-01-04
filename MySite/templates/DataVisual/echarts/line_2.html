@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="http://cdn.bootcss.com/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="mainMap" style="width: 1000px;height:600px;"></div>
+
+<script src="../../lib/jquery-1.9.1.min.js"></script>
+<script src="../../lib/echarts.min.js"></script>
+<script type="text/javascript">
+    var mainChart = echarts.init(document.getElementById('mainMap'));
+
+    var option = {
+        title: {
+            text: '西安技术交易动态图'
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data:['技术成交额','技术成交项']
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {}
+            }
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: ['1月','2月','3月','4月','5月','6月','7月', '8月', '9月', '10月', '11月', '12月']
+        },
+        yAxis: [
+            {
+                type: 'value',
+                name: '万元',
+                min: 0,
+                max: 250,
+                splitLine: {
+                    show: false
+                }
+            }
+        ],
+        series: [
+            {
+                name:'技术成交额',
+                type:'line',
+                yAxisIndex: 0,
+                data:[17, 15, 17, 22, 27, 220, 32, 80, 40, 70, 140]
+            },
+            {
+                name:'技术成交项',
+                type:'line',
+                data:[13, 17, 41, 63, 110, 230, 30, 180, 130, 210, 30]
+            }
+        ]
+    };
+
+    mainChart.setOption(option);
+</script>
+</body>
+</html>

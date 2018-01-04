@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<body>
+<div id="pieChart" style="width: 260px;height:210px;"></div>
+
+<script src="../../lib/echarts.min.js"></script>
+<script src="../../lib/jquery-1.9.1.min.js"></script>
+<script src="../../js/common/utils.js"></script>
+<script>
+    var pieChart = echarts.init(document.getElementById('pieChart'));
+
+    var pieOption = {
+        title: {
+            text: '合作交流',
+            left: 'center',
+            textStyle:{
+                color:'#fff',
+                fontSize: 14
+            }
+        },
+        series: [{
+            type: 'pie',
+            center: ['50%', '50%'],
+            radius: ['40%', '50%'],
+            color: ['#191d6a', '#b81c2b', '#007457', '#6c1f76', '#006979', '#d3a100', '#824221', '#58592a'],
+            label: {
+                normal: {
+                    position: 'inner',
+                    formatter: function (val) {
+                        return val.name + ' ' + val.percent;
+                    },
+                    textStyle: {
+                        color: '#fff',
+                        fontSize: 12
+                    }
+                }
+            },
+            data: [{
+                value: 11,
+                name: '科技局'
+            }, {
+                value: 3,
+                name: '高新管委会'
+            }, {
+                value: 7,
+                name: '其他'
+            }]
+        }]
+    };
+
+    var currentIndex = -1;
+
+    setInterval(function () {
+        var dataLen = pieOption.series[0].data.length;
+        // 取消之前高亮的图形
+        pieChart.dispatchAction({
+            type: 'downplay',
+            seriesIndex: 0,
+            dataIndex: currentIndex
+        });
+
+        currentIndex = (currentIndex + 1) % dataLen;
+
+        // 高亮当前图形
+        pieChart.dispatchAction({
+            type: 'highlight',
+            seriesIndex: 0,
+            dataIndex: currentIndex
+        });
+
+    }, 1000);
+
+    pieChart.setOption(pieOption);
+</script>
+</body>
+</html>

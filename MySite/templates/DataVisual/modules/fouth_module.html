@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="西安科技大市场,西安科技,科技大市场,大市场,技术转移,技术交易,成果转化,科技服务,仪器设备,科技政策,现代服务业,创业">
+    <meta name="description" content="西安科技大市场将重点发挥“交易、共享、服务、交流”四位一体的功能。展示各种科技资源，促进科技资源的对接与合作；科技大市场促进技术转移和成果转化；科技大市场实现技术平台、仪器设备、科技文献等资源的共享；提供人才创业、政策落实、项目申报等专业化和集成化服务；通过举办科技集市和各种专业论坛，推动科技资源的交流与合作，促进科技成果的商品化、产业化与国际化。">
+    <title>数据可视化</title>
+    <link href="http://cdn.bootcss.com/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/first_module.less">
+</head>
+<body>
+<div class="container">
+    <div class="chart-wrap" id="mainChart"></div>
+</div>
+
+<script src="../../lib/jquery-1.9.1.min.js"></script>
+<script src="../../lib/echarts.min.js"></script>
+<script src="../../js/common/utils.js"></script>
+<script type="text/javascript">
+    var mainChart = echarts.init(document.getElementById('mainChart'));
+
+        var option = {
+            title: [
+                {
+                    text: '过去一周独立访问量',
+                    subtext: func.randomData() * 1000,
+                    subtextStyle: {
+                        color: '#ff8000',
+                        fontSize: 28,
+                        fontWeight: 'bold'
+                    },
+                    textAlign: 'center',
+                    left: '12%',
+                    textStyle: {
+                        color: '#fff',
+                        fontSize: 14,
+                        fontWeight: 'normal'
+                    }
+                },
+                {
+                    text: '过去一周点击量',
+                    subtext: func.randomData() * 1000,
+                    subtextStyle: {
+                        color: '#ff8000',
+                        fontSize: 28,
+                        fontWeight: 'bold'
+                    },
+                    textAlign: 'center',
+                    left: '35%',
+                    textStyle: {
+                        color: '#fff',
+                        fontSize: 14,
+                        fontWeight: 'normal'
+                    }
+                },
+                {
+                    text: '注册人数',
+                    subtext: func.randomData() * 1000,
+                    subtextStyle: {
+                        color: '#ff8000',
+                        fontSize: 28,
+                        fontWeight: 'bold'
+                    },
+                    textAlign: 'center',
+                    right: '10%',
+                    textStyle: {
+                        color: '#fff',
+                        fontSize: 14,
+                        fontWeight: 'normal'
+                    }
+                },
+                {
+                    text: '过去一周独立访问量交易',
+                    subtext: func.randomData() * 1000,
+                    subtextStyle: {
+                        color: '#ff8000',
+                        fontSize: 28,
+                        fontWeight: 'bold'
+                    },
+                    textAlign: 'center',
+                    right: '25%',
+                    textStyle: {
+                        color: '#fff',
+                        fontSize: 14,
+                        fontWeight: 'normal'
+                    }
+                },
+                {
+                    text: '过去一周点击转化率',
+                    textAlign: 'left',
+                    left: '17%',
+                    top: '12%',
+                    textStyle: {
+                        color: '#fff',
+                        fontSize: 14,
+                        fontWeight: 'normal'
+                    }
+                },
+                {
+                    text: '过去一周扫码下载转化率',
+                    textAlign: 'left',
+                    right: '23%',
+                    top: '12%',
+                    textStyle: {
+                        color: '#fff',
+                        fontSize: 14,
+                        fontWeight: 'normal'
+                    }
+                },
+                {
+                    text: '过去三周独立IP&注册人数',
+                    textAlign: 'left',
+                    left: '8%',
+                    bottom: '33%',
+                    textStyle: {
+                        color: '#fff',
+                        fontSize: 14,
+                        fontWeight: 'normal'
+                    }
+                },
+                {
+                    text: '过去一周RIO情况',
+                    textAlign: 'left',
+                    right: '32%',
+                    bottom: '33%',
+                    textStyle: {
+                        color: '#fff',
+                        fontSize: 14,
+                        fontWeight: 'normal'
+                    }
+                }
+            ],
+            legend: [{
+                left: '45%',
+                bottom: '25%',
+                orient: 'vertical',
+                textStyle: {
+                    color: '#fff'
+                },
+                data:['独立访问用户','注册人数']
+            }],
+            grid: [
+                {left: 'left', top: '2%', width: '45%', height: '40%', containLabel: true},
+                {left: 'right', top: '2%', width: '45%', height: '40%', containLabel: true},
+                {left: 'left', top: 'bottom', width: '45%', height: '30%', containLabel: true},
+                {left: 'right', bottom: '3%', width: '45%', height: '28%', containLabel: true}
+            ],
+            xAxis: [
+                {
+                    gridIndex: 0,
+                    show: false
+                },
+                {
+                    gridIndex: 1,
+                    show: false
+                },
+                {
+                    gridIndex: 2,
+                    axisLine: {
+                        show: false
+                    },
+                    splitLine: {
+                        show: false
+                    },
+                    axisLabel: {
+                        interval: 0
+                    },
+                    type: 'value'
+                },
+                {
+                    gridIndex: 3,
+                    type: 'category',
+                    axisTick: {
+                        show: false
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    data: ['周一','周二','周三','周四','周五','周六','周七']
+                }
+            ],
+            yAxis: [
+                {
+                    gridIndex: 0,
+                    show: false
+                },
+                {
+                    gridIndex: 1,
+                    show: false
+                },
+                {
+                    gridIndex: 2,
+                    axisTick: {
+                        show: false
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    type: 'category',
+                    data: ['2015年第40周','2015年第41周','2015年第42周']
+                },
+                {
+                    gridIndex: 3,
+                    type: 'value',
+                    min: 0,
+                    max: 0.6,
+                    interval: 0.15,
+                    splitLine: {
+                        show: false
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#fff'
+                        }
+                    }
+                }
+            ],
+            series: [
+                {
+                    name:'过去一周点击转化率',
+                    type:'funnel',
+                    left: '13%',
+                    top: '20%',
+                    width: '20%',
+                    height: '40%',
+                    min: 0,
+                    max: 100,
+                    sort: 'descending',
+                    gap: 5,
+                    data: [
+                        {value: func.randomData(), name: '展现量'},
+                        {value: func.randomData(), name: '点击量'},
+                        {value: func.randomData(), name: '注册人数'},
+                        {value: func.randomData(), name: '交易人数'}
+                    ]
+                },
+                {
+                    name:'过去一周扫码下载转化率',
+                    type:'funnel',
+                    left: '60%',
+                    top: '20%',
+                    width: '20%',
+                    height: '40%',
+                    min: 0,
+                    max: 100,
+                    sort: 'descending',
+                    gap: 5,
+                    data: [
+                        {value: func.randomData(), name: '展现量'},
+                        {value: func.randomData(), name: '点击量'},
+                        {value: func.randomData(), name: '注册人数'},
+                        {value: func.randomData(), name: '交易人数'}
+                    ]
+                },
+                {
+                    name:'独立访问用户',
+                    type:'bar',
+                    xAxisIndex: 2,
+                    yAxisIndex: 2,
+                    data:[func.randomData(), func.randomData(), func.randomData()]
+                },
+                {
+                    name:'注册人数',
+                    type:'bar',
+                    xAxisIndex: 2,
+                    yAxisIndex: 2,
+                    data:[func.randomData(), func.randomData(), func.randomData()]
+                },
+                {
+                    name:'注册人数',
+                    type:'line',
+                    xAxisIndex: 3,
+                    yAxisIndex: 3,
+                    data:[func.randomData() / 200, func.randomData()  / 200, func.randomData()  / 200, func.randomData()  / 200, func.randomData()  / 200, func.randomData()  / 200, func.randomData()  / 200]
+                },
+                {
+                    name:'独立访问用户',
+                    type:'line',
+                    xAxisIndex: 3,
+                    yAxisIndex: 3,
+                    data:[func.randomData() / 200, func.randomData()  / 200, func.randomData()  / 200, func.randomData()  / 200, func.randomData()  / 200, func.randomData()  / 200, func.randomData()  / 200]
+                }
+            ]
+        };
+
+        mainChart.setOption(option);
+</script>
+</body>
+</html>

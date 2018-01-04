@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<body>
+<div id="pieChart" style="width: 260px;height:210px;"></div>
+
+<script src="../../lib/echarts.min.js"></script>
+<script src="../../lib/jquery-1.9.1.min.js"></script>
+<script src="../../js/common/utils.js"></script>
+<script>
+    var pieChart = echarts.init(document.getElementById('pieChart'));
+
+    var pieOption = {
+        title: [{
+            text: '运营模式',
+            left: '38%',
+            textStyle: {
+                color: '#fff',
+                fontSize: 14
+            }
+        },{
+            text: '线上',
+            left: 'center',
+            bottom: '40%',
+            textStyle: {
+                color: '#fff',
+                fontWeight: 'normal',
+                fontSize: 14
+            },
+            subtextStyle: {
+                fontWeight: 'bold',
+                fontSize: 16,
+                color: '#fff'
+            }
+        }],
+        series: [
+            {
+                name: ' ',
+                type: 'pie',
+                radius: ['40%', '50%'],
+                avoidLabelOverlap: false,
+                startAngle: 225,
+                color: ["#007457", "transparent"],
+                hoverAnimation: false,
+                legendHoverLink: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center'
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            fontSize: '30',
+                            fontWeight: 'bold'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data: [{
+                    value: 75,
+                    name: '1'
+                }, {
+                    value: 25,
+                    name: '2'
+                }]
+            },
+            {
+                name: '',
+                type: 'pie',
+                radius: ['40%', '50%'],
+                avoidLabelOverlap: false,
+                startAngle: 317,
+                color: ["#00CED1", "transparent"],
+                hoverAnimation: false,
+                legendHoverLink: false,
+                clockwise: false,
+                itemStyle:{
+                    normal:{
+                        borderColor:"transparent",
+                        borderWidth:"20"
+                    },
+                    emphasis:{
+                        borderColor:"transparent",
+                        borderWidth:"20"
+                    }
+                },
+                z:10,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center'
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            fontSize: '30',
+                            fontWeight: 'bold'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data: [{
+                    name: 'show'
+                }, {
+                    name: 'hide'
+                }]
+            }
+        ]
+    };
+
+    var i = 1;
+    setInterval(function() {
+        var index = i % 3;
+        var valueDatas = [80.65, 3.23, 6.98, 6.45];
+        var textDatas = ["线上线下", "线上", "线下", "其他"];
+        pieOption.title[1].text = textDatas[index];
+        pieOption.title[1].subtext = valueDatas[index] + "%";
+        if (index === 0) {
+            pieOption.series[1].data[0].value = valueDatas[index] - 40;
+        } else {
+            pieOption.series[1].data[0].value = valueDatas[index];
+        }
+
+        pieOption.series[1].data[1].value = 100 - valueDatas[index];
+        i++;
+        pieChart.setOption(pieOption, true);
+    }, 3000);
+
+    pieChart.setOption(pieOption);
+</script>
+</body>
+</html>

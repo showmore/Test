@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "name": "未央区",
+    "data_ori": 1010,
+    "data_mac": 2010,
+    "data_tech": 3010,
+    "data_exp": 4010
+  },
+  {
+    "id": 2,
+    "name": "碑林区",
+    "data_ori": 1020,
+    "data_mac": 2020,
+    "data_tech": 3020,
+    "data_exp": 4020
+  },
+  {
+    "id": 3,
+    "name": "莲湖区",
+    "data_ori": 1030,
+    "data_mac": 2030,
+    "data_tech": 3300,
+    "data_exp": 4030
+  },
+  {
+    "id": 4,
+    "name": "新城区",
+    "data_ori": 1400,
+    "data_mac": 2400,
+    "data_tech": 3400,
+    "data_exp": 4400
+  },
+  {
+    "id": 5,
+    "name": "灞桥区",
+    "data_ori": 1005,
+    "data_mac": 2005,
+    "data_tech": 3005,
+    "data_exp": 4005
+  },
+  {
+    "id": 6,
+    "name": "雁塔区",
+    "data_ori": 160,
+    "data_mac": 260,
+    "data_tech": 360,
+    "data_exp": 460
+  },
+  {
+    "id": 7,
+    "name": "高陵区",
+    "data_ori": 7100,
+    "data_mac": 2700,
+    "data_tech": 3700,
+    "data_exp": 4700
+  },
+  {
+    "id": 8,
+    "name": "阎良区",
+    "data_ori": 108,
+    "data_mac": 208,
+    "data_tech": 308,
+    "data_exp": 408
+  },
+  {
+    "id": 9,
+    "name": "周至县",
+    "data_ori": 1009,
+    "data_mac": 2009,
+    "data_tech": 3009,
+    "data_exp": 4090
+  },
+  {
+    "id": 10,
+    "name": "临潼区",
+    "data_ori": 101,
+    "data_mac": 201,
+    "data_tech": 301,
+    "data_exp": 401
+  },
+  {
+    "id": 11,
+    "name": "长安区",
+    "data_ori": 102,
+    "data_mac": 202,
+    "data_tech": 302,
+    "data_exp": 402
+  },
+  {
+    "id": 12,
+    "name": "蓝田县",
+    "data_ori": 103,
+    "data_mac": 203,
+    "data_tech": 303,
+    "data_exp": 403
+  },
+  {
+    "id": 13,
+    "name": "户县",
+    "data_ori": 104,
+    "data_mac": 204,
+    "data_tech": 304,
+    "data_exp": 404
+  }
+]

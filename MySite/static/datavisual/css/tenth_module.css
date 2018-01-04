@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000;
+}
+
+.bor {
+    /*border: 2px solid #2E4A50;*/
+    border: 2px solid #fff;
+}
+
+.wrapper {
+    width: 1580px;
+    height: 100%;
+    margin: 0 auto;
+    min-width: 1580px;
+    min-height: 360px;
+}
+
+.section {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.section-item {
+    display: table-cell;
+    height: auto;
+    vertical-align: top;
+}
+
+.mapChart {
+    width: 100%;
+    height: 760px;
+}
+
+.pieChart {
+    width: 60%;
+    height: 300px;
+}
+
+.txtScroll-top1 {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+}
+
+.txtScroll-top1 .bd {
+    padding: 6px;
+}
+
+.txtScroll-top1 .infoList li {
+    list-style: none;
+    height: 24px;
+    line-height: 24px;
+    width: 90%; 
+    overflow:hidden; 
+    text-overflow:ellipsis; 
+    white-space:nowrap;
+}
+
+.txtScroll-top1 .infoList li a{
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+}

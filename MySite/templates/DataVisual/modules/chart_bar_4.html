@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	<div id="vbarChart" style="width:100%;height:180px;"></div>
+    <script src="../../../static/datavisual/lib/echarts.min.js"></script>
+    <script src="../../../static/datavisual/lib/jquery-1.9.1.min.js"></script>
+    <script src="../../../static/datavisual/js/common/utils.js"></script>
+	<script>
+	    var vbarChart = echarts.init(document.getElementById('vbarChart'));
+	    
+	 
+		   	var data = ['2011','2012','2013','2014','2015','2016','2017'];
+			var data1 = ['1267','1897','1670','1571','1659','1831','1231'];
+			var data2 = ['76','118','157','164','167','144','126'];
+			for (var i = 0; i < data.length; i++) {
+			  if (data[i] == '2017') {
+			    data[i] = {
+			      value: '2017',
+			      textStyle: {
+			        color: '#FEDC6E'
+			      }
+			    }
+			  }
+			}
+			barOption = {
+			  title: {
+			    text: '历年到访数据',
+			    left: 'center',
+			    top: 5,
+			    textStyle: {
+		        	color: '#fff',
+		        	fontSize:14
+		      	}
+			  },
+			/*legend: {
+		        data: ['到访次数', '到访人数'],
+		        align: 'left',
+		        left: 10
+		    },*/
+			  grid: {
+			    right: '10%',
+			    left: '15%',
+			    top: '25%',
+			    bottom: '12%'
+			
+			  },
+			  tooltip: {
+			    trigger: 'axis',
+			    axisPointer: {
+			      type: 'shadow',
+			    }
+			  },
+			  legend: {
+			    left: '0',
+			    top: '0',
+			    data: ['次数', '人数'],
+			    padding:[0, 100, 0, 0],
+			    textStyle: {
+		        	color: '#fff',
+		        	fontSize:6
+		        	
+		      	},
+		      	itemWidth:15,
+		      	itemHeight:10
+			  },
+			  xAxis: {
+			    triggerEvent: true,
+			    data: data,
+			    axisLabel: {
+			      interval: 0,
+			      show: true,
+			      textStyle: {
+			        color: "#fff"
+			      }
+			    },
+			    axisLine: {
+			      lineStyle: {
+			        show: true,
+			        color: "rgba(255,255,255,0.2)",
+			        width: 1
+			      }
+			    }
+			  },
+			  yAxis: [{
+			      type: 'value',
+			      min: 0,
+                  max: 1800,
+                  name:'人数',
+                  interval: 300,
+			      nameTextStyle: {
+			        "color": "#AEA4A8"
+			      },
+			      axisLabel: {
+			        interval: 0,
+			        show: true,
+			        textStyle: {
+			          color: "#B4B5BE"
+			        }
+			      },
+			      axisLine: {
+			        lineStyle: {
+			          color: "#F3F3F3",
+			          width: 1
+			        }
+			      },
+			      splitLine: {
+			        lineStyle: {
+			          	color: "rgba(255,255,255,02)",
+			        	width: 1
+			        }
+			      }
+			   },
+			    {
+			      type: 'value',
+			      min: 0,
+                  max: 180,
+                  interval: 30,
+                  name:'次数',
+			      nameTextStyle: {
+			        "color": "#AEA4A8",
+			        verticalAlign:'bottom'
+			      },
+			      axisLabel: {
+			        interval: 0,
+			        show: true,
+			        textStyle: {
+			          color: "#B4B5BE"
+			        }
+			      },
+			      axisLine: {
+			        lineStyle: {
+			          color: "#F3F3F3",
+			          width: 1
+			        }
+			      },
+			      splitLine: {
+			        show: false,
+			        lineStyle: {
+			          	color: "rgba(255,255,255,02)",
+			        	width: 1
+			        }
+			      }
+			
+			    }
+			  ],
+			  series: [{
+			    name: '人数',
+			    type: 'bar',
+			    silent: true,
+			    itemStyle: {
+			      normal: {
+			        color: '#1FBCD2'
+			      }
+			    },
+			    data: data1
+			  }, {
+			    name: '次数',
+			    type: 'bar',
+			    silent: true,
+			     yAxisIndex: 1,
+			    itemStyle: {
+			      normal: {
+			        color: '#FEDC6E'
+			      }
+			    },
+			    data:data2
+			  }]
+			};
+			 /* myChart.on('click', function(param) {
+			  for (var i = 0; i < data.length; i++) {
+			    if (data[i] == param.value || data[i].value == param.value) {
+			      data[i] = {
+			        value: param.value,
+			        textStyle: {
+			          color: '#1FBCD2'
+			        }
+			      }
+			    } else {
+			      if (typeof data[i] == 'object') {
+			        if ("textStyle" in data[i]) {
+			          delete data[i].textStyle;
+			        }
+			      }
+			    }
+			  }
+			  option.xAxis.data = data;
+			myChart.setOption(option);
+			  provName = param.value;
+			  var list = ["chart41", "chart42", "chart51", "chart52"];
+			  refreshPage("sDate", "eDate", "selInterval", editControl, list, {
+			    "prov_code": getProvCode(param.value)
+			  });
+			});*/
+			    
+	    vbarChart.setOption(barOption);
+	</script>
+</html>

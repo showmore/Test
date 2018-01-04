@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="vbarChart" style="width:100%;height:200px;"></div>
+    <script src="../../lib/echarts.min.js"></script>
+    <script src="../../lib/jquery-1.9.1.min.js"></script>
+    <script src="../../js/common/utils.js"></script>
+    <script>
+        var vbarChart = echarts.init(document.getElementById('vbarChart'));
+
+        var dataMap = {};
+
+        dataMap.dataVisit = {
+            2013: [1, 2, 7, 2, 3, 3, 3, 6, 3, 2, 9, 2],
+            2014: [3, 2, 1, 4, 8, 3, 3, 5, 3, 9, 11, 3],
+            2015: [6, 3, 2, 6, 6, 2, 2, 8, 2, 1, 6, 2],
+            2016: [4, 0, 5, 2, 3, 0, 5, 9, 5, 2, 2, 1],
+            2017: [1, 1, 4, 1, 1, 0, 0, 0, 0, 0, 0, 0]
+        };
+
+        var barOption = {
+            baseOption: {
+                timeline: {
+                    show: false,
+                    axisType: 'category',
+                    loop: true,
+                    autoPlay: true,
+                    playInterval: 1000,
+                    label: {
+                        normal: {
+                            textStyle: {
+                                color: '#fff'
+                            }
+                        },
+                        position: 14
+                    },
+                    lineStyle: {
+                        color: '#fff'
+                    },
+                    controlStyle: {
+                        show: false
+                    },
+                    bottom: 10,
+                    data: [
+                        '2013','2014','2015',' 2016', '2017'
+                    ]
+                },
+                xAxis: [
+                    {
+                        type: 'category',
+                        axisLine: {
+                            lineStyle: {
+                                color: '#fff'
+                            }
+                        },
+                        axisTick: {
+                            lineStyle: {
+                                color: '#fff'
+                            }
+                        },
+                        axisLabel: {
+                            interval: 0,
+                            textStyle: {
+                                color: '#fff'
+                            }
+                        },
+                        splitLine: {
+                            show: false
+                        },
+                        data: ['1月', '2月','3月','4月','5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'value',
+                        name: '场次',
+                        min: 0,
+                        max: 16,
+                        interval: 4,
+                        axisLine: {
+                            lineStyle: {
+                                color: '#fff'
+                            }
+                        },
+                        axisTick: {
+                            lineStyle: {
+                                color: '#fff'
+                            }
+                        },
+                        axisLabel: {
+                            interval: 0,
+                            textStyle: {
+                                color: '#fff'
+                            }
+                        },
+                        splitLine: {
+                            show: false
+                        }
+                    }
+                ],
+                series: [
+                    {name: '交流访问', type: 'bar'},
+                    {name: '平均流量', type: 'line', smooth: true}
+                ]
+            },
+            options: [
+                {
+                    title: {
+                        text: '2013年交流情况',
+                        left: 'center',
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 14
+                        }
+                    },
+                    series: [
+                        {
+                            data: dataMap.dataVisit['2013'],
+                            itemStyle: {
+                                normal: {
+                                    color: '#b81c2b'
+                                }
+                            }
+                        },
+                        {
+                            data: dataMap.dataVisit['2013'],
+                            itemStyle: {
+                                normal: {
+                                    color: '#d3a100'
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    title: {
+                        text: '2014年交流情况',
+                        left: 'center',
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 14
+                        }
+                    },
+                    series : [
+                        {
+                            data: dataMap.dataVisit['2014'],
+                            itemStyle: {
+                                normal: {
+                                    color: '#d3a100'
+                                }
+                            }
+                        },
+                        {
+                            data: dataMap.dataVisit['2014'],
+                            itemStyle: {
+                                normal: {
+                                    color: '#007457'
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    title: {
+                        text: '2015年交流情况',
+                        left: 'center',
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 14
+                        }
+                    },
+                    series : [
+                        {
+                            data: dataMap.dataVisit['2015'],
+                            itemStyle: {
+                                normal: {
+                                    color: '#007457'
+                                }
+                            }},
+                        {
+                            data: dataMap.dataVisit['2015'],
+                            itemStyle: {
+                                normal: {
+                                    color: '#6c1f76'
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    title: {
+                        text: '2016年交流情况',
+                        left: 'center',
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 14
+                        }
+                    },
+                    series : [
+                        {
+                            data: dataMap.dataVisit['2016'],
+                            itemStyle: {
+                                normal: {
+                                    color: '#6c1f76'
+                                }
+                            }
+                        },
+                        {
+                            data: dataMap.dataVisit['2016'],
+                            itemStyle: {
+                                normal: {
+                                    color: '#006979'
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    title: {
+                        text: '2017年交流情况',
+                        left: 'center',
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 14
+                        }
+                    },
+                    series : [
+                        {
+                            data: dataMap.dataVisit['2017'],
+                            itemStyle: {
+                                normal: {
+                                    color: '#006979'
+                                }
+                            }
+                        },
+                        {
+                            data: dataMap.dataVisit['2017'],
+                            itemStyle: {
+                                normal: {
+                                    color: '#191d6a'
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        };
+
+        vbarChart.setOption(barOption);
+    </script>
+</body>
+</html>

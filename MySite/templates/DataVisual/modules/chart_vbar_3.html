@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body style="background-color: #000">
+    <div id="vbarChart" style="width:100%;height:200px;"></div>
+    <script src="../../lib/echarts.min.js"></script>
+    <script src="../../lib/jquery-1.9.1.min.js"></script>
+    <script src="../../js/common/utils.js"></script>
+    <script>
+        var vbarChart = echarts.init(document.getElementById('vbarChart'));
+
+        var barOption = {
+            title: {
+                text: '统筹科技资源与GDP',
+                left: 'center',
+                textStyle: {
+                    color: '#fff',
+                    fontSize: 14
+                }
+            },
+            xAxis: {
+                type: 'category',
+                data: ['河南', '河北', '山西', '浙江', '吉林', '内蒙', '甘肃', '辽宁', '重庆'],
+                axisPointer: {
+                    type: 'shadow'
+                },
+                axisLine: {
+                    lineStyle: {
+                        color: '#fff'
+                    }
+                },
+                axisTick: {
+                    lineStyle: {
+                        color: '#fff'
+                    }
+                },
+                axisLabel: {
+                    interval: 0,
+                    textStyle: {
+                        color: '#fff'
+                    }
+                },
+                splitLine: {
+                    show: false,
+                    lineStyle: {
+                        type: 'dashed',
+                        color: '#ccc'
+                    }
+                }
+            },
+            yAxis: {
+                type: 'value',
+                name: '数量(家)',
+                min: 0,
+                max: 10,
+                interval: 2,
+                axisLine: {
+                    lineStyle: {
+                        color: '#fff'
+                    }
+                },
+                axisTick: {
+                    lineStyle: {
+                        color: '#fff'
+                    }
+                },
+                axisLabel: {
+                    interval: 1,
+                    textStyle: {
+                        color: '#fff'
+                    }
+                },
+                splitLine: {
+                    show: false,
+                    lineStyle: {
+                        type: 'dashed',
+                        color: '#ccc'
+                    }
+                },
+                scale: true
+            },
+            legend: {
+                show: false,
+                right: 10,
+                top: 20,
+                textStyle: {
+                    color: '#fff'
+                },
+                data: ['一线城市', '二线城市', '三线城市'],
+                orient:  'vertical'
+            },
+            series: [{
+                name: '一线城市',
+                data: [
+                    {
+                        value: ['河南', 3, 401],
+                        symbolSize: 40
+                    },
+                    {
+                        value: ['河北', 3, 318],
+                        symbolSize: 30
+                    },
+                    {
+                        value: ['浙江', 8, 464],
+                        symbolSize: 50
+                    }
+                ],
+                type: 'scatter',
+                itemStyle: {
+                    normal: {
+                        shadowBlur: 10,
+                        shadowColor: 'rgba(25, 100, 150, 0.5)',
+                        shadowOffsetY: 5,
+                        color: new echarts.graphic.RadialGradient(0.4, 0.3, 1, [{
+                            offset: 0,
+                            color: '#fff'
+                        }, {
+                            offset: 1,
+                            color: '#ff7f50'
+                        }])
+                    }
+                }
+            }, {
+                name: '二线城市',
+                data: [
+                    {
+                        value: ['内蒙', 2, 180],
+                        symbolSize: 20
+                    },
+                    {
+                        value: ['辽宁', 3, 287],
+                        symbolSize: 30
+                    },
+                    {
+                        value: ['重庆', 1, 175],
+                        symbolSize: 20
+                    }
+                ],
+                type: 'scatter',
+                itemStyle: {
+                    normal: {
+                        shadowBlur: 10,
+                        shadowColor: 'rgba(25, 100, 150, 0.5)',
+                        shadowOffsetY: 5,
+                        color: new echarts.graphic.RadialGradient(0.4, 0.3, 1, [{
+                            offset: 0,
+                            color: '#fff'
+                        }, {
+                            offset: 1,
+                            color: '#8a2be2'
+                        }])
+                    }
+                }
+            }, {
+                name: '三线城市',
+                data: [
+                    {
+                        value: ['山西', 2, 128],
+                        symbolSize: 10
+                    },
+                    {
+                        value: ['吉林', 3, 142],
+                        symbolSize: 20
+                    },
+                    {
+                        value: ['甘肃', 2, 67],
+                        symbolSize: 10
+                    }
+                ],
+                type: 'scatter',
+                itemStyle: {
+                    normal: {
+                        shadowBlur: 10,
+                        shadowColor: 'rgba(25, 100, 150, 0.5)',
+                        shadowOffsetY: 5,
+                        color: new echarts.graphic.RadialGradient(0.4, 0.3, 1, [{
+                            offset: 0,
+                            color: '#fff'
+                        }, {
+                            offset: 1,
+                            color: '#00fa9a'
+                        }])
+                    }
+                }
+            }]
+        };
+
+        /*
+        var currentIndex = -1;
+
+        setInterval(function () {
+            currentIndex = (currentIndex + 1) % barOption.series.length;
+
+            console.log(currentIndex);
+
+            // 取消之前高亮的图形
+            vbarChart.dispatchAction({
+                type: 'downplay',
+                seriesIndex: currentIndex,
+                dataIndex: currentIndex
+            });
+
+            // 高亮当前图形
+            vbarChart.dispatchAction({
+                type: 'highlight',
+                seriesIndex: currentIndex,
+                dataIndex: currentIndex
+            });
+
+        }, 1000);
+*/
+
+        vbarChart.setOption(barOption);
+    </script>
+</body>
+</html>

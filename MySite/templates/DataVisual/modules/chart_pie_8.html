@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<body>
+<div id="pieChart" style="width: 260px;height:210px;"></div>
+
+<script src="../../lib/echarts.min.js"></script>
+<script src="../../lib/jquery-1.9.1.min.js"></script>
+<script src="../../js/common/utils.js"></script>
+<script>
+    var pieChart = echarts.init(document.getElementById('pieChart'));
+
+    var pieOption = {
+        title: {
+            text: '综合经济区',
+            left: 'center',
+            textStyle:{
+                color:'#fff',
+                fontSize: 14
+            }
+        },
+        series: [
+            {
+                name:'综合经济区',
+                type:'pie',
+                clockWise: true,
+                selectedMode:'single',
+                center : ['49%', '50%'],
+                radius : [30, 40],
+                color: ['#d3a100', '#b81c2b', '#007457', '#6c1f76', '#006979', '#191d6a', '#824221', '#58592a'],
+                label: {
+                    normal: {
+                        position: 'outside',
+                        formatter: function (val) {
+                            return val.name;
+                        },
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    }
+                },
+                data:[
+                    {value:7, name:'黄河中游'},
+                    {value:1, name:'长江中游'},
+                    {value:4, name:'东北'},
+                    {value:4, name:'北部沿海'},
+                    {value:12, name:'东部沿海'},
+                    {value:1, name:'南部沿海'},
+                    {value:1, name:'大西南'},
+                    {value:2, name:'大西北'}
+                ]
+            }
+        ]
+    };
+
+    var currentIndex = -1;
+
+    setInterval(function () {
+        var dataLen = pieOption.series[0].data.length;
+        // 取消之前高亮的图形
+        pieChart.dispatchAction({
+            type: 'downplay',
+            seriesIndex: 0,
+            dataIndex: currentIndex
+        });
+
+        currentIndex = (currentIndex + 1) % dataLen;
+
+        // 高亮当前图形
+        pieChart.dispatchAction({
+            type: 'highlight',
+            seriesIndex: 0,
+            dataIndex: currentIndex
+        });
+    }, 1000);
+
+    pieChart.setOption(pieOption);
+</script>
+</body>
+</html>

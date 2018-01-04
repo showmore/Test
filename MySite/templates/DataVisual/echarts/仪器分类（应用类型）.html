@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="西安科技大市场,西安科技,科技大市场,大市场,技术转移,技术交易,成果转化,科技服务,仪器设备,科技政策,现代服务业,创业">
+    <meta name="description" content="西安科技大市场将重点发挥“交易、共享、服务、交流”四位一体的功能。展示各种科技资源，促进科技资源的对接与合作；科技大市场促进技术转移和成果转化；科技大市场实现技术平台、仪器设备、科技文献等资源的共享；提供人才创业、政策落实、项目申报等专业化和集成化服务；通过举办科技集市和各种专业论坛，推动科技资源的交流与合作，促进科技成果的商品化、产业化与国际化。">
+    <title>数据可视化</title>
+    <link rel="shortcut icon" href="../images/common/favicon.ico">
+    <link rel="icon" type="image/gif" href="../images/common/animated_favicon1.gif">
+
+    <link rel="stylesheet" href="http://cdn.bootcss.com/normalize/5.0.0/normalize.min.css" />
+</head>
+<body>
+<div id="mainMap" style="width: 1000px;height:600px;"></div>
+<!--[if lte IE 8]>
+<script src="http://cdn.bootcss.com/selectivizr/1.0.2/selectivizr.js"></script>
+<![endif]-->
+
+<script src="../../lib/cnzz.js"></script>
+<script src="../../lib/modernizr.js"></script>
+<script src="../../lib/jquery-1.9.1.min.js"></script>
+<script src="../../lib/echarts.min.js"></script>
+<script type="text/javascript">var mainChart=echarts.init(document.getElementById("mainMap")),
+
+
+    option = {
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            x: 'left',
+           data:['轻工/纺织','石油/石化','地质/矿产','钢铁/有色金属','水文气象','橡胶/塑料',
+ '机械制造','地质勘探','农/林/牧','食品/烟草','矿业/冶金','化工/化纤','非金属/珠宝','通信/邮政',
+               '医疗/卫生','电子/信息技术']
+        },
+        series: [
+            {
+                name:'仪器分类',
+                type:'pie',
+                radius: ['30%', '50%'],
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center'
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            fontSize: '30',
+                            fontWeight: 'bold'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data:[
+                    {value:154, name:'轻工/纺织'},
+                    {value:439, name:'石油/石化'},
+                    {value:314, name:'地质/矿产'},
+                    {value:480, name:'钢铁/有色金属'},
+                    {value:33, name:'水文气象'},
+                    {value:151, name:'橡胶/塑料'},
+                    {value:726, name:'机械制造'},
+                    {value:175, name:'地质勘探'},
+                    {value:166, name:'农/林/牧'},
+                    {value:220, name:'食品/烟草'},
+                    {value:404, name:'矿业/冶金'},
+                    {value:0, name:'化工/化纤'},
+                    {value:112, name:'非金属/珠宝'},
+                    {value:321, name:'通信/邮政'},
+                    {value:252, name:'医疗/卫生'},
+                    {value:1003, name:'电子/信息技术'}
+
+
+                ]
+            }
+        ]
+    };
+
+
+mainChart.setOption(option);</script>
+<script type="text/javascript" charset="utf-8" src="http://192.168.8.50:8132/livereload.js"></script></body>
+</html>

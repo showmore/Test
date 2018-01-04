@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="西安科技大市场,西安科技,科技大市场,大市场,技术转移,技术交易,成果转化,科技服务,仪器设备,科技政策,现代服务业,创业">
+	<meta name="description" content="西安科技大市场将重点发挥“交易、共享、服务、交流”四位一体的功能。展示各种科技资源，促进科技资源的对接与合作；科技大市场促进技术转移和成果转化；科技大市场实现技术平台、仪器设备、科技文献等资源的共享；提供人才创业、政策落实、项目申报等专业化和集成化服务；通过举办科技集市和各种专业论坛，推动科技资源的交流与合作，促进科技成果的商品化、产业化与国际化。">
+	<title>数据可视化</title>
+	<link rel="shortcut icon" href="../images/common/favicon.ico">
+	<link rel="icon" type="image/gif" href="../images/common/animated_favicon1.gif">
+	<link href="http://cdn.bootcss.com/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/index.less">
+	<link rel="stylesheet" href="../../css/buttons.less">
+</head>
+<body>
+<div class="container">
+	<div class="chart-wrap">
+		<div class="chart bor--2" id="miniMap"></div>
+		<div class="chart chart--big" id="mainMap"></div>
+	</div>
+	<!--展示具体科技资源数据-->
+	<div class="right-box">
+		<div class="card-wrap" id="subMain">
+			<div class="title">{{item.name || '区/县'}}</div>
+			<div class="card">
+				<span class="card__title">科技组织</span>
+				<section class="card__item">
+					<span class="card__item__value">{{item.data_ori || '00000'}}</span>
+					<span class="card__item__unit">个</span>
+				</section>
+			</div>
+			<div class="card">
+				<span class="card__title">仪器设备</span>
+				<section class="card__item">
+					<span class="card__item__value">{{item.data_mac || '00000'}}</span>
+					<span class="card__item__unit">套</span>
+				</section>
+			</div>
+			<div class="card">
+				<span class="card__title">科研成果</span>
+				<section class="card__item">
+					<span class="card__item__value">{{item.data_tech || '00000'}}</span>
+					<span class="card__item__unit">项</span>
+				</section>
+			</div>
+			<div class="card">
+				<span class="card__title">行业专家</span>
+				<section class="card__item">
+					<span class="card__item__value">{{item.data_exp || '00000'}}</span>
+					<span class="card__item__unit">位</span>
+				</section>
+			</div>
+		</div>
+		<div class="btn-wrap" style="display: none">
+			<div class="btn btn-small btn-inline btn-primary">科技组织</div>
+			<div class="btn btn-small btn-inline btn-info">仪器设备</div>
+			<div class="btn btn-small btn-inline btn-success">科研成果</div>
+			<div class="btn btn-small btn-inline btn-danger">行业专家</div>
+		</div>
+	</div>
+</div>
+
+<script src="../../lib/cnzz.js"></script>
+<script src="../../lib/modernizr.js"></script>
+<!--[if lte IE 8]>
+<script src="http://cdn.bootcss.com/selectivizr/1.0.2/selectivizr.js"></script>
+<![endif]-->
+<script src="../../lib/jquery-1.9.1.min.js"></script>
+<script src="../../lib/echarts.min.js"></script>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    Vue.config.silent = true;
+    Vue.config.devtools = true;
+
+    function randomData() {
+        return Math.round(Math.random()*1000);
+    }
+
+    var locationData = [
+		{name: '未央区', value: 1, geoData: {file: 'geo_weiyang', name: 'weiyang'}},
+		{name: '碑林区', value: 2, geoData: {file: 'geo_beilin', name: 'beilin'}},
+		{name: '莲湖区', value: 3, geoData: {file: 'geo_lianhu', name: 'lianhu'}},
+		{name: '新城区', value: 4, geoData: {file: 'geo_xincheng', name: 'xincheng'}},
+		{name: '灞桥区', value: 5, geoData: {file: 'geo_baqiao', name: 'baqiao'}},
+		{name: '雁塔区', value: 6, geoData: {file: 'geo_yanta', name: 'yanta'}},
+		{name: '高陵区', value: 7, geoData: {file: 'geo_gaoling', name: 'gaoling'}},
+		{name: '阎良区', value: 8, geoData: {file: 'geo_yanliang', name: 'yanliang'}},
+		{name: '周至县', value: 9, geoData: {file: 'geo_zhouzhi', name: 'zhouzhi'}},
+		{name: '临潼区', value: 10, geoData: {file: 'geo_lintong', name: 'lintong'}},
+		{name: '长安区', value: 11, geoData: {file: 'geo_changan', name: 'changan'}},
+		{name: '蓝田县', value: 12, geoData: {file: 'geo_lantian', name: 'lantian'}},
+		{name: '户县', 	 value: 13, geoData: {file: 'geo_huxian', name: 'huxian'}}
+    ];
+
+    var miniChart = echarts.init(document.getElementById('miniMap'));
+    var mainChart = echarts.init(document.getElementById('mainMap'));
+
+    miniChart.showLoading();
+    mainChart.showLoading();
+
+    var vm = new Vue({
+        el: '#subMain',
+        data: {
+            item: ''
+        }
+    });
+
+//    缩略地图
+    $.get('../../js/data/geo_xian.json', function (locations) {
+
+        miniChart.hideLoading();
+
+        echarts.registerMap('xian', locations);
+
+        var currentLoc = 0;
+
+        setInterval(function () {
+            var option = {
+                backgroundColor: '#404a59',
+                tooltip: {
+                    formatter: '{b}'
+				},
+                series: [
+                    {
+                        type: 'map',
+                        center: locations.features[currentLoc].properties.cp,
+                        animationDurationUpdate: 1000,
+                        animationEasingUpdate: 'cubicInOut',
+                        mapType: 'xian',
+						//zoom: 2,
+                        selectedMode : 'single',
+                        itemStyle: {
+                            normal: {
+                                areaColor: 'rgba(0,0,0,0)',
+                                borderColor: '#ffffff',
+                                label:{
+                                    show: false,
+									textStyle: {
+                                        color: '#fff'
+									}
+                                }
+                            },
+                            emphasis: {
+                                areaColor: '#ffffff',
+                                label:{
+                                    show: true,
+                                    textStyle: {
+                                        color: '#000'
+                                    }
+                                }
+                            }
+                        },
+                        data:[
+                            {name: locationData[currentLoc].name, selected: true}
+                        ]
+                    }
+                ]
+            };
+
+            miniChart.setOption(option);
+
+            var districtData = locationData[currentLoc].geoData;
+            var districtName = locationData[currentLoc].name;
+            var districtId = locationData[currentLoc].value;
+
+            showTechData(districtId);
+            showDistrict(districtName, districtData);
+
+            currentLoc = (currentLoc + 1) % locations.features.length;
+        }, 3000);
+    });
+
+//    显示总的科技资源数据
+    function showTechData(districtId) {
+        $.get('../../js/data/map_techdata.json', function (data) {
+            for(var i=0,len=data.length; i<len; i++) {
+                if (data[i].id == districtId) {
+                    vm.item = data[i];
+                    break;
+                }
+            }
+        });
+	}
+//    主要的区域地图
+	function showDistrict(districtName, districtData) {
+        $.get('../../js/data/' + districtData.file + '.json', function (locations) {
+
+            mainChart.hideLoading();
+
+            echarts.registerMap(districtData.name, locations);
+
+            var fixOptions = {
+                zoom: 1,
+				geoX: '50%',
+                geoY: '14%'
+			};
+            var techData = {
+            	ori_data: [
+					{name: '黄家坡村', value: [109.038586,34.268363, randomData()]},
+					{name: '梁家街村', value: [109.055834,34.283278, randomData()]},
+					{name: '水沟村', value: [109.080411,34.275761, randomData()]}
+				],
+            	mac_data: [
+                    {name: '东江名苑', value: [109.076997,34.278356, randomData()]},
+                    {name: '灞桥区政府', value: [109.070889,34.279311, randomData()]},
+                    {name: '枣园刘村', value: [109.074913,34.271257, randomData()]}
+				],
+            	arc_data: [
+                    {name: '肖家寨村', value: [109.09597,34.264037, randomData()]},
+                    {name: '四棉社区', value: [109.072326,34.26893, randomData()]},
+                    {name: '纺五路', value: [109.07326,34.266424, randomData()]}
+				],
+            	exp_data: [
+                    {name: '马家旺村', value: [109.097335,34.281578, randomData()]},
+                    {name: '露园温泉小区', value: [109.078507,34.276089, randomData()]},
+                    {name: '三棉社区', value: [109.069524,34.274896, randomData()]}
+				]
+			};
+
+            switch(districtData.name) {
+				case 'weiyang':
+                    fixOptions.zoom = 1;
+                    fixOptions.geoX = '40%';
+
+                    techData.ori_data = [
+						{name: '鸵鸟王大厦', value: [108.928943,34.298475, randomData()]},
+						{name: '莲花区希望小学', value: [108.942454,34.296208, randomData()]},
+						{name: '自强西路', value: [108.939004,34.286545, randomData()]}
+					];
+					techData.mac_data = [
+						{name: '自强东路', value: [108.964013,34.287261, randomData()]},
+						{name: '大家润购物广场', value: [108.964013,34.287261, randomData()]},
+						{name: '大明宫遗址', value: [108.964013,34.287261, randomData()]}
+					];
+                    techData.arc_data = [
+						{name: '龙湖MOCO小区', value: [108.964013,34.287261, randomData()]},
+						{name: '西安西站', value: [108.964013,34.287261, randomData()]},
+						{name: '大兴东路', value: [108.964013,34.287261, randomData()]}
+					];
+                    techData.exp_data = [
+						{name: '玉祥门', value: [108.964013,34.287261, randomData()]},
+						{name: '金鸡酒店', value: [108.964013,34.287261, randomData()]},
+						{name: '陕师大附属实验小学', value: [108.964013,34.287261, randomData()]}
+					];
+
+				    break;
+				case 'beilin':
+                    fixOptions.zoom = 0.8;
+                    fixOptions.geoX = '20%';
+                    fixOptions.geoY = '30%';
+
+                    techData.ori_data = [
+                        {name: '西安鑫鑫宾馆', value: [108.964013,34.287261, randomData()]},
+                        {name: '王珂黄焖鸡', value: [108.964013,34.287261, randomData()]},
+                        {name: '欧亚学院', value: [108.964013,34.287261, randomData()]}
+                    ];
+                    techData.mac_data = [
+                        {name: '金都宾馆', value: [108.964013,34.287261, randomData()]},
+                        {name: '西北武术院', value: [108.964013,34.287261, randomData()]},
+                        {name: '来历桌球', value: [108.964013,34.287261, randomData()]}
+                    ];
+                    techData.arc_data = [
+                        {name: '都城幼儿园', value: [108.964013,34.287261, randomData()]},
+                        {name: '雁塔刘胡奎诊所', value: [108.964013,34.287261, randomData()]},
+                        {name: '永利百丽便利店', value: [108.964013,34.287261, randomData()]}
+                    ];
+                    techData.exp_data = [
+                        {name: '迈德思', value: [108.964013,34.287261, randomData()]},
+                        {name: '1号餐厅', value: [108.964013,34.287261, randomData()]},
+                        {name: '实验楼', value: [108.964013,34.287261, randomData()]}
+                    ];
+				    break;
+				case 'lianhu':
+                    fixOptions.zoom = 0.7;
+                    fixOptions.geoX = '32%';
+
+                    techData.ori_data = [
+                        {name: '丰庆路', value: [108.964013,34.287261, randomData()]},
+                        {name: '西北大学', value: [108.964013,34.287261, randomData()]},
+                        {name: '西北工业大学', value: [108.964013,34.287261, randomData()]}
+                    ];
+                    techData.mac_data = [
+                        {name: '桃园路', value: [108.964013,34.287261, randomData()]},
+                        {name: '朱雀大街北路', value: [108.964013,34.287261, randomData()]},
+                        {name: '大寨路', value: [108.964013,34.287261, randomData()]}
+                    ];
+                    techData.arc_data = [
+                        {name: '协同大厦', value: [108.964013,34.287261, randomData()]},
+                        {name: '财富中心', value: [108.964013,34.287261, randomData()]},
+                        {name: '快创国际', value: [108.964013,34.287261, randomData()]}
+                    ];
+                    techData.exp_data = [
+                        {name: '零壹广场', value: [108.964013,34.287261, randomData()]},
+                        {name: '西安美术学院', value: [108.964013,34.287261, randomData()]},
+                        {name: '实例服务', value: [108.964013,34.287261, randomData()]}
+                    ];
+				    break;
+				case 'xincheng':
+                    fixOptions.geoX = '45%';
+
+                    techData.ori_data = [
+                        {name: '曲江国际', value: [108.964013,34.287261, randomData()]},
+                        {name: '岳家寨', value: [108.964013,34.287261, randomData()]},
+                        {name: '荣家寨', value: [108.964013,34.287261, randomData()]}
+                    ];
+                    techData.mac_data = [
+                        {name: '航天佳苑', value: [109.015999,34.231201, randomData()]},
+                        {name: '中职一区', value: [109.008094,34.225291, randomData()]},
+                        {name: '培训大厦', value: [108.985456,34.228515, randomData()]}
+                    ];
+                    techData.arc_data = [
+                        {name: '电信十所', value: [108.961957,34.222067, randomData()]},
+                        {name: '光电大剧院', value: [108.949021,34.218008, randomData()]},
+                        {name: '西安音乐厅', value: [108.970796,34.216575, randomData()]}
+                    ];
+                    techData.exp_data = [
+                        {name: '学院', value: [108.967059,34.233469, randomData()]},
+                        {name: '贸易中心', value: [108.967059,34.233469, randomData()]},
+                        {name: '雁塔文化新天地', value: [108.948446,34.222366, randomData()]}
+                    ];
+				    break;
+				case 'baqiao':
+                    techData.ori_data = [
+                        {name: '黄家坡村', value: [109.038586,34.268363, randomData()]},
+                        {name: '梁家街村', value: [109.055834,34.283278, randomData()]},
+                        {name: '水沟村', value: [109.080411,34.275761, randomData()]}
+                    ];
+                    techData.mac_data = [
+                        {name: '东江名苑', value: [109.076997,34.278356, randomData()]},
+                        {name: '灞桥区政府', value: [109.070889,34.279311, randomData()]},
+                        {name: '枣园刘村', value: [109.074913,34.271257, randomData()]}
+                    ];
+                    techData.arc_data = [
+                        {name: '肖家寨村', value: [109.09597,34.264037, randomData()]},
+                        {name: '四棉社区', value: [109.072326,34.26893, randomData()]},
+                        {name: '纺五路', value: [109.07326,34.266424, randomData()]}
+                    ];
+                    techData.exp_data = [
+                        {name: '马家旺村', value: [109.097335,34.281578, randomData()]},
+                        {name: '露园温泉小区', value: [109.078507,34.276089, randomData()]},
+                        {name: '三棉社区', value: [109.069524,34.274896, randomData()]}
+                    ];
+				    break;
+				case 'yanta':
+				    fixOptions.zoom = 0.7;
+                    fixOptions.geoX = '30%';
+
+                    techData.ori_data = [
+                        {name: '曲江会议中心', value: [108.959524,34.20021, randomData()]},
+                        {name: '陕西师范大学', value: [108.959524,34.20021, randomData()]},
+                        {name: '城南客运站', value: [108.959524,34.20021, randomData()]}
+                    ];
+                    techData.mac_data = [
+                        {name: '南三环', value: [108.959524,34.20021, randomData()]},
+                        {name: '西安美术学院', value: [108.959524,34.20021, randomData()]},
+                        {name: '西安自然博物馆', value: [108.959524,34.20021, randomData()]}
+                    ];
+                    techData.arc_data = [
+                        {name: '西部大道', value: [108.959524,34.20021, randomData()]},
+                        {name: '西安美术学院', value: [108.959524,34.20021, randomData()]},
+                        {name: '汉武泉桥', value: [108.959524,34.20021, randomData()]}
+                    ];
+                    techData.exp_data = [
+                        {name: '黄溪桥', value: [108.991719,34.205704, randomData()]},
+                        {name: '大唐芙蓉园', value: [108.980221,34.219316, randomData()]},
+                        {name: '休闲景区', value: [108.972459,34.225525, randomData()]}
+                    ];
+				    break;
+				case 'gaoling':
+                    fixOptions.zoom = 0.9;
+                    fixOptions.geoX = '40%';
+
+                    techData.ori_data = [
+                        {name: '通源镇', value: [109.05394,34.558248, randomData()]},
+                        {name: '钩子巷', value: [109.005073,34.573944, randomData()]},
+                        {name: '药惠乡', value: [109.123505,34.547783, randomData()]}
+                    ];
+                    techData.mac_data = [
+                        {name: '张博翔', value: [109.12753,34.490201, randomData()]},
+                        {name: '北天正', value: [109.187321,34.465442, randomData()]},
+                        {name: '姬家乡', value: [109.011397,34.494009, randomData()]}
+                    ];
+                    techData.arc_data = [
+                        {name: '任留乡', value: [109.242513,34.496389, randomData()]},
+                        {name: '从黄祥', value: [109.026919,34.51162, randomData()]},
+                        {name: '泾河站', value: [108.999323,34.485916, randomData()]}
+                    ];
+                    techData.exp_data = [
+                        {name: '新合街道', value: [109.106833,34.430196, randomData()]},
+                        {name: '马家湾街', value: [109.007372,34.451632, randomData()]},
+                        {name: '梨园镇', value: [109.214917,34.58393, randomData()]}
+                    ];
+				    break;
+				case 'yanliang':
+                    fixOptions.zoom = 0.8;
+                    fixOptions.geoX = '28%';
+
+                    techData.ori_data = [
+                        {name: '北屯乡', value: [109.214917,34.58393, randomData()]},
+                        {name: '武屯镇', value: [109.214917,34.58393, randomData()]},
+                        {name: '康桥镇', value: [109.214917,34.58393, randomData()]}
+                    ];
+                    techData.mac_data = [
+                        {name: '相桥镇', value: [109.214917,34.58393, randomData()]},
+                        {name: '冠山镇', value: [109.387029,34.696569, randomData()]},
+                        {name: '许愿街道', value: [109.150739,34.621982, randomData()]}
+                    ];
+                    techData.arc_data = [
+                        {name: '徐木乡', value: [109.124292,34.700843, randomData()]},
+                        {name: '八里店街', value: [109.2456,34.712713, randomData()]},
+                        {name: '留固镇', value: [109.283544,34.749262, randomData()]}
+                    ];
+                    techData.exp_data = [
+                        {name: '淡村镇', value: [109.067376,34.726954, randomData()]},
+                        {name: '杜集镇', value: [109.091522,34.640516, randomData()]},
+                        {name: '陂西镇', value: [109.113944,34.624359, randomData()]}
+                    ];
+				    break;
+				case 'zhouzhi':
+                    fixOptions.zoom = 0.8;
+                    fixOptions.geoX = '28%';
+
+                    techData.ori_data = [
+                        {name: '四屯镇', value: [108.15295,34.176516, randomData()]},
+                        {name: '司竹镇', value: [108.28863,34.164091, randomData()]},
+                        {name: '终南镇', value: [108.370268,34.150708, randomData()]}
+                    ];
+                    techData.mac_data = [
+                        {name: '广济镇', value: [108.292079,34.192284, randomData()]},
+                        {name: '哑柏镇', value: [108.342672,34.135411, randomData()]},
+                        {name: '富仁镇', value: [108.11788,34.150708, randomData()]}
+                    ];
+                    techData.arc_data = [
+                        {name: '及乡镇', value: [108.394989,34.090937, randomData()]},
+                        {name: '四棉社区', value: [109.072326,34.26893, randomData()]},
+                        {name: '纺五路', value: [109.07326,34.266424, randomData()]}
+                    ];
+                    techData.exp_data = [
+                        {name: '九峰镇', value: [108.432359,34.091894, randomData()]},
+                        {name: '朱玉镇', value: [108.051764,34.144494, randomData()]},
+                        {name: '路遇镇', value: [108.123054,34.094764, randomData()]}
+                    ];
+				    break;
+				case 'lintong':
+                    techData.ori_data = [
+                        {name: '土桥乡', value: [109.334192,34.355543, randomData()]},
+                        {name: '东岳乡', value: [109.361788,34.339806, randomData()]},
+                        {name: '小金乡', value: [109.426178,34.347436, randomData()]}
+                    ];
+                    techData.mac_data = [
+                        {name: '金山镇', value: [109.399157,34.297827, randomData()]},
+                        {name: '马燕镇', value: [109.392258,34.408454, randomData()]},
+                        {name: '铁路乡', value: [109.453774,34.400829, randomData()]}
+                    ];
+                    techData.arc_data = [
+                        {name: '西泉镇', value: [109.148494,34.411789, randomData()]},
+                        {name: '西安工程大学', value: [109.158268,34.376997, randomData()]},
+                        {name: '溪口街道', value: [109.151944,34.368893, randomData()]}
+                    ];
+                    techData.exp_data = [
+                        {name: '灞桥镇', value: [109.082379,34.318342, randomData()]},
+                        {name: '韩峪乡', value: [109.157118,34.336944, randomData()]},
+                        {name: '新合街道', value: [109.113999,34.420842, randomData()]}
+                    ];
+				    break;
+				case 'changan':
+                    fixOptions.geoX = '44%';
+
+                    techData.ori_data = [
+                        {name: '西北大学', value: [108.890752,34.153641, randomData()]},
+                        {name: '祝村乡', value: [108.83441,34.167023, randomData()]},
+                        {name: '杜林乡', value: [108.996536,34.168935, randomData()]}
+                    ];
+                    techData.mac_data = [
+                        {name: '秦渡镇', value: [108.758521,34.11635, randomData()]},
+                        {name: '内万乡', value: [108.873504,34.08574, randomData()]},
+                        {name: '大兆街道', value: [109.053453,34.141212, randomData()]}
+                    ];
+                    techData.arc_data = [
+                        {name: '旧堡乡', value: [109.058627,34.173236, randomData()]},
+                        {name: '马兴乡', value: [109.100596,34.162244, randomData()]},
+                        {name: '炮里乡', value: [109.14429,34.174192, randomData()]}
+                    ];
+                    techData.exp_data = [
+                        {name: '义井乡', value: [108.775194,34.176581, randomData()]},
+                        {name: '孤独镇', value: [108.877529,34.168457, randomData()]},
+                        {name: '民渡镇', value: [109.112669,34.133563, randomData()]}
+                    ];
+				    break;
+				case 'lantian':
+                    fixOptions.zoom = 0.9;
+                    fixOptions.geoX = '40%';
+
+                    techData.ori_data = [
+                        {name: '牧护关镇', value: [109.583704,34.04881, randomData()]},
+                        {name: '兰桥镇', value: [109.47332,34.078476, randomData()]},
+                        {name: '通乡镇', value: [109.384783,34.066037, randomData()]}
+                    ];
+                    techData.mac_data = [
+                        {name: '涨价平乡', value: [109.603826,34.122001, randomData()]},
+                        {name: '小镇寨', value: [109.297396,34.053117, randomData()]},
+                        {name: '汤峪镇', value: [109.227256,34.025835, randomData()]}
+                    ];
+                    techData.arc_data = [
+                        {name: '安村镇', value: [109.289922,34.136822, randomData()]},
+                        {name: '焦岱镇', value: [109.259451,34.06508, randomData()]},
+                        {name: '莲湖森林公园', value: [109.480794,34.104785, randomData()]}
+                    ];
+                    techData.exp_data = [
+                        {name: '李后乡', value: [109.480794,34.104785, randomData()]},
+                        {name: '大寨乡', value: [109.33764,34.144949, randomData()]},
+                        {name: '前卫镇', value: [109.227256,34.132998, randomData()]}
+                    ];
+				    break;
+				case 'huxian':
+                    techData.ori_data = [
+                        {name: '五竹镇', value: [108.66109,34.114552, randomData()]},
+                        {name: '灵沼乡', value: [108.732955,34.167616, randomData()]},
+                        {name: '赵王镇', value: [108.69616,34.162837, randomData()]}
+                    ];
+                    techData.mac_data = [
+                        {name: '祖安镇', value: [108.502988,34.114552, randomData()]},
+                        {name: '草堂镇', value: [108.718007,34.054755, randomData()]},
+                        {name: '义井乡', value: [108.773199,34.176696, randomData()]}
+                    ];
+                    techData.arc_data = [
+                        {name: '蒋村镇', value: [108.49034,34.087768, randomData()]},
+                        {name: '石井镇', value: [108.603599,34.049491, randomData()]},
+                        {name: '东大街道', value: [108.776648,34.062411, randomData()]}
+                    ];
+                    techData.exp_data = [
+                        {name: '内湾乡', value: [108.866335,34.089203, randomData()]},
+                        {name: '五星街道', value: [108.786422,34.091595, randomData()]},
+                        {name: '甘河镇', value: [108.527135,34.164749, randomData()]}
+                    ];
+				    break;
+				default:
+                    console.log('未定义');
+			}
+
+            var option = {
+                backgroundColor: '#404a59',
+                title: {
+                    text: '西安市科技资源分布地图',
+                    subtext: '数据来源于西安科技大市场',
+                    sublink: 'http://www.xatrm.com',
+                    textStyle: {
+                        color: '#fff'
+                    },
+                    left: '60%',
+                    top: 'top'
+                },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function (params) {
+                        return params.name + ' : ' + params.value[2];
+                    }
+                },
+                legend: {
+                    orient: 'vertical',
+                    bottom: 'bottom',
+                    right:'right',
+                    data:[
+                        {name: '科技组织', icon: 'rect'},
+                        {name: '仪器设备', icon: 'rect'},
+                        {name: '科研成果', icon: 'rect'},
+                        {name: '行业专家', icon: 'rect'}
+                    ],
+                    textStyle: {
+                        color: '#fff'
+                    }
+                },
+                visualMap: {
+                    min: 0,
+                    max: 5000,
+                    text:['高','低'],
+                    realtime: true,
+                    calculable: true,
+                    inRange: {
+                        color: ['#50a3ba', '#eac736', '#d94e5d']
+                    },
+                    textStyle: {
+                        color: '#fff'
+                    }
+                },
+                geo: {
+                    map: districtData.name,
+                    roam: false,
+                    zoom: fixOptions.zoom,
+                    label: {
+                        emphasis: {
+                            show: false
+                        }
+                    },
+                    x: fixOptions.geoX,
+                    y: fixOptions.geoY,
+                    itemStyle: {
+                        normal: {
+                            areaColor: '#323c48',
+                            borderColor: '#111'
+                        },
+                        emphasis: {
+                            areaColor: '#2a333d'
+                        }
+                    }
+                },
+                series: [
+                    {
+                        name: '科技组织',
+                        type: 'effectScatter',
+                        coordinateSystem: 'geo',
+                        data: techData.ori_data,
+                        symbolSize: 30,
+                        hoverAnimation: true,
+                        rippleEffect: {
+                            brushType: 'stroke'
+                        },
+                        symbol: 'circle',
+                        label: {
+                            normal: {
+                                show: true,
+                                formatter: function (params) {
+                                    return params.value[2];
+                                }
+                            },
+                            emphasis: {
+                                show: false
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                color: '#98ff20'
+                            },
+                            emphasis: {
+                                borderColor: '#fff',
+                                borderWidth: 1
+                            }
+                        }
+                    },
+                    {
+                        name: '仪器设备',
+                        type: 'effectScatter',
+                        coordinateSystem: 'geo',
+                        data: techData.mac_data,
+                        symbolSize: 30,
+                        hoverAnimation: true,
+                        rippleEffect: {
+                            brushType: 'stroke'
+                        },
+                        symbol: 'circle',
+                        label: {
+                            normal: {
+                                show: true,
+                                formatter: function (params) {
+                                    return params.value[2];
+                                }
+                            },
+                            emphasis: {
+                                show: false
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                color: '#ffa830'
+                            },
+                            emphasis: {
+                                borderColor: '#fff',
+                                borderWidth: 1
+                            }
+                        }
+                    },
+                    {
+                        name: '科研成果',
+                        type: 'effectScatter',
+                        coordinateSystem: 'geo',
+                        data: techData.arc_data,
+                        symbolSize: 30,
+                        hoverAnimation: true,
+                        rippleEffect: {
+                            brushType: 'stroke'
+                        },
+                        symbol: 'circle',
+                        label: {
+                            normal: {
+                                show: true,
+                                formatter: function (params) {
+                                    return params.value[2];
+                                }
+                            },
+                            emphasis: {
+                                show: false
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                color: '#59cfff'
+                            },
+                            emphasis: {
+                                borderColor: '#fff',
+                                borderWidth: 1
+                            }
+                        }
+                    },
+                    {
+                        name: '行业专家',
+                        type: 'effectScatter',
+                        coordinateSystem: 'geo',
+                        data: techData.exp_data,
+                        symbolSize: 30,
+                        hoverAnimation: true,
+                        rippleEffect: {
+                            brushType: 'stroke'
+                        },
+                        symbol: 'circle',
+                        label: {
+                            normal: {
+                                show: true,
+                                formatter: function (params) {
+                                    return params.value[2];
+                                }
+                            },
+                            emphasis: {
+                                show: false
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                color: '#ff354f'
+                            },
+                            emphasis: {
+                                borderColor: '#fff',
+                                borderWidth: 1
+                            }
+                        }
+                    }
+                ]
+            }
+
+            mainChart.setOption(option);
+        });
+    }
+</script>
+</body>
+</html>

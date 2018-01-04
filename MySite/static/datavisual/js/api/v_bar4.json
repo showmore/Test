@@ -1,0 +1,60 @@
+{
+	"title": {
+	  "text": "西安市雁塔区11-15年输出吸纳情况"
+	},
+	"legend": {
+		"data": ["输出金额", "吸纳金额", "输出项", "吸纳项"]
+	},
+	"xAxis": [
+		{
+			"type": "category",
+			"data": ["2011","2012","2013","2014","2015"]
+		}
+	],
+	"yAxis": [
+		{
+			"type": "value",
+			"name": "亿元",
+			"min": 0,
+			"max": 350,
+			"interval": 50,
+			"axisLabel": {
+				"formatter": "{value}"
+			}
+		},
+		{
+			"type": "value",
+			"name": "项",
+			"min": 0,
+			"max": 7000,
+			"interval": 1000,
+			"axisLabel": {
+				"formatter": "{value}"
+			}
+		}
+	],
+	"series": [
+        {
+            "name": "输出金额",
+            "type": "bar",
+            "data": [60, 20, 30, 10, 210]
+        },
+        {
+            "name": "吸纳金额",
+            "type": "bar",
+            "data":[10, 130, 110, 140, 20]
+        },
+        {
+            "name": "输出项",
+            "type": "line",
+			"yAxisIndex": 1,
+            "data": [3300, 5900, 1000, 4000, 5800]
+        },
+        {
+            "name": "吸纳项",
+            "type": "line",
+			"yAxisIndex": 1,
+            "data": [600, 1200, 2400, 1100, 900]
+        }
+	]
+}

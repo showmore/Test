@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="chinaMap" style="width:100%; height: 200px;"></div>
+		<script src="../../lib/echarts.min.js"></script>
+	    <script src="../../lib/jquery-1.9.1.min.js"></script>
+	    <script src="../../js/common/china.js"></script>
+	    <script type="text/javascript">
+	    	request();
+	    	var regionCoor = [];	//区域坐标
+	    	//获取区域坐标点
+	    	function request(){
+				$.get('http://test.xatrm.com/select/dv_visitor_loc_1', function(data){
+
+					if (data) {
+						data = JSON.parse(data);
+
+						for(var i=0; i<data.length; i++) {
+							regionCoor.push({"name": data[i]["loc"], "value": data[i]["coordinate"].split(',')})
+						}
+						worldChart.setOption(option);
+					}
+				});
+			}
+	    
+	    	var worldChart = echarts.init(document.getElementById('chinaMap'));
+	    	
+	    	var geoCoordMap = {
+			    '西安': [108.95, 34.27]
+			};
+			var xianCor = [
+				{
+                "name": "西安",
+                "value": [108.940175, 34.341568],
+                "symbolSize": 14,
+                "itemStyle": {
+                    "normal": {
+                        "color": "#fff"  //"#F58158"
+                    }
+                }
+            }
+			];
+			var allData = {
+		
+            "moveLines": [{
+                "fromName": "西安市",
+                "toName": "内江市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [105.058433,29.580228]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "东莞市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [113.751765,23.020536]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "中山市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [113.392782,22.517645]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "临安市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [119.724733,30.233873]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "丽水市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [119.922796,28.467630]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "九江市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [116.001930,29.705077]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "佛山市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [113.121416,23.021548]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "保定市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [115.464806, 38.873891]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "南阳市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [112.528321,32.990833]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "台州市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [121.420757,28.656386]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "吕梁市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [111.144319,37.518314]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "呼伦贝尔市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [119.765744,49.211574]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "咸阳市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [108.708992,34.329605]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "商洛市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [109.940477,33.870422]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "嘉兴市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [120.755486,30.746129]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "天水市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [105.724947,34.580863]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "威海市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [122.120419,37.513068]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "宁国市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [118.982915,30.633571]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "宁德市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [119.547932,26.665617]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "安康市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [109.029022,32.684714]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "安阳市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [114.392392,36.097577]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "宜宾市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [104.643215,28.751768]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "宿州市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [116.964356,33.646373]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "富州市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [111.277389,24.814444]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "平顶山市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [113.192661,33.766169]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "张家港市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [120.553200,31.870405]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "徐州市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [117.284124,34.205768]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "惠州市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [114.416196,23.111847]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "意大利",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [113.600716,37.862324]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "扬州市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [119.412966,32.394210]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "抚顺市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [123.957208,41.880872]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "新泰市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [117.767953,35.909032]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "昌吉市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [87.070179,44.176833]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "晋江市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [118.552365,24.781681]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "杭州市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [120.155070,30.274084]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "桂林市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [110.290194,25.273566]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "榆林市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [109.734589,38.285390]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "江山市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [118.626974,28.737223]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "江门市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [113.081901,22.578738]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "济宁市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [116.587098,35.414921]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "湖州市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [120.086823,30.894348]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "潍坊市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [119.161755,36.706774]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "灵宝市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [110.894220,34.516828]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "玉林市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [110.164756,22.636379]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "玉溪市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [102.546543,24.352036]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "珠海市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [113.576726,22.270715]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "福州市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [119.296494,26.074507]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "聊城市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [115.985371,36.456703]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "西宁市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [101.778228,36.617144]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "许昌市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [113.852640,34.035506]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "遂宁市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [105.592898,30.532847]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "钦州市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [108.654146,21.979933]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "银川市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [106.230909,38.487193]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "镇江市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [119.425836,32.187849]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "防城港市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [108.353846,21.686860]
+                ]
+            },{
+                "fromName": "西安市",
+                "toName": "鹤壁市",
+                "coords": [
+                    [108.940175, 34.341568],
+                    [114.297272,35.747225]
+                ]
+            }
+            ]
+       }; 
+			
+			
+			var planePath = 'path://M1705.06,1318.313v-89.254l-319.9-221.799l0.073-208.063c0.521-84.662-26.629-121.796-63.961-121.491c-37.332-0.305-64.482,36.829-63.961,121.491l0.073,208.063l-319.9,221.799v89.254l330.343-157.288l12.238,241.308l-134.449,92.931l0.531,42.034l175.125-42.917l175.125,42.917l0.531-42.034l-134.449-92.931l12.238-241.308L1705.06,1318.313z';
+			function formtGCData(geoData, data, srcNam, dest) {
+			    var tGeoDt = [];
+			    if (dest) {
+			        for (var i = 0, len = data.length; i < len; i++) {
+			            if (srcNam != data[i].name) {
+			                tGeoDt.push({
+			                    coords: [geoData[srcNam], geoData[data[i].name]]
+			                });
+			            }
+			        }
+			    } else {
+			        for (var i = 0, len = data.length; i < len; i++) {
+			            if (srcNam != data[i].name) {
+			                tGeoDt.push({
+			                    coords: [geoData[data[i].name], geoData[srcNam]]
+			                });
+			            }
+			        }
+			    }
+			    return tGeoDt;
+			}
+			
+			function formtVData(geoData, data, srcNam) {
+			    var tGeoDt = [];
+			    for (var i = 0, len = data.length; i < len; i++) {
+			        var tNam = data[i].name
+			        if (srcNam != tNam) {
+			            tGeoDt.push({
+			                name: tNam,
+			                value: geoData[tNam],
+			                symbolSize: v[i],
+			                itemStyle: {
+			
+			                    normal: {
+			                        color: '#f79906',	//红色  ffc100黄色
+			                        borderColor: 'gold'
+			                    }
+			                }
+			            });
+			        }
+			
+			    }
+			    tGeoDt.push({
+			        name: srcNam,
+			        value: geoData[srcNam],
+			        symbolSize: 8,
+			        itemStyle: {
+			            normal: {
+			                color: '#60ff44',	//蓝色
+			                borderColor: '#fff'
+			            }
+			        }
+			    });
+			    return tGeoDt;
+			}
+			option = {
+	            title: {
+	                text: '各省份来访接待示意图',
+	                left: 'center',
+	                top:'3%',
+	                textStyle: {
+	                    color: '#fff',
+	                    fontSize: 12
+	                }
+	            },
+	            legend: {
+	                show: false,
+	                orient: 'vertical',
+	                top: 'bottom',
+	                left: 'right',
+	                data: ['地点', '线路'],
+	                textStyle: {
+	                    color: '#fff'
+	                }
+	            },
+	            geo: {
+	                map: 'china',
+	                label: {
+	                    emphasis: {
+	                        show: false
+	                    }
+	                },
+	                roam: true,
+	                itemStyle: {
+	                    normal: {
+	                    	color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+	                    		  offset: 0, color: 'rgba(1, 17, 154, 0.6)' // 0% 处的颜色27a7f8
+	                    		}, {
+	                    		  offset: 1, color: 'rgba(1, 17, 154, 0.6)' // 100% 处的颜色
+	                    		}], false),
+	                       
+	                        borderColor: '#aeb0b2',//#404a59,
+	                        borderWidth : 0.5,
+	                        areaColor: '#000055'
+	                    },
+	                    emphasis: {
+	                        areaColor: '#2a333d'
+	                    }
+	                }
+	            },
+	            series: [
+	            {
+	                name: '地点',
+	                type: 'effectScatter',
+	                coordinateSystem: 'geo',
+	                zlevel: 2,
+	                rippleEffect: {
+	                    brushType: 'stroke'
+	                },
+	                label: {
+	                    emphasis: {
+	                        show: true,
+	                        position: 'right',
+	                        formatter: '{b}'
+	                    }
+	                },
+	                symbolSize: 2,
+	                showEffectOn: 'render',
+	                itemStyle: {
+	                    normal: {
+	                        color: '#adfa18'
+	                    }
+	                },
+	                data: regionCoor
+	            }, {
+	                name: '线路',
+	                type: 'lines',
+	                coordinateSystem: 'geo',
+	                zlevel: 4,
+	                large: true,
+	                effect: {
+	                    show: true,
+	                    constantSpeed: 30,
+	                    symbol: 'pin',
+	                    symbolSize: 3,
+	                    trailLength: 0,
+	                },
+	                lineStyle: {
+	                    normal: {
+	                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+	                            offset: 0,
+	                            color: '#27a7f8'  //#58B3CC
+	                        }, {
+	                            offset: 1,
+	                            color: '#27a7f8'   //"##27a7f8"
+	                        }], false),
+	                        width: 3,
+	                        opacity: 0.2,
+	                        curveness: 0.1
+	                    }
+	                },
+	                data: allData.moveLines
+	            },
+	            {
+	                name: '西安',
+	                type: 'effectScatter',
+	                coordinateSystem: 'geo',
+	                zlevel: 99,
+	                rippleEffect: {
+	                    brushType: 'stroke'
+	                },
+	                label: {
+	                    emphasis: {
+	                        show: true,
+	                        position: 'right',
+	                        formatter: '{b}'
+	                    }
+	                },
+	                symbolSize: 35,
+	                showEffectOn: 'render',
+	                itemStyle: {
+	                    normal: {
+	                        color: '#46bee9'
+	                    }
+	                },
+	                data: xianCor
+	            },]
+        	};
+		
+	    </script>
+	</body>
+</html>
+

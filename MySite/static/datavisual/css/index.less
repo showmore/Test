@@ -1,0 +1,107 @@
+.clearfix:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+.container{
+	position: relative;
+	width: 1100px;
+	margin: 0 auto;
+	background-color: #404a59;
+}
+
+.bor--2{
+	border: 2px solid #fff;
+}
+
+.chart-wrap{
+	width: 1100px;
+	height: 600px;
+	margin: 20px auto 0 auto;
+	position: relative;
+	z-index: 10000;
+
+	.chart{
+		width: 300px;
+		height: 300px;
+		position: absolute;
+		z-index: 10010;
+
+		&.chart--big{
+			width: 800px;
+			height: 600px;
+			position: absolute;
+			z-index: 10009;
+		}
+	}
+}
+
+.right-box{
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-align: center;
+	width: 220px;
+}
+
+.card-wrap{
+	position: absolute;
+	top: 20px;
+	right: 10px;
+
+	.title{
+		font-size: 32px;
+		color: #fff;
+		text-align: center;
+	}
+
+	.card{
+		position: relative;
+		margin: 20px 0;
+		padding: 10px;
+		width: 160px;
+		height: 60px;
+		border-radius: 10px;
+		border: 1px solid #fff;
+		text-align: center;
+
+		.card__title{
+			color: #fff;
+			position: absolute;
+			left: 24px;
+			padding: 0 10px;
+			top: -8px;
+			font-size: 14px;
+			background-color: #404a59;
+		}
+		.card__item{
+			color: #fff;
+			line-height: 60px;
+
+			.card__item__value{
+				font-size: 32px;
+				font-weight: bold;
+			}
+			.card__item__unit{
+
+			}
+		}
+	}
+}
+
+.btn-wrap{
+	height: 60px;
+	position: absolute;
+	top: 500px;
+
+	.btn{
+		margin: 5px;
+	}
+}

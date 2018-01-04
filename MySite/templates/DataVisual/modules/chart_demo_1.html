@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body,html{width: 100%;height: 100%;}
+			.chart{display: inline-block;position: absolute;z-index: -1;width: 400px;height:350px;top: 4px;left: 6%;}
+			.semicircle_left{width: 40%;height: 40%;border:4px solid #30774b;border-radius: 50%;position: relative;display: inline-block;margin-left: 12%;margin-top: 10%;}
+			.semicircle_left::after{background:url(../../static/datavisual/images/2.png);content:" ";width: 80%;height: 80%;border-radius: 50%;left: 45px;top:100px;position: absolute;}
+			.semicircle_right{width: 40%;height: 40%;border:4px solid #30774b;border-radius: 50%;position: relative;display: inline-block;left: -28px;}
+			.semicircle_right::after{background:url(../../static/datavisual/images/2.png);content:" ";width: 80%;height: 80%;border-radius: 50%;left: -45px;top:100px;position: absolute;}
+			.data {position: relative;width: 100%;overflow: hidden;top: -145px;left:64px;}
+			.data_left{float: left;width: 36%;}
+			.data_right{float: left;width:36%;}
+			.data  span{display: block;width: 100%;text-align: center;color:#fff;font-size: 1.1em;}
+			.data  i{display: block;margin-top:10px;width: 100%;text-align: center;font-style: normal;font-weight: bold;font-size: 2em;color:orange;}
+			.data  b{display: block;width: 100%;text-align: center;color:#fff;font-style: normal;margin-top: -3%;}
+			.data em{display:block;width: 80%;text-align: center;color:#fff;font-style: normal;line-height: 30px;border-radius: 10px;margin-left: 10%;}
+		</style>
+	</head>
+	<body>
+		<p style="color:#fff;margin-top: 10px;text-align: center;font-size: 1.1em;">数据统计截止日期：2017年10月31日</p>
+		<div class="chart">
+			<div class="semicircle_left"></div>
+			<div class="semicircle_right"></div>
+			<div class="data">
+			<p class="data_left">
+				<span>总共接待场次</span>
+				<i>972</i>
+				
+			</p>
+			<p class="data_right">
+				<span>总共接待人数</span>
+				<i>11339</i>
+				
+			</p>
+		</div>
+		
+		</div>
+	</body>
+</html>

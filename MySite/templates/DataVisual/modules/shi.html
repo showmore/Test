@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	
+		
+			<div class="contentCharts" id="mainChart" style="width:100%;height:200px;">
+				
+			</div>	
+		
+		<script src="../../lib/echarts.min.js"></script>
+		<script type="text/javascript">
+			var mainChart = echarts.init(document.getElementById('mainChart'));
+		option = {
+    title: {
+        text: '市到访前五排名',
+        left: 'center',
+		textStyle: {
+            fontFamily:'幼圆',
+            fontWeight: 'bolder',
+            fontSize: 14,
+            color: '#fff'
+            
+        }
+    },
+    tooltip: {
+        trigger: 'item',
+        formatter: '{a} <br/>{b} : {c}'
+    },
+    /*legend: {
+        left: 'center',
+		top:20,
+		textStyle: {     
+	                        fontSize: 12,
+	                        color: '#fff'
+	                        
+	                    },
+        data: ['到访次数']
+    },*/
+    xAxis: {
+        type: 'category',
+        
+        splitLine: {show: false},
+        data: ['北京市', '天津市', '郑州市', '重庆市', '深圳市'],
+		axisTick: {
+								alignWithLabel: true
+							},
+							axisLine: {
+                            lineStyle: {
+                                color: '#fff'
+                            }
+                        },
+                        axisTick: {
+                            lineStyle: {
+                                color: '#fff'
+                            }
+                        },
+						axisLabel: {
+                            interval: 0,
+                            textStyle: {
+                                color: '#fff'
+                            }
+                        },
+                        splitLine: {
+                            show: false
+                        },
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '10%',
+        top:"15%",
+        containLabel: true
+    },
+    yAxis: {
+        type: 'value',
+       
+		min:8,
+		max: 10,
+		interval: 0.2,
+		axisTick: {
+			alignWithLabel: true
+		},
+		axisLine: {
+        lineStyle: {
+            color: '#fff'
+        }
+    },
+    axisTick: {
+        lineStyle: {
+            color: '#fff'
+        }
+    },
+	splitLine: {
+        show: true
+    }
+							
+    },
+    series: [
+        {
+            name: '到访次数',
+            type: 'line',
+			itemStyle : {  
+                normal : {  
+                    lineStyle:{  
+                        color:'red'  
+                    }  
+                }  
+            },  
+            data: [10, 9, 9, 8, 8],
+            label: {
+                normal: {
+                    show: true,
+                    position: 'inside'
+                }
+            }
+        },
+        
+    ]
+};
+
+
+        mainChart.setOption(option);
+		</script>
+	</body>
+</html>

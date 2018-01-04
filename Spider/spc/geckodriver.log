@@ -1,0 +1,1259 @@
+1513321326849	geckodriver	INFO	geckodriver 0.19.1
+1513321326864	geckodriver	INFO	Listening on 127.0.0.1:59016
+1513321328930	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.2rEEoyndItdr"
+1513321329426	Marionette	INFO	Enabled via --marionette
+[Child 6312, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513321330505	Marionette	INFO	Listening on port 59024
+1513321330973	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513321331053	Marionette	DEBUG	Register listener.js for window 4294967297
+1513321331069	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513321331089	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513321331089	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513321332118	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.iptrm.com/"
+1513321336407	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.iptrm.com/"
+1513321758495	geckodriver	INFO	geckodriver 0.19.1
+1513321758502	geckodriver	INFO	Listening on 127.0.0.1:59239
+1513321760568	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.UsuTVALEhClg"
+1513321761021	Marionette	INFO	Enabled via --marionette
+[Parent 6876, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6364, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6364, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513321762014	Marionette	INFO	Listening on port 59245
+1513321762096	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513321762144	Marionette	DEBUG	Register listener.js for window 4294967297
+1513321762167	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513321762187	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513321762187	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513321763006	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.iptrm.com/"
+1513321767132	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.iptrm.com/"
+[Child 4524, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 464
+1513322606521	geckodriver	INFO	geckodriver 0.19.1
+1513322606528	geckodriver	INFO	Listening on 127.0.0.1:55840
+1513322608587	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.w7KEkbXR0ZEI"
+1513322609048	Marionette	INFO	Enabled via --marionette
+1513322610060	Marionette	INFO	Listening on port 55846
+1513322610126	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513322610175	Marionette	DEBUG	Register listener.js for window 4294967297
+1513322610197	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513322610475	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513322610475	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513322611277	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513322611289	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513322611546	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513322611801	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513322709856	geckodriver	INFO	geckodriver 0.19.1
+1513322709864	geckodriver	INFO	Listening on 127.0.0.1:55883
+1513322711930	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.w6l6zcaXcmaw"
+1513322712385	Marionette	INFO	Enabled via --marionette
+[Child 6352, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6352, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513322713386	Marionette	INFO	Listening on port 55889
+1513322713478	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513322713522	Marionette	DEBUG	Register listener.js for window 4294967297
+1513322713546	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513322713871	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513322713871	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513322714746	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513322714759	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513322715004	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513322715203	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513322715329	geckodriver	INFO	geckodriver 0.19.1
+1513322715337	geckodriver	INFO	Listening on 127.0.0.1:55925
+1513322717427	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.XECZyuJjcJue"
+1513322717913	Marionette	INFO	Enabled via --marionette
+[Parent 332, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 5176, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513322718931	Marionette	INFO	Listening on port 55931
+1513322718991	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513322719036	Marionette	DEBUG	Register listener.js for window 4294967297
+1513322719056	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513322719294	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513322719295	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513322720123	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513322720135	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513322720478	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513322720644	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513322756605	geckodriver	INFO	geckodriver 0.19.1
+1513322756612	geckodriver	INFO	Listening on 127.0.0.1:55984
+1513322758658	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.YZ30RAIHgU87"
+1513322759105	Marionette	INFO	Enabled via --marionette
+[Parent 5472, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4368, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4368, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513322760098	Marionette	INFO	Listening on port 55990
+1513322760182	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513322760228	Marionette	DEBUG	Register listener.js for window 4294967297
+1513322760257	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513322760487	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513322760487	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513322761221	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513322761233	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513322761506	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513322762044	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513322770861	geckodriver	INFO	geckodriver 0.19.1
+1513322770868	geckodriver	INFO	Listening on 127.0.0.1:56030
+1513322772924	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.klghkQYRSHzU"
+1513322773408	Marionette	INFO	Enabled via --marionette
+[Parent 6084, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 716, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 716, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513322774407	Marionette	INFO	Listening on port 56036
+1513322774464	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513322774509	Marionette	DEBUG	Register listener.js for window 4294967297
+1513322774542	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513322774797	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513322774797	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513322775998	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513322776011	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513322776381	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513322776590	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513323345391	geckodriver	INFO	geckodriver 0.19.1
+1513323345401	geckodriver	INFO	Listening on 127.0.0.1:56102
+1513323347465	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.7ltXuUJJSZLc"
+1513323347942	Marionette	INFO	Enabled via --marionette
+[Child 4376, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4376, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513323348956	Marionette	INFO	Listening on port 56109
+1513323349020	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513323349071	Marionette	DEBUG	Register listener.js for window 4294967297
+1513323349145	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513323349485	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513323349485	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513323350737	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513323350749	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513323351096	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513323351354	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513323403363	geckodriver	INFO	geckodriver 0.19.1
+1513323403370	geckodriver	INFO	Listening on 127.0.0.1:56152
+1513323405438	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.793Sbbk6M2Ni"
+1513323405934	Marionette	INFO	Enabled via --marionette
+[Child 6408, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6408, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513323406931	Marionette	INFO	Listening on port 56158
+1513323406966	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513323407011	Marionette	DEBUG	Register listener.js for window 4294967297
+1513323407033	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513323407302	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513323407303	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513323408068	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513323408080	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513323408474	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513323408573	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513324266011	geckodriver	INFO	geckodriver 0.19.1
+1513324266018	geckodriver	INFO	Listening on 127.0.0.1:56488
+1513324268088	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.03vR0qtFp33t"
+1513324268557	Marionette	INFO	Enabled via --marionette
+1513324269585	Marionette	INFO	Listening on port 56494
+1513324269618	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513324269671	Marionette	DEBUG	Register listener.js for window 4294967297
+1513324269696	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513324269913	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513324269913	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513324270739	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/online/GB%252015093-1994/"
+1513324270754	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/online/GB%252015093-1994/"
+1513324271145	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/online/GB%252015093-1994/?lang=zh_CN&text="
+1513324271405	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/online/GB%252015093-1994/?lang=zh_CN&text="
+1513324347012	geckodriver	INFO	geckodriver 0.19.1
+1513324347020	geckodriver	INFO	Listening on 127.0.0.1:56635
+1513324349073	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.fM29ovEJjB90"
+1513324349563	Marionette	INFO	Enabled via --marionette
+[Parent 2412, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6084, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6084, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513324350577	Marionette	INFO	Listening on port 56641
+1513324350610	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513324350669	Marionette	DEBUG	Register listener.js for window 4294967297
+1513324350692	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513324350919	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513324350919	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513324352053	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513324352066	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513324352441	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513324352708	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513561431614	geckodriver	INFO	geckodriver 0.19.1
+1513561431631	geckodriver	INFO	Listening on 127.0.0.1:49480
+1513561433686	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.NZzSeQN1J8Zz"
+1513561434558	Marionette	INFO	Enabled via --marionette
+1513561435695	Marionette	INFO	Listening on port 49492
+1513561435728	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513561435776	Marionette	DEBUG	Register listener.js for window 4294967297
+1513561435807	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513561436032	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513561436032	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513561436803	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513561436815	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513561437133	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513561437313	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513563628917	geckodriver	INFO	geckodriver 0.19.1
+1513563628926	geckodriver	INFO	Listening on 127.0.0.1:53145
+1513563630975	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.KY0UIxtviklk"
+1513563631453	Marionette	INFO	Enabled via --marionette
+[Parent 2448, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6536, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6536, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513563632476	Marionette	INFO	Listening on port 53156
+1513563632504	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513563632555	Marionette	DEBUG	Register listener.js for window 4294967297
+1513563632585	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513563632822	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513563632822	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513563633652	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513563633667	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513563633911	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513563634067	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513563800900	geckodriver	INFO	geckodriver 0.19.1
+1513563800906	geckodriver	INFO	Listening on 127.0.0.1:53577
+1513563802990	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.zMgeiwHdKSVF"
+1513563803465	Marionette	INFO	Enabled via --marionette
+1513563804494	Marionette	INFO	Listening on port 53585
+1513563804546	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513563804600	Marionette	DEBUG	Register listener.js for window 4294967297
+1513563804626	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513563804886	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513563804886	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513563805790	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513563805804	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513563806069	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513563806555	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513563865772	geckodriver	INFO	geckodriver 0.19.1
+1513563865779	geckodriver	INFO	Listening on 127.0.0.1:53719
+1513563867837	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.khq2Eb8JGjgJ"
+1513563868303	Marionette	INFO	Enabled via --marionette
+[Child 6352, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6352, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513563869357	Marionette	INFO	Listening on port 53727
+1513563869388	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513563869434	Marionette	DEBUG	Register listener.js for window 4294967297
+1513563869457	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513563869676	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513563869676	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513563870365	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513563870378	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513563870737	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513563870886	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513563958470	geckodriver	INFO	geckodriver 0.19.1
+1513563958477	geckodriver	INFO	Listening on 127.0.0.1:53904
+1513563960532	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.LucSB558BMOH"
+1513563960982	Marionette	INFO	Enabled via --marionette
+1513563962030	Marionette	INFO	Listening on port 53912
+1513563962054	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513563962104	Marionette	DEBUG	Register listener.js for window 4294967297
+1513563962125	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513563962380	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513563962381	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513563963364	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513563963377	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513563963697	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513563963928	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513563963985	Marionette	DEBUG	Register listener.js for window 4294967302
+1513563964012	Marionette	DEBUG	Register listener.js for window 4294967305
+JavaScript error: javascript:submit('%E7%BB%BC%E5%90%88','A','1','%E5%9B%BD%E5%86%85%E6%A0%87%E5%87%86'), line 1: ReferenceError: submit is not defined
+[Parent 7820, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 7664, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1513564007318	geckodriver	INFO	geckodriver 0.19.1
+1513564007324	geckodriver	INFO	Listening on 127.0.0.1:54027
+1513564009379	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.NOzPO549DPkm"
+1513564009828	Marionette	INFO	Enabled via --marionette
+[Child 5824, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513564010847	Marionette	INFO	Listening on port 54037
+1513564010915	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513564010972	Marionette	DEBUG	Register listener.js for window 4294967297
+1513564010995	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513564011216	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513564011217	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513564012146	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513564012158	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513564012405	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513564014599	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+[Child 6868, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6868, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6176, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6176, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+t "pagehide" for "about:blank"
+1513564029974	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513564030900	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513564030912	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513564031541	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513564031704	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513564031744	Marionette	DEBUG	Register listener.js for window 4294967302
+1513564031773	Marionette	DEBUG	Register listener.js for window 4294967305
+JavaScript error: javascript:submit('%E7%BB%BC%E5%90%88','A','1','%E5%9B%BD%E5%86%85%E6%A0%87%E5%87%86'), line 1: ReferenceError: submit is not defined
+[Child 7212, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8988, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8988, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1513564234570	geckodriver	INFO	geckodriver 0.19.1
+1513564234577	geckodriver	INFO	Listening on 127.0.0.1:54447
+1513564236640	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.N4Ksiobz1OVv"
+1513564237089	Marionette	INFO	Enabled via --marionette
+[Child 6300, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6300, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513564238095	Marionette	INFO	Listening on port 54456
+1513564238166	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513564238213	Marionette	DEBUG	Register listener.js for window 4294967297
+1513564238234	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513564238452	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513564238452	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513564239203	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513564239217	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513564239455	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513564241618	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513564241704	Marionette	DEBUG	Register listener.js for window 4294967302
+1513564241747	Marionette	DEBUG	Register listener.js for window 4294967305
+JavaScript error: javascript:submit('%E7%BB%BC%E5%90%88','A','1','%E5%9B%BD%E5%86%85%E6%A0%87%E5%87%86'), line 1: ReferenceError: submit is not defined
+JavaScript error: http://www.spc.org.cn/gb168/js/viewjs/index.js, line 408: ReferenceError: images is not defined
+JavaScript error: http://www.spc.org.cn/gb168/js/viewjs/index.js, line 411: ReferenceError: images is not defined
+JavaScript error: http://www.spc.org.cn/gb168/js/viewjs/index.js, line 408: ReferenceError: images is not defined
+JavaScript error: http://www.spc.org.cn/gb168/js/viewjs/index.js, line 411: ReferenceError: images is not defined
+JavaScript warning: resource://devtools/shared/base-loader.js -> resource://devtools/client/shared/demangle.js, line 0: Successfully compiled asm.js code (total compilation time 61ms; unable to cache asm.js in synchronous scripts; try loading asm.js via <script async> or createElement('script'))
+console.log: plural-form.js: Index #1 of '再显示一个节点；显示全部 #1 个节点' for value 85 is invalid -- plural rule #1;
+
+console.log: plural-form.js: Index #1 of '再显示一个节点；显示全部 #1 个节点' for value 85 is invalid -- plural rule #1;
+
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/tab.js, line 1419: TypeError: this._tabPool is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/tab.js, line 1419: TypeError: this._tabPool is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/tab.js, line 1419: TypeError: this._tabPool is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/tab.js, line 1419: TypeError: this._tabPool is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/tab.js, line 1419: TypeError: this._tabPool is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/tab.js, line 1419: TypeError: this._tabPool is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/tab.js, line 1419: TypeError: this._tabPool is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/client/netmonitor/src/connector/firefox-connector.js, line 74: TypeError: this.tabTarget is null
+JavaScript error: resource:///modules/ContentMetaHandler.jsm, line 123: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIMessageSender.sendAsyncMessage]
+JavaScript error: resource:///modules/ContentMetaHandler.jsm, line 123: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIMessageSender.sendAsyncMessage]
+JavaScript error: resource:///modules/ContentMetaHandler.jsm, line 123: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIMessageSender.sendAsyncMessage]
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/client/netmonitor/src/connector/firefox-connector.js, line 74: TypeError: this.tabTarget is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/client/netmonitor/src/connector/firefox-connector.js, line 74: TypeError: this.tabTarget is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/client/netmonitor/src/connector/firefox-connector.js, line 74: TypeError: this.tabTarget is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/client/shared/developer-toolbar.js, line 742: TypeError: this._chromeWindow.gBrowser.selectedTab is undefined
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/client/shared/developer-toolbar.js, line 742: TypeError: this._chromeWindow.gBrowser.selectedTab is undefined
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/client/netmonitor/src/connector/firefox-connector.js, line 74: TypeError: this.tabTarget is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/client/netmonitor/src/connector/firefox-connector.js, line 74: TypeError: this.tabTarget is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/client/shared/developer-toolbar.js, line 742: TypeError: this._chromeWindow.gBrowser.selectedTab is undefined
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/client/shared/developer-toolbar.js, line 742: TypeError: this._chromeWindow.gBrowser.selectedTab is undefined
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/client/shared/developer-toolbar.js, line 742: TypeError: this._chromeWindow.gBrowser.selectedTab is undefined
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/client/shared/developer-toolbar.js, line 742: TypeError: this._chromeWindow.gBrowser.selectedTab is undefined
+[Child 6208, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6208, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 5128, Chrome_ChildThread] WARNING: pipe error: 232: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 513
+[Child 5128, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 5128, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/client/shared/developer-toolbar.js, line 742: TypeError: this._chromeWindow.gBrowser.selectedTab is undefined
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/client/shared/developer-toolbar.js, line 742: TypeError: this._chromeWindow.gBrowser.selectedTab is undefined
+: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 7988, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9948, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9948, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1513567863814	geckodriver	INFO	geckodriver 0.19.1
+1513567863820	geckodriver	INFO	Listening on 127.0.0.1:59381
+1513567865880	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.AicUr3WGQgDn"
+1513567866339	Marionette	INFO	Enabled via --marionette
+[Parent 9352, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9644, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9644, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513567867326	Marionette	INFO	Listening on port 59392
+1513567867409	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513567867467	Marionette	DEBUG	Register listener.js for window 4294967297
+1513567867499	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513567867803	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513567867804	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513567868601	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513567868613	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513567868999	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513567872307	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513567989878	addons.productaddons	WARN	Failed downloading XML, status: 0, reason: timeout
+[Parent 9352, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9760, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8264, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+ 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10736, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513570547418	Marionette	INFO	Listening on port 63313
+1513570547453	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513570547505	Marionette	DEBUG	Register listener.js for window 4294967297
+1513570547537	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513570547801	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513570547802	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513570548695	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513570548707	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513570549052	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513570549232	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+[Parent 9208, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6972, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6972, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 9208, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10064, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10064, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1513572001230	geckodriver	INFO	geckodriver 0.19.1
+1513572001236	geckodriver	INFO	Listening on 127.0.0.1:49192
+1513572003310	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.ZSKZeG9BwYyc"
+1513572003791	Marionette	INFO	Enabled via --marionette
+[Parent 10520, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513572004791	Marionette	INFO	Listening on port 49200
+1513572004854	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513572004905	Marionette	DEBUG	Register listener.js for window 4294967297
+1513572004934	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513572005228	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513572005229	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513572006050	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513572006064	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513572006483	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513572006738	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+[Parent 10520, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 10520, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11344, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 1048, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 1048, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+ window 4294967297
+1513573239921	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513573240163	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513573240164	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513573241036	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513573241049	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513573241310	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513573241534	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+[Child 11648, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11648, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+54823	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513573254874	Marionette	DEBUG	Register listener.js for window 4294967297
+1513573254904	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513573255152	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513573255152	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513573255877	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513573255889	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513573256172	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513573256350	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+[Parent 12852, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10780, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10780, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12704, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12704, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+82605	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513573282675	Marionette	DEBUG	Register listener.js for window 4294967297
+1513573282694	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513573282933	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513573282934	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513573283868	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513573283883	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513573284154	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513573284447	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+[Parent 12808, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 14000, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 12808, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 13636, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Child 13636, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1513573312217	geckodriver	INFO	geckodriver 0.19.1
+1513573312223	geckodriver	INFO	Listening on 127.0.0.1:51823
+1513573314286	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.0lQOLEYF27HV"
+1513573314731	Marionette	INFO	Enabled via --marionette
+[Child 9368, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513573315738	Marionette	INFO	Listening on port 51831
+1513573315818	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513573315870	Marionette	DEBUG	Register listener.js for window 4294967297
+1513573315896	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513573316376	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513573316377	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513573317144	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513573317156	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513573317475	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513573317669	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513573620008	geckodriver	INFO	geckodriver 0.19.1
+1513573620015	geckodriver	INFO	Listening on 127.0.0.1:52355
+1513573622101	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.OivfbPeHQwVX"
+1513573622574	Marionette	INFO	Enabled via --marionette
+[Child 9552, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513573623570	Marionette	INFO	Listening on port 52365
+1513573623640	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513573623687	Marionette	DEBUG	Register listener.js for window 4294967297
+1513573623714	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513573623982	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513573623982	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513573624719	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513573624731	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513573625104	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513573625275	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513573625311	Marionette	DEBUG	Register listener.js for window 4294967302
+1513573625346	Marionette	DEBUG	Register listener.js for window 4294967305
+JavaScript error: javascript:submit('%E7%BB%BC%E5%90%88','A','1','%E5%9B%BD%E5%86%85%E6%A0%87%E5%87%86'), line 1: ReferenceError: submit is not defined
+[Parent 13804, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10464, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9300, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9300, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+ndow 4294967297
+1513574028007	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513574028250	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513574028251	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513574029040	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513574029053	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513574029397	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513574029561	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+[Parent 9324, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 2696, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 2696, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11676, Chrome_ChildThread] WARNING: pipe error: 232: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 513
+[Child 11676, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11676, Chrome_ChildThread] WARNING: pipe error: 232: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 513
+[Child 11676, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+ceived DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513574111332	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513574111615	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513574111901	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+[Child 12276, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12276, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8792, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8792, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+ile z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11160, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513574148752	Marionette	INFO	Listening on port 53361
+1513574149238	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513574149298	Marionette	DEBUG	Register listener.js for window 4294967297
+1513574149315	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513574149558	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513574149559	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513574150636	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513574150649	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513574150940	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513574151128	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+[Child 8324, Chrome_ChildThread] WARNING: pipe error: 232: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 513
+[Child 8324, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8324, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8540, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8540, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1513574203350	geckodriver	INFO	geckodriver 0.19.1
+1513574203357	geckodriver	INFO	Listening on 127.0.0.1:53486
+1513574205428	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.sHxj9hXXhUwg"
+1513574205899	Marionette	INFO	Enabled via --marionette
+1513574206885	Marionette	INFO	Listening on port 53496
+1513574206962	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513574207008	Marionette	DEBUG	Register listener.js for window 4294967297
+1513574207045	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513574208292	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513574208292	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513574209095	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513574209108	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513574209372	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513574209533	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+JavaScript error: http://www.spc.org.cn/gb168/js/viewjs/index.js, line 354: ReferenceError: images is not defined
+JavaScript error: http://www.spc.org.cn/gb168/js/viewjs/index.js, line 357: ReferenceError: images is not defined
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/client/netmonitor/src/connector/firefox-connector.js, line 74: TypeError: this.tabTarget is null
+[Child 6208, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+r listener.js for window 4294967297
+1513574232031	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513574232277	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513574232277	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513574233156	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513574233169	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513574233437	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513574233615	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513574803364	geckodriver	INFO	geckodriver 0.19.1
+1513574803371	geckodriver	INFO	Listening on 127.0.0.1:54659
+1513574805434	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.B0br7fZJWpLG"
+1513574805873	Marionette	INFO	Enabled via --marionette
+[Child 14216, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 14216, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513574806876	Marionette	INFO	Listening on port 54667
+1513574806962	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513574807015	Marionette	DEBUG	Register listener.js for window 4294967297
+1513574807046	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513574807288	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513574807288	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513574808326	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513574808349	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513574808721	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513574808735	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513574808801	Marionette	DEBUG	Register listener.js for window 4294967302
+1513574808825	Marionette	DEBUG	Register listener.js for window 4294967305
+[Child 10716, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10716, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 13524, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+13575024452	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513575024500	Marionette	DEBUG	Register listener.js for window 4294967297
+1513575024535	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513575024797	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513575024798	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513575025571	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513575025583	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513575025876	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513575026048	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+[Parent 7212, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 7212, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9232, Chrome_ChildThread] WARN1513575191170	Marionette	INFO	Enabled via --marionette
+[Child 9280, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9280, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513575192231	Marionette	INFO	Listening on port 55825
+1513575192479	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513575192524	Marionette	DEBUG	Register listener.js for window 4294967297
+1513575192543	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513575192798	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513575192799	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513575193667	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513575193680	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513575193958	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513575196211	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513575196295	Marionette	DEBUG	Register listener.js for window 4294967302
+1513575196328	Marionette	DEBUG	Register listener.js for window 4294967305
+[Child 11124, Chrome_ChildThread] WARNING: pipe error: 232: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 513
+[Child 8260, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8260, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12792, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513575353746	Marionette	INFO	Listening on port 56177
+1513575353784	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513575353831	Marionette	DEBUG	Register listener.js for window 4294967297
+1513575353862	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513575354103	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513575354103	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513575354888	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513575354900	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513575355184	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513575355395	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513575355427	Marionette	DEBUG	Register listener.js for window 4294967302
+1513575355455	Marionette	DEBUG	Register listener.js for window 4294967305
+[Parent 9000, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 9000, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11996, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11996, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1513575502638	geckodriver	INFO	geckodriver 0.19.1
+1513575502644	geckodriver	INFO	Listening on 127.0.0.1:56460
+1513575504698	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.honvW9unidnk"
+1513575505168	Marionette	INFO	Enabled via --marionette
+[Child 11036, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11036, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513575506187	Marionette	INFO	Listening on port 56469
+1513575506231	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513575506284	Marionette	DEBUG	Register listener.js for window 4294967297
+1513575506314	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513575506564	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513575506564	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513575507387	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513575507400	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513575507634	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513575507797	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513575507831	Marionette	DEBUG	Register listener.js for window 4294967302
+1513575507848	Marionette	DEBUG	Register listener.js for window 4294967305
+[Child 14256, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10100, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+ust_mozprofile.vfNbUoXaa6v1"
+1513575529453	Marionette	INFO	Enabled via --marionette
+[Parent 13408, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513575530456	Marionette	INFO	Listening on port 56568
+1513575530537	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513575530594	Marionette	DEBUG	Register listener.js for window 4294967297
+1513575530613	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513575530862	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513575530862	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513575531936	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513575531949	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513575532211	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513575532395	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513575532435	Marionette	DEBUG	Register listener.js for window 4294967302
+1513575532460	Marionette	DEBUG	Register listener.js for window 4294967305
+JavaScript error: javascript:submit('%E7%BB%BC%E5%90%88','A','1','%E5%9B%BD%E5%86%85%E6%A0%87%E5%87%86'), line 1: ReferenceError: submit is not defined
+[Child 12180, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12180, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10548, Chrome_ChildThread] WARNING: pipe error: 232: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 513
+[Child 10548, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10548, Chrome_ChildThread] WARNING: pipe error: 232: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 513
+[Child 10548, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1513575784114	geckodriver	INFO	geckodriver 0.19.1
+1513575784120	geckodriver	INFO	Listening on 127.0.0.1:57107
+1513575786186	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.UIKpTfOc5zUi"
+1513575786655	Marionette	INFO	Enabled via --marionette
+1513575787670	Marionette	INFO	Listening on port 57117
+1513575787724	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513575787783	Marionette	DEBUG	Register listener.js for window 4294967297
+1513575787811	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513575788044	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513575788045	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513575788959	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513575788972	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513575789232	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513575789398	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513575789433	Marionette	DEBUG	Register listener.js for window 4294967302
+1513575789453	Marionette	DEBUG	Register listener.js for window 4294967305
+[Parent 6348, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8248, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8248, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 14104, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+ 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513575883854	Marionette	INFO	Listening on port 57345
+1513575883878	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513575883928	Marionette	DEBUG	Register listener.js for window 4294967297
+1513575883985	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513575884240	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513575884240	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513575885261	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513575885274	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513575885629	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513575885774	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513575885802	Marionette	DEBUG	Register listener.js for window 4294967302
+1513575885830	Marionette	DEBUG	Register listener.js for window 4294967305
+[Child 11672, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11672, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 14004, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+75955151	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513575955197	Marionette	DEBUG	Register listener.js for window 4294967297
+1513575955226	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513575955501	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513575955502	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513575956291	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513575956304	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513575956611	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513575956756	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513575956778	Marionette	DEBUG	Register listener.js for window 4294967302
+1513575956802	Marionette	DEBUG	Register listener.js for window 4294967305
+[Parent 12060, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9000, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 12060, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11288, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11288, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+13576009719	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513576009772	Marionette	DEBUG	Register listener.js for window 4294967297
+1513576009804	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513576010075	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513576010076	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513576010845	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513576010858	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513576011121	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513576011269	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513576011301	Marionette	DEBUG	Register listener.js for window 4294967302
+1513576011329	Marionette	DEBUG	Register listener.js for window 4294967305
+[Child 8908, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 8244, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 13852, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 13852, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513576150528	Marionette	INFO	Listening on port 58000
+1513576150562	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513576150609	Marionette	DEBUG	Register listener.js for window 4294967297
+1513576150639	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513576150889	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513576150890	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513576151654	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513576151666	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513576152050	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513576152234	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513576152270	Marionette	DEBUG	Register listener.js for window 4294967302
+1513576152293	Marionette	DEBUG	Register listener.js for window 4294967305
+[Parent 12340, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 12340, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12952, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+1513576807013	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513576807062	Marionette	DEBUG	Register listener.js for window 4294967297
+1513576807090	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513576807317	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513576807318	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513576808424	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513576808437	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513576808671	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513576808731	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513576808763	Marionette	DEBUG	Register listener.js for window 4294967302
+1513576808788	Marionette	DEBUG	Register listener.js for window 4294967305
+[Child 9304, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9304, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 12432, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8392, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8392, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513580649865	geckodriver	INFO	geckodriver 0.19.1
+1513580649879	geckodriver	INFO	Listening on 127.0.0.1:53763
+1513580651927	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.4XMlXXYFLQRt"
+1513580652441	Marionette	INFO	Enabled via --marionette
+[Child 11580, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513580653422	Marionette	INFO	Listening on port 53770
+1513580653482	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513580653532	Marionette	DEBUG	Register listener.js for window 4294967297
+1513580653572	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513580653819	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513580653820	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513580654583	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513580654596	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513580654932	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513580655019	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513580655123	Marionette	DEBUG	Register listener.js for window 4294967302
+1513580655150	Marionette	DEBUG	Register listener.js for window 4294967305
+JavaScript error: http://www.spc.org.cn/gb168/js/viewjs/index.js, line 354: ReferenceError: images is not defined
+JavaScript error: http://www.spc.org.cn/gb168/js/viewjs/index.js, line 357: ReferenceError: images is not defined
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/client/netmonitor/src/connector/firefox-connector.js, line 74: TypeError: this.tabTarget is null
+[Child 14128, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11428, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11428, Chrome_ChildThread] WARNING: pipe error: 232: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 513
+[Child 11428, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+onette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513582058494	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513582059011	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+[Parent 12328, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6512, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6512, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10896, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10896, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513582288699	geckodriver	INFO	geckodriver 0.19.1
+1513582288705	geckodriver	INFO	Listening on 127.0.0.1:54081
+1513582290765	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.744SyFFRPHfR"
+1513582291238	Marionette	INFO	Enabled via --marionette
+[Child 10532, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513582292212	Marionette	INFO	Listening on port 54087
+1513582292300	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513582292354	Marionette	DEBUG	Register listener.js for window 4294967297
+1513582292384	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513582292658	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513582292658	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513582294589	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513582294600	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513582295169	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513582295735	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513582295768	Marionette	DEBUG	Register listener.js for window 4294967302
+1513582295793	Marionette	DEBUG	Register listener.js for window 4294967305
+[Parent 3468, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6516, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6516, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10784, Chrome_ChildThread] WARNING: pipe error: 232: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 513
+[Child 10784, Chrome_ChildThread] WARNING: pipe error: 232: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 513
+[Child 10784, Chrome_ChildThread] WARNING: pipe error: 232: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 513
+[Child 10784, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10784, Chrome_ChildThread] WARNING: pipe error: 232: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 513
+[Child 10784, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513582359315	geckodriver	INFO	geckodriver 0.19.1
+1513582359321	geckodriver	INFO	Listening on 127.0.0.1:54357
+1513582361371	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.NrTyc8P8rlwJ"
+1513582361851	Marionette	INFO	Enabled via --marionette
+1513582362868	Marionette	INFO	Listening on port 54363
+1513582362909	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513582362962	Marionette	DEBUG	Register listener.js for window 4294967297
+1513582362991	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513582363283	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513582363284	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513582365237	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513582365249	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513582365923	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513582366405	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513582366439	Marionette	DEBUG	Register listener.js for window 4294967302
+1513582366471	Marionette	DEBUG	Register listener.js for window 4294967305
+[Child 12876, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Child 4424, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4424, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+ event "beforeunload" for "about:blank"
+1513582412746	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513582412747	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513582414384	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513582414399	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513582415097	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513582415568	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513582415597	Marionette	DEBUG	Register listener.js for window 4294967302
+1513582415622	Marionette	DEBUG	Register listener.js for window 4294967305
+[Parent 13956, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 13956, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9516, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9516, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+1513582488372	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513582488422	Marionette	DEBUG	Register listener.js for window 4294967297
+1513582488456	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513582488715	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513582488716	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513582489815	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513582489828	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513582490219	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513582490511	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513582490588	Marionette	DEBUG	Register listener.js for window 4294967302
+1513582490622	Marionette	DEBUG	Register listener.js for window 4294967305
+[Parent 12096, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10336, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9832, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9832, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513582587711	geckodriver	INFO	geckodriver 0.19.1
+1513582587717	geckodriver	INFO	Listening on 127.0.0.1:54559
+1513582589813	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.z3KfEZTEBGlP"
+1513582590301	Marionette	INFO	Enabled via --marionette
+1513582591315	Marionette	INFO	Listening on port 54565
+1513582591358	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513582591408	Marionette	DEBUG	Register listener.js for window 4294967297
+1513582591436	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513582591711	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513582591712	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513582595246	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513582595258	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513582595842	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513582596184	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513582596349	Marionette	DEBUG	Register listener.js for window 4294967302
+1513582596375	Marionette	DEBUG	Register listener.js for window 4294967305
+JavaScript warning: resource://devtools/shared/base-loader.js -> resource://devtools/client/shared/demangle.js, line 0: Successfully compiled asm.js code (total compilation time 56ms; unable to cache asm.js in synchronous scripts; try loading asm.js via <script async> or createElement('script'))
+[Child 10552, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10552, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/tab.js, line 1419: TypeError: this._tabPool is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/tab.js, line 1419: TypeError: this._tabPool is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/tab.js, line 1419: TypeError: this._tabPool is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/tab.js, line 1419: TypeError: this._tabPool is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/tab.js, line 1419: TypeError: this._tabPool is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/tab.js, line 1419: TypeError: this._tabPool is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/client/netmonitor/src/connector/firefox-connector.js, line 74: TypeError: this.tabTarget is null
+[Parent 5384, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4920, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4920, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513585098571	geckodriver	INFO	geckodriver 0.19.1
+1513585098584	geckodriver	INFO	Listening on 127.0.0.1:61186
+1513585100621	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.DRz0vTgryiDg"
+1513585101172	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 10344, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10344, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513585101988	Marionette	INFO	Listening on port 61193
+1513585102146	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513585102185	Marionette	DEBUG	Register listener.js for window 4294967297
+1513585102204	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513585102419	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513585102420	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513585103711	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513585103727	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513585104045	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513585104285	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513585104333	Marionette	DEBUG	Register listener.js for window 4294967302
+1513585104351	Marionette	DEBUG	Register listener.js for window 4294967305
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 12640, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 12640, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 6440, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 12432, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12432, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+UG	Received DOM event "unload" for "about:blank"
+1513585141578	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513585141591	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513585141910	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513585142159	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513585142205	Marionette	DEBUG	Register listener.js for window 4294967302
+1513585142228	Marionette	DEBUG	Register listener.js for window 4294967305
+Marionette threw an error: [Exception... "Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIMessageSender.sendAsyncMessage]"  nsresult: "0x80070057 (NS_ERROR_ILLEGAL_VALUE)"  location: "JS frame :: chrome://marionette/content/proxy.js :: sendReply_ :: line 276"  data: no]
+sendReply_@chrome://marionette/content/proxy.js:276:5
+reply@chrome://marionette/content/proxy.js:256:7
+sendToServer@chrome://marionette/content/listener.js:734:3
+sendError@chrome://marionette/content/listener.js:768:3
+dispatch/</<@chrome://marionette/content/listener.js:532:40
+
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 11728, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 11728, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 1552, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 1552, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 13328, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 13328, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1513585223728	geckodriver	INFO	geckodriver 0.19.1
+1513585223733	geckodriver	INFO	Listening on 127.0.0.1:61322
+1513585225784	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.7OXVD0Dhj8fk"
+1513585226341	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 15244, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 15244, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513585227178	Marionette	INFO	Listening on port 61329
+1513585227302	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513585227346	Marionette	DEBUG	Register listener.js for window 4294967297
+1513585227364	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513585227583	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513585227584	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513585228391	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513585228403	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513585228742	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513585228990	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513585229030	Marionette	DEBUG	Register listener.js for window 4294967302
+1513585229052	Marionette	DEBUG	Register listener.js for window 4294967305
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 6464, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6464, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10500, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513585359110	Marionette	INFO	Listening on port 61469
+1513585359227	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513585359275	Marionette	DEBUG	Register listener.js for window 4294967297
+1513585359304	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513585359526	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513585359527	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513585360539	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513585360551	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513585360897	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513585361173	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513585361235	Marionette	DEBUG	Register listener.js for window 4294967302
+1513585361262	Marionette	DEBUG	Register listener.js for window 4294967305
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 9736, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 14704, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 14704, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 11728, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11728, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1513585378892	geckodriver	INFO	geckodriver 0.19.1
+1513585378898	geckodriver	INFO	Listening on 127.0.0.1:61525
+1513585380965	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.3w6zN4K9BMSz"
+1513585381537	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 13888, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 13888, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513585382410	Marionette	INFO	Listening on port 61531
+1513585382484	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513585382530	Marionette	DEBUG	Register listener.js for window 4294967297
+1513585382556	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513585382813	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513585382814	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513585383788	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline"
+1513585383801	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline"
+1513585384216	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513585384485	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/standardonline?lang=zh_CN&text="
+1513585384527	Marionette	DEBUG	Register listener.js for window 4294967302
+1513585384565	Marionette	DEBUG	Register listener.js for window 4294967305
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 12412, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 10076, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 15148, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+red for this session
+1513586418126	Marionette	DEBUG	Register listener.js for window 4294967297
+1513586418141	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513586423461	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513586423462	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513586424613	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/basicsearch?search=a100"
+1513586424628	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/basicsearch?search=a100"
+1513586428327	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/basicsearch?lang=zh_CN&text="
+1513586431084	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/basicsearch?lang=zh_CN&text="
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 11352, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 7084, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 7084, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 15080, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513586749297	geckodriver	INFO	geckodriver 0.19.1
+1513586749303	geckodriver	INFO	Listening on 127.0.0.1:62648
+1513586751377	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.TSRxRUFV7WRv"
+1513586751952	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 7108, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 7108, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513586752759	Marionette	INFO	Listening on port 62654
+1513586752907	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513586752949	Marionette	DEBUG	Register listener.js for window 4294967297
+1513586752963	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513586760113	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513586760114	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513586761256	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/basicsearch?search=a100"
+1513586761270	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/basicsearch?search=a100"
+1513586764986	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/basicsearch?lang=zh_CN&text="
+1513586765294	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/basicsearch?lang=zh_CN&text="
+1513586765341	Marionette	DEBUG	Register listener.js for window 4294967302
+1513586765382	Marionette	DEBUG	Register listener.js for window 4294967305
+1513586765575	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513586765596	Marionette	DEBUG	Register listener.js for window 4294967308
+1513586765807	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513586765829	Marionette	DEBUG	Register listener.js for window 4294967311
+1513586766062	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513586766089	Marionette	DEBUG	Register listener.js for window 4294967314
+1513586766310	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513586766343	Marionette	DEBUG	Register listener.js for window 4294967317
+1513586766579	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513586766624	Marionette	DEBUG	Register listener.js for window 4294967320
+1513586766838	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513586766868	Marionette	DEBUG	Register listener.js for window 4294967323
+1513586767088	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513586767108	Marionette	DEBUG	Register listener.js for window 4294967326
+1513586767333	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513586767368	Marionette	DEBUG	Register listener.js for window 4294967329
+1513586767580	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513586767611	Marionette	DEBUG	Register listener.js for window 4294967332
+1513586767832	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/client/netmonitor/src/connector/firefox-connector.js, line 74: TypeError: this.tabTarget is null
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 2748, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513586968039	geckodriver	INFO	geckodriver 0.19.1
+1513586968051	geckodriver	INFO	Listening on 127.0.0.1:62742
+1513586970100	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.XyRcPewUlEqf"
+1513586970660	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 15204, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 15204, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513586971465	Marionette	INFO	Listening on port 62749
+1513586971616	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513586971655	Marionette	DEBUG	Register listener.js for window 4294967297
+1513586971672	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513586976001	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513586976001	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513586976993	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/basicsearch?search=a100&pageIndex=1"
+1513586977007	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/basicsearch?search=a100&pageIndex=1"
+1513586981622	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/basicsearch?lang=zh_CN&text="
+1513586981970	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/basicsearch?lang=zh_CN&text="
+1513586982213	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513586982272	Marionette	DEBUG	Register listener.js for window 4294967302
+1513586982312	Marionette	DEBUG	Register listener.js for window 4294967305
+1513586982507	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513586982528	Marionette	DEBUG	Register listener.js for window 4294967308
+1513586982755	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513586982776	Marionette	DEBUG	Register listener.js for window 4294967311
+1513586982992	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513586983022	Marionette	DEBUG	Register listener.js for window 4294967314
+1513586983247	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513586983283	Marionette	DEBUG	Register listener.js for window 4294967317
+1513586983496	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513586983519	Marionette	DEBUG	Register listener.js for window 4294967320
+1513586983729	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513586983749	Marionette	DEBUG	Register listener.js for window 4294967323
+1513586983969	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513586984007	Marionette	DEBUG	Register listener.js for window 4294967326
+1513586984231	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513586984270	Marionette	DEBUG	Register listener.js for window 4294967329
+1513586984484	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 4648, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 4632, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4632, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 8416, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513587823013	geckodriver	INFO	geckodriver 0.19.1
+1513587823019	geckodriver	INFO	Listening on 127.0.0.1:62910
+1513587825088	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.RdNZGl4LYyIC"
+1513587825713	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 8748, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8748, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513587826563	Marionette	INFO	Listening on port 62916
+1513587826631	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513587826686	Marionette	DEBUG	Register listener.js for window 4294967297
+1513587826711	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513587830060	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513587830060	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513587831066	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/basicsearch?search=a100&pageIndex=2"
+1513587831080	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/basicsearch?search=a100&pageIndex=2"
+1513587834839	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/basicsearch?lang=zh_CN&text="
+1513587835253	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/basicsearch?lang=zh_CN&text="
+1513587835319	Marionette	DEBUG	Register listener.js for window 4294967302
+1513587835348	Marionette	DEBUG	Register listener.js for window 4294967305
+1513587835543	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513587835570	Marionette	DEBUG	Register listener.js for window 4294967308
+1513587835799	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513587835842	Marionette	DEBUG	Register listener.js for window 4294967311
+1513587836052	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513587836073	Marionette	DEBUG	Register listener.js for window 4294967314
+1513587836292	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513587836313	Marionette	DEBUG	Register listener.js for window 4294967317
+1513587836535	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513587836556	Marionette	DEBUG	Register listener.js for window 4294967320
+1513587836776	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513587836795	Marionette	DEBUG	Register listener.js for window 4294967323
+1513587837015	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513587837037	Marionette	DEBUG	Register listener.js for window 4294967326
+1513587837258	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513587837280	Marionette	DEBUG	Register listener.js for window 4294967329
+1513587837504	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513587837526	Marionette	DEBUG	Register listener.js for window 4294967332
+1513587837745	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+JavaScript error: http://www.spc.org.cn/gb168/online/GB%252010055-2007/, line 78: NS_ERROR_NOT_AVAILABLE: 
+JavaScript error: resource:///modules/ContentMetaHandler.jsm, line 123: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIMessageSender.sendAsyncMessage]
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 11016, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Lo1513588574945	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 9048, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9048, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513588575798	Marionette	INFO	Listening on port 63028
+1513588575844	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513588575895	Marionette	DEBUG	Register listener.js for window 4294967297
+1513588575920	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513588579296	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513588579297	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513588580393	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/basicsearch?search=a100"
+1513588580407	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/basicsearch?search=a100"
+1513588584178	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/basicsearch?lang=zh_CN&text="
+1513588584551	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/basicsearch?lang=zh_CN&text="
+1513588584614	Marionette	DEBUG	Register listener.js for window 4294967302
+1513588584642	Marionette	DEBUG	Register listener.js for window 4294967305
+1513588584837	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513588584859	Marionette	DEBUG	Register listener.js for window 4294967308
+1513588585079	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513588585136	Marionette	DEBUG	Register listener.js for window 4294967311
+1513588585370	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513588585435	Marionette	DEBUG	Register listener.js for window 4294967314
+1513588585656	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513588585704	Marionette	DEBUG	Register listener.js for window 4294967317
+1513588585922	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513588585982	Marionette	DEBUG	Register listener.js for window 4294967320
+1513588586211	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513588586236	Marionette	DEBUG	Register listener.js for window 4294967323
+1513588586454	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513588586478	Marionette	DEBUG	Register listener.js for window 4294967326
+1513588586695	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513588586720	Marionette	DEBUG	Register listener.js for window 4294967329
+1513588586948	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513588586970	Marionette	DEBUG	Register listener.js for window 4294967332
+1513588587197	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 491513588687110	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.KdsXC03NHeoV"
+1513588687670	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 12336, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12336, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513588688491	Marionette	INFO	Listening on port 63129
+1513588688639	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513588688685	Marionette	DEBUG	Register listener.js for window 4294967297
+1513588688702	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513588692169	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513588692170	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513588693562	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/basicsearch?search=a100"
+1513588693576	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/basicsearch?search=a100"
+1513588697620	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/basicsearch?lang=zh_CN&text="
+1513588697883	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/basicsearch?lang=zh_CN&text="
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 12640, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 14876, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 14876, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 13788, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 13788, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 8204, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+//www.spc.org.cn/gb168/basicsearch?search=a100"
+1513588730146	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.spc.org.cn/gb168/basicsearch?lang=zh_CN&text="
+1513588730425	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.spc.org.cn/gb168/basicsearch?lang=zh_CN&text="
+[Parent 14808, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 8460, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346

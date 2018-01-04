@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="wrap" style="width:100%;height:200px;">
+			<div class="contentCharts" id="mainChart" style="width:100%;height:200px;"></div>
+		</div>
+			
+		<script src="../../lib/echarts.min.js"></script>
+		<script src="../../lib/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript">
+			var mainChart = echarts.init(document.getElementById('mainChart'));
+			var	option = {
+			   title: {
+			        text: '到访省、市排名前五',
+					 left: 'center',
+	                    textStyle: {
+	                        fontFamily:'幼圆',
+	                        fontWeight: 'bolder',
+	                        fontSize: 12,
+	                        color: '#fff'
+	                        
+	                    }
+			    },
+			    tooltip: {
+			        trigger: 'item',
+			        formatter: "{a} <br/>{b} : {c}次"
+			    },
+				color: ['#ec9c03','#1116f0',/*'#fb6d04',*/'#f91872','#49b369','#fb0707','#16cc41','#d303f9','#00b6ba','#e85b8e','#7f4d41'],
+			    /*legend: {
+			    	 y: 'top',
+			//      orient: 'vertical',
+			        left: 'left',
+			        data: ['A省','B省','C省','D省','E省','F省','G省','H省','I省','J省']
+			    },*/
+			    calculable: true,
+			    series: [
+			        {
+			            name: '到访',
+			            type: 'funnel',
+			            width: '50%',
+			            height: '80%',
+			            left: '2%',
+			            top: '13%',
+			            bottom:'10%',
+			            right:'10%',
+			            funnelAlign: 'right',
+						label:{
+							normal:{
+								show:true,
+								position:'center'	,
+								formatter: '{b}: {c}'
+							}
+						},
+			            data:[
+			                {value:45, name:'河南省'},
+			                {value:35, name:'山东省'},
+			                {value:27, name:'浙江省'},
+			                {value:25, name:'辽宁省'},
+			                {value:24, name:'广东省'}/*,
+			                {value:24, name:'江苏省'},
+			                {value:18, name:'四川省'},
+			                {value:15, name:'河北省'},
+			                {value:13, name:'山西省'},
+			                {value:11, name:'内蒙古'}*/
+			            ]
+			        },
+			
+			        {
+			            name:'到访',
+			            type:'funnel',
+			            width: '40%',
+			            height: '80%',
+			            left: '58%',
+			            top: '13%',
+			            bottom:'10%',
+			            funnelAlign: 'left',
+			            label:{
+							normal:{
+								show:true,
+								position:'center'	,
+								formatter: '{b}: {c}'
+							}
+						},
+			            data: [
+			                {value: 10, name: '北京市'},
+			                {value: 9, name: '天津市'},
+			                {value: 9, name: '郑州市'},
+			                {value: 8, name: '重庆市'},
+			                {value: 8, name: '深圳市'}/*,
+			                {value:8, name:'南京市'},
+			                {value:8, name:'济南市'},
+			                {value:8, name:'沈阳市'},
+			                {value:8, name:'济源市'},
+			                {value:7, name:'焦作市'}*/
+			                
+			            ]
+			        },
+			
+			    ]
+			};
+			mainChart.setOption(option);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="vbarChart" style="width:100%;height:180px;"></div>
+    <script src="../../../static/datavisual/lib/echarts.min.js"></script>
+    <script src="../../../static/datavisual/lib/jquery-1.9.1.min.js"></script>
+    <script src="../../../static/datavisual/js/common/utils.js"></script>
+<script>
+        var vbarChart = echarts.init(document.getElementById('vbarChart'));
+
+        var dataMap = {};
+		
+        dataMap.dataVisit = {
+            2011: [0,512,347,408],
+            2012: [378,469,590,460],
+            2013: [275,338,626,431],
+            2014: [185,559,335,492],
+            2015: [265,490,298,606],
+            2016: [176,804,489,362],
+            2017: [216,561,454,0]
+        };
+        dataMap.dataVisit2 = {
+            2011: [0,25,26,25],
+            2012: [21,31,39,27],
+            2013: [36,50,50,40],
+            2014: [20,51,44,49],
+            2015: [35,53,34,45],
+            2016: [22,44,46,32],
+            2017: [28,54,44,0]
+        };
+
+        var barOption = {
+            baseOption: {
+                timeline: {
+                    show: false,
+                    axisType: 'category',
+                    loop: true,
+                    autoPlay: true,
+                    playInterval: 1000,
+                    label: {
+                        normal: {
+                            textStyle: {
+                                color: '#fff'
+                            }
+                        },
+                        position: 14
+                    },
+                    lineStyle: {
+                        color: '#fff'
+                    },
+                    controlStyle: {
+                        show: false
+                    },
+                    bottom: 10,
+                    data: [
+                        '2011','2012','2013','2014','2015',' 2016', '2017'
+                    ]
+                },
+                grid: {
+			        left: '1%',
+			        right: '6%',
+			        bottom: '0%',
+			        top:'10%',
+			        containLabel: true
+			    },
+                xAxis: [
+                    {
+                        type: 'category',
+                        boundaryGap : true,
+                        axisLine: {
+                            lineStyle: {
+                                color: '#fff'
+                            }
+                        },
+                       	nameTextStyle: {
+				            color: '#fff'
+				        },
+		                axisTick: {
+                            lineStyle: {
+                                color: '#fff'
+                            }
+                        },
+                        axisLabel: {
+                            interval: 0,
+                            textStyle: {
+                                color: '#fff'
+                            }
+                        },
+                        splitLine: {
+                            show: true,
+                            lineStyle: {
+								 color: 'rgba(204, 204, 204, 0.3)'
+							 }
+                        },
+                        data: ['1季度', '2季度','3季度','4季度'],
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'value',
+                        /*name: '场次',*/
+                        min: 0,
+                        max: 800,
+                        interval: 100,
+                        axisLine: {
+                            lineStyle: {
+                                color: '#fff'
+                            }
+                        },
+                        axisTick: {
+                            lineStyle: {
+                                color: '#fff'
+                            }
+                        },
+                        axisLabel: {
+                            interval: 0,
+                            textStyle: {
+                                color: '#fff'
+                            }
+                        },
+                        splitLine: {
+                            show: true,
+                            lineStyle: {
+								 color: 'rgba(204, 204, 204, 0.31)'
+							 }
+                        }
+                    }
+                ],
+                series: [
+                    {name: '访问人数', type: 'line'},
+                    {name: '访问次数', type: 'line', smooth: true}
+                ]
+            },
+            options: [
+            	{
+                    title: {
+                        text: '2011年季度访问情况',
+                        left: 'center',
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 14
+                        }
+                    },
+                    series: [
+                        {
+                            data: dataMap.dataVisit['2011'],
+                            areaStyle: {
+				            	normal: {
+				            		color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+				                        offset: 0,
+				                        color: 'rgba(53, 53,245, 1)'
+				                    }, {
+				                        offset: 1,
+				                        color: 'rgba(17, 168,171, 1)'
+				                    }]),
+				                    shadowColor: 'rgba(0, 0, 0, 0.1)'
+				            	}
+				           	},
+                            itemStyle: {
+                                normal: {
+                                    color: '#fff'
+                                }
+                            }
+                        },
+                        {
+                            data: dataMap.dataVisit2['2011'],
+                            areaStyle: {
+				            	normal: {
+				            		color:"#f04f16"
+				            	}
+				            },
+                            itemStyle: {
+                                normal: {
+                                    color: '#fff'
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    title: {
+                        text: '2012年季度访问情况',
+                        left: 'center',
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 14
+                        }
+                    },
+                    series : [
+                        {
+                            data: dataMap.dataVisit['2012'],
+                             areaStyle: {
+				            	normal: {
+				            		color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+				                        offset: 0,
+				                        color: 'rgba(53, 53,245, 1)'
+				                    }, {
+				                        offset: 1,
+				                        color: 'rgba(17, 168,171, 1)'
+				                    }]),
+				                    shadowColor: 'rgba(0, 0, 0, 0.1)'
+				            	}
+				           	},
+                            itemStyle: {
+                                normal: {
+                                    color: '#fff'
+                                }
+                            }
+                        },
+                        {
+                            data: dataMap.dataVisit2['2012'],
+                            areaStyle: {
+				            	normal: {
+				            		color:"#f04f16"
+				            	}
+				            },
+                            itemStyle: {
+                                normal: {
+                                    color: '#fff'
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    title: {
+                        text: '2013年季度访问情况',
+                        left: 'center',
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 14
+                        }
+                    },
+                    series: [
+                        {
+                            data: dataMap.dataVisit['2013'],
+                            areaStyle: {
+				            	normal: {
+				            		color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+				                        offset: 0,
+				                        color: 'rgba(53, 53,245, 1)'
+				                    }, {
+				                        offset: 1,
+				                        color: 'rgba(17, 168,171, 1)'
+				                    }]),
+				                    shadowColor: 'rgba(0, 0, 0, 0.1)'
+				            	}
+				           	},
+                            itemStyle: {
+                                normal: {
+                                    color: '#fff'
+                                }
+                            }
+                        },
+                        {
+                            data: dataMap.dataVisit2['2013'],
+                            areaStyle: {
+				            	normal: {
+				            		color:"#f04f16"
+				            	}
+				            },
+                            itemStyle: {
+                                normal: {
+                                    color: '#fff'
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    title: {
+                        text: '2014年季度访问情况',
+                        left: 'center',
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 14
+                        }
+                    },
+                    series : [
+                        {
+                            data: dataMap.dataVisit['2014'],
+                             areaStyle: {
+				            	normal: {
+				            		color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+				                        offset: 0,
+				                        color: 'rgba(53, 53,245, 1)'
+				                    }, {
+				                        offset: 1,
+				                        color: 'rgba(17, 168,171, 1)'
+				                    }]),
+				                    shadowColor: 'rgba(0, 0, 0, 0.1)'
+				            	}
+				           	},
+                            itemStyle: {
+                                normal: {
+                                    color: '#fff'
+                                }
+                            }
+                        },
+                        {
+                            data: dataMap.dataVisit2['2014'],
+                            areaStyle: {
+				            	normal: {
+				            		color:"#f04f16"
+				            	}
+				            },
+                            itemStyle: {
+                                normal: {
+                                    color: '#fff'
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    title: {
+                        text: '2015年季度访问情况',
+                        left: 'center',
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 14
+                        }
+                    },
+                    series : [
+                        {
+                            data: dataMap.dataVisit['2015'],
+                            areaStyle: {
+				            	normal: {
+				            		color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+				                        offset: 0,
+				                        color: 'rgba(53, 53,245, 1)'
+				                    }, {
+				                        offset: 1,
+				                        color: 'rgba(17, 168,171, 1)'
+				                    }]),
+				                    shadowColor: 'rgba(0, 0, 0, 0.1)'
+				            	}
+				           	},
+                            itemStyle: {
+                                normal: {
+                                    color: '#fff'
+                                }
+                            }},
+                        {
+                            data: dataMap.dataVisit2['2015'],
+                            areaStyle: {
+				            	normal: {
+				            		color:"#f04f16"
+				            	}
+				            },
+                            itemStyle: {
+                                normal: {
+                                    color: '#fff'
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    title: {
+                        text: '2016年季度访问情况',
+                        left: 'center',
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 14
+                        }
+                    },
+                    series : [
+                        {
+                            data: dataMap.dataVisit['2016'],
+                            areaStyle: {
+				            	normal: {
+				            		color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+				                        offset: 0,
+				                        color: 'rgba(53, 53,245, 1)'
+				                    }, {
+				                        offset: 1,
+				                        color: 'rgba(17, 168,171, 1)'
+				                    }]),
+				                    shadowColor: 'rgba(0, 0, 0, 0.1)'
+				            	}
+				           	},
+                            itemStyle: {
+                                normal: {
+                                    color: '#fff'
+                                }
+                            }
+                        },
+                        {
+                            data: dataMap.dataVisit2['2016'],
+			                areaStyle: {
+				            	normal: {
+				            		color:"#f04f16"
+				            	}
+				            },
+                            itemStyle: {
+                                normal: {
+                                    color: '#fff'
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    title: {
+                        text: '2017年季度访问情况',
+                        left: 'center',
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 14
+                        }
+                    },
+                    series : [
+                        {
+                            data: dataMap.dataVisit['2017'],
+			                areaStyle: {
+				            	normal: {
+				            		color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+				                        offset: 0,
+				                        color: 'rgba(53, 53,245, 1)'
+				                    }, {
+				                        offset: 1,
+				                        color: 'rgba(17, 168,171, 1)'
+				                    }]),
+				                    shadowColor: 'rgba(0, 0, 0, 0.1)'
+				            	}
+				           	},
+                            itemStyle: {
+                                normal: {
+                                    color: '#fff'
+                                }
+                            }
+                        },
+                        {
+                            data: dataMap.dataVisit2['2017'],
+                            areaStyle: {
+				            	normal: {
+				            		color:"#f04f16"
+				            	}
+				           	},
+                            itemStyle: {
+                                normal: {
+                                    color: '#fff'
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        };
+
+        vbarChart.setOption(barOption);
+    </script>
+</body>
+</html>
