@@ -18,6 +18,7 @@ from django.contrib import admin
 
 from utility import views
 from utility import views_test
+from utility import permission
 
 urlpatterns = [
     url(r'^$',views.index),
@@ -29,6 +30,8 @@ urlpatterns = [
     url(r'^test(\d*)/$',views_test.test_url),
     url(r'^dv/(\w*)?',views_test.dv_url),
     url(r'^jiaoda/',views_test.jiaoda_url),
+    url(r'^regist/$',permission.regist),
+    url(r'^login/$',permission.login),
 
 ]
 

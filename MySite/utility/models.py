@@ -6,6 +6,9 @@ class UserInfo(models.Model):
     user = models.CharField(max_length=32)
     pwd = models.CharField(max_length=32)
 
+    def __unicode__(self):
+        return self.user
+
 class xajtdx_instrument_test(models.Model):
     id = models.DecimalField(primary_key=True,max_digits=10,decimal_places=0)
     instruType = models.CharField(max_length=100)
