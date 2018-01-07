@@ -18,13 +18,10 @@ def regist(request):
             password = uf.cleaned_data['password']
             print(username,password)
             models.UserInfo.objects.create(user=username, pwd=password)
-            request.session.set_test_cookie()
             return HttpResponseRedirect('/login/')
     else:
         uf = UserForm()
     return render_to_response('regist.html',{'uf':uf})
-
-
 
 def login(request):
     if request.method == "POST":
@@ -34,9 +31,21 @@ def login(request):
             password = uf.cleaned_data['password']
             users = models.UserInfo.objects.filter(user__exact=username,pwd__exact=password)
             if users:
-                return HttpResponseRedirect('/')
+                response = HttpResponseRedirect('/')
+                # response.set_cookie('username',username,3600)
+                request.session['username'] = username
+                return response
             else:
                 return HttpResponseRedirect('/login')
     else:
         uf = UserForm()
     return render_to_response('login.html',{'uf':uf})
+
+def logout(request):
+    response = HttpResponseRedirect('/login/')
+    try:
+        # response.delete_cookie('username')
+        del request.session['username']
+    except:
+        pass
+    return response

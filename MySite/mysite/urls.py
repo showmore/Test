@@ -32,6 +32,7 @@ urlpatterns = [
     url(r'^jiaoda/',views_test.jiaoda_url),
     url(r'^regist/$',permission.regist),
     url(r'^login/$',permission.login),
+    url(r'^logout/$',permission.logout),
 
 ]
 

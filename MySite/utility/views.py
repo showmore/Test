@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 from django.shortcuts import render
 from django.shortcuts import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
 from utility import models
 from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 
@@ -8,22 +9,13 @@ from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 # Create your views here.
 
 def index(request):
-    if request.method == "POST":
-        username = request.POST.get("username", None)
-        password = request.POST.get("password", None)
-        print(username,password)
-        # 添加数据到数据库
-        models.UserInfo.objects.create(user=username,pwd=password)
+    # username = request.COOKIES.get('username','')
+    username = request.session.get('username','')
+    if username:
+        return render(request,"index.html",locals())
+    else:
+        return HttpResponseRedirect('/login')
 
-    #从数据库读取数据
-    user_list = models.UserInfo.objects.all()
-    # print(str(user_list.query))
-
-    rpath = request.path
-    rhost = request.get_host()
-
-
-    return render(request,"index.html",locals())
 
 def instr(request):
     # return HttpResponse("Hello world!")
