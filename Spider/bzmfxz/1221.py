@@ -69,8 +69,6 @@ def get_lsturl(start_url):
 		sql = '''insert into foodmate_list(url,pageurl,name,insertdate)'''
 
 
-		
-
 
 
 if __name__ == '__main__':
