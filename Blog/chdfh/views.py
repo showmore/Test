@@ -22,3 +22,5 @@ def about(request):
 def contact(request):
     return render(request,"contact.html")
 
+def picpage(request):
+    return render(request,"picpage.html")
