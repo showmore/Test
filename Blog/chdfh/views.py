@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.shortcuts import HttpResponse
 from django.contrib.auth.decorators import login_required
+import markdown
+from .models import *
+from .files import get_picfiles
 
 # Create your views here.
 
@@ -23,4 +26,11 @@ def contact(request):
     return render(request,"contact.html")
 
 def picpage(request):
-    return render(request,"picpage.html")
+    blog = Blog.objects.first()
+    blog_content = markdown.markdown(blog.content)
+    return render(request,"picpage.html",locals())
+
+def AD(request):
+    ad = AlcoholDetection.objects.all()
+    pics = get_picfiles()
+    return render(request,"AlcoholDetection.html",locals())

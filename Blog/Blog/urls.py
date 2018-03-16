@@ -28,5 +28,6 @@ urlpatterns = [
     url(r'^login',permission.weblogin),
     url(r'^logout',permission.weblogout),
     url(r'^regist',permission.regist),
-    url(r'^picpage',views.picpage)
+    url(r'^picpage',views.picpage),
+    url(r'^ad', views.AD)
 ]

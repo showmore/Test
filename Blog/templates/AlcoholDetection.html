@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>酒精检测记录查询</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/AlcoholDetection.css">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="joy_header">
+        <div class="w_1200a" >
+            <div class="logoline">
+                <div class="logo">
+                    <a href="/index.html" target="_blank"></a>
+                </div>
+                <div class="ti">机组人员酒精检测记录</div>
+            </div>
+            <div class="loginline">
+                <span>登陆</span>
+                <span>注册</span>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="joy_cont">
+        <div class="joy_continner w_1200a">
+
+            <div class="searchBox">
+
+                <form class="form-inline fs">
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="exampleInputEmail2">起始日期:</label>
+                            <input type="date" class="form-control input-sm" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputName3">起始时间:</label>
+                            <input type="time" class="form-control input-sm" id="exampleInputName3" placeholder="Jane Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail10">截止日期:</label>
+                            <input type="date" class="form-control input-sm" id="exampleInputEmail10" placeholder="jane.doe@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputName11">截止时间:</label>
+                            <input type="time" class="form-control input-sm" id="exampleInputName11" placeholder="Jane Doe">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 10px">
+                        <div class="form-group">
+                            <label for="exampleInputName4">工号:</label>
+                            <input type="text" class="form-control input-sm" id="exampleInputName4" placeholder="Jane Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputName1">姓名:</label>
+                            <input type="text" class="form-control input-sm" id="exampleInputName1" placeholder="Jane Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail5">部门:</label>
+                            <input type="text" class="form-control input-sm" id="exampleInputEmail5" placeholder="jane.doe@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputName6">岗位:</label>
+                            <input type="text" class="form-control input-sm" id="exampleInputName6" placeholder="Jane Doe">
+                        </div>
+                    </div>
+                    <div class="row btnline">
+                        <button id="cx" type="submit" class="btn btn-default cxbtn">查询</button>
+                        <button id="cz" type="reset" class="btn btn-default cxbtn">重置</button>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="row picarea">
+
+        {% for x in pics %}
+            <div class="col-md-2" style="margin-bottom: 20px">
+            <div class="picpos">
+
+            <a href="#" class="work image-popup" style="background-image: url({{ x }})">
+            </a>
+            <div class="desc"><span>Project Name Illustration</span></div>
+            </div>
+            </div>
+        {% empty %}
+            <h3>没有查询结果。</h3>
+        {% endfor %}
+        </div>
+    </div>
+
+
+    </div>
+<div class="joy_footer">幸福热线：400 868 0000|©JoyAir幸福航空有限责任公司版权所有　陕ICP备09025016</div>
+
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('.picpos').hover(
+            function(){
+            $(this).children('a').hide();
+            $(this).children('.desc').css({'display':'block'});
+            },
+            function(){
+                $(this).children('a').show();
+                $(this).children('.desc').css('display','none');
+            }
+        )
+
+
+
+
+
+
+
+    })
+
+</script>
+</html>

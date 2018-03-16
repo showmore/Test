@@ -26,18 +26,18 @@
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<!-- Animate.css -->
-	<link rel="stylesheet" href="/static/css/animate.css">
+{#	<link rel="stylesheet" href="/static/css/animate.css">#}
 	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="/static/css/icomoon.css">
+{#	<link rel="stylesheet" href="/static/css/icomoon.css">#}
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="/static/css/bootstrap.css">
 	<!-- Flexslider  -->
-	<link rel="stylesheet" href="/static/css/flexslider.css">
+{#	<link rel="stylesheet" href="/static/css/flexslider.css">#}
 	<!-- Theme style  -->
-	<link rel="stylesheet" href="/static/css/style.css">
+{#	<link rel="stylesheet" href="/static/css/style.css">#}
 
 	<!-- Modernizr JS -->
-	<script src="/static/js/modernizr-2.6.2.min.js"></script>
+{#	<script src="/static/js/modernizr-2.6.2.min.js"></script>#}
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="/static/js/respond.min.js"></script>
@@ -48,14 +48,11 @@
 
 
         .work1 {
-            width: 270px;
-            height: 220px;
+            width: 250px;
+            height: 200px;
             position: relative;
             border:1px solid #000;
             display: inline-block;
-            margin-right: 15px;
-            margin-bottom: 15px;
-
         }
 
         .work1 img{
@@ -67,42 +64,70 @@
             margin-top: -80px;
         }
 
-        .row1{
-            padding-left: 30px;
-            padding-right: 30px;
-        }
 
 
 
 
     </style>
 	</head>
+
 	<body>
-    <div class="row1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="work1">
+                    <img src="/static/images/img-1.jpg" alt="">
+                </div>
+            </div>
 
-                    <div class="work1">
-                        <img src="/static/images/img-1.jpg" alt="">
-                    </div>
+            <div class="col-md-3">
+                <div class="work1">
+                    <img src="/static/images/img-2.jpg" alt="">
+                </div>
+            </div>
 
-                    <div class="work1">
-                        <img src="/static/images/img-2.jpg" alt="">
-                    </div>
+            <div class="col-md-3">
+                <div class="work1">
+                    <img src="/static/images/img-3.jpg" alt="">
+                </div>
+            </div>
 
-                    <div class="work1">
-                        <img src="/static/images/img-3.jpg" alt="">
-                    </div>
+            <div class="col-md-3">
+                <div class="work1">
+                    <img src="/static/images/img-4.jpg" alt="">
+                </div>
+            </div>
+        </div>
 
-                    <div class="work1">
-                        <img src="/static/images/img-4.jpg" alt="">
-                    </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="work1">
+                    <img src="/static/images/img-5.jpg" alt="">
+                </div>
+            </div>
 
-                    <div class="work1">
-                        <img src="/static/images/img-5.jpg" alt="">
-                    </div>
+            <div class="col-md-3">
+                <div class="work1">
+                    <img src="/static/images/img-6.jpg" alt="">
+                </div>
+            </div>
+        </div>
 
-                    <div class="work1">
-                       <img src="/static/images/img-6.jpg" alt="">
-                    </div>
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-9">
+                <header><h2>{{ blog.title }}</h2></header>
+                <hr>
+                <p>{{ blog_content | safe }}</p>
+            </div>
+
+        </div>
+
+
+
+
 
 
     </div>
@@ -113,15 +138,15 @@
 	<!-- jQuery -->
 	<script src="/static/js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
-	<script src="/static/js/jquery.easing.1.3.js"></script>
+{#	<script src="/static/js/jquery.easing.1.3.js"></script>#}
 	<!-- Bootstrap -->
 	<script src="/static/js/bootstrap.min.js"></script>
 	<!-- Waypoints -->
-	<script src="/static/js/jquery.waypoints.min.js"></script>
+{#	<script src="/static/js/jquery.waypoints.min.js"></script>#}
 	<!-- Flexslider -->
-	<script src="/static/js/jquery.flexslider-min.js"></script>
+{#	<script src="/static/js/jquery.flexslider-min.js"></script>#}
 	<!-- MAIN JS -->
-	<script src="/static/js/main.js"></script>
+{#	<script src="/static/js/main.js"></script>#}
 
     <script  type="text/javascript">
         {#$(function() {#}
